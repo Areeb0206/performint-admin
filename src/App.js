@@ -21,17 +21,15 @@ const NotFound = lazy(() => import("./container/pages/404"));
 const { theme } = config;
 
 function ProviderConfig() {
-  const { rtl, isLoggedIn, topMenu, mainContent, currentUser } = useSelector(
-    (state) => {
-      return {
-        rtl: state.ChangeLayoutMode.rtlData,
-        topMenu: state.ChangeLayoutMode.topMenu,
-        mainContent: state.ChangeLayoutMode.mode,
-        isLoggedIn: state.auth.login,
-        currentUser: state.currentUser.data,
-      };
-    }
-  );
+  const { rtl, isLoggedIn, topMenu, mainContent } = useSelector((state) => {
+    return {
+      rtl: state.ChangeLayoutMode.rtlData,
+      topMenu: state.ChangeLayoutMode.topMenu,
+      mainContent: state.ChangeLayoutMode.mode,
+      isLoggedIn: state.auth.login,
+      currentUser: state.currentUser.data,
+    };
+  });
   const [path, setPath] = useState(window.location.pathname);
 
   useEffect(() => {

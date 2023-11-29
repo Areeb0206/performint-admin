@@ -19,17 +19,15 @@ const SecurityWrapper = ({ children }) => {
 };
 
 function ProtectedRoute({ Component, path }) {
-  const { rtl, isLoggedIn, topMenu, mainContent, currentUser } = useSelector(
-    (state) => {
-      return {
-        rtl: state.ChangeLayoutMode.rtlData,
-        topMenu: state.ChangeLayoutMode.topMenu,
-        mainContent: state.ChangeLayoutMode.mode,
-        isLoggedIn: state.auth.login,
-        currentUser: state.currentUser.data,
-      };
-    }
-  );
+  const { isLoggedIn, currentUser } = useSelector((state) => {
+    return {
+      rtl: state.ChangeLayoutMode.rtlData,
+      topMenu: state.ChangeLayoutMode.topMenu,
+      mainContent: state.ChangeLayoutMode.mode,
+      isLoggedIn: state.auth.login,
+      currentUser: state.currentUser.data,
+    };
+  });
   const [linkToken, setLinkToken] = useAtom(plaidAtom);
   const [loading, setLoading] = useState(false);
   const getLinkToken = async () => {
