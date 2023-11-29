@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-
+const colors = require("tailwindcss/colors");
 module.exports = {
   darkMode: "class",
   important: true,
@@ -13,7 +13,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        ...colors,
         primary: "#0478FF",
+        white: "#ffffff",
+        black: "#000000",
         "primary-hover": "rgb(103, 38, 168)",
         "primary-transparent": "rgba(130, 49, 211, 0.082)",
         secondary: "#5840FF",
@@ -97,7 +100,7 @@ module.exports = {
         normalBG: "#F4F5F7",
         deepBG: "#EFF0F3",
         insideBG: "#efeffe",
-        white: "#ffffff",
+
         regularBGdark: "rgb(255, 255, 255, .10)",
         normalBGdark: "rgb(255, 255, 255, .10)",
         deepBGdark: "rgb(255, 255, 255, .10)",

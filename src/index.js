@@ -1,15 +1,16 @@
-import React from 'react';
+import React from "react";
 // import ReactDOM from 'react-dom';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import './i18n/config';
-import reportWebVitals from './reportWebVitals';
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./i18n/config";
+import reportWebVitals from "./reportWebVitals";
+import "./static/css/style.css";
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 root.render(
   // <React.StrictMode>
-  <App />,
+  <App />
   // </React.StrictMode>,
 );
 

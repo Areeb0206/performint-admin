@@ -1,43 +1,50 @@
-import UilAngleDown from '@iconscout/react-unicons/icons/uil-angle-down';
-import UilBell from '@iconscout/react-unicons/icons/uil-bell';
-import UilDollarSign from '@iconscout/react-unicons/icons/uil-dollar-sign';
-import UilSetting from '@iconscout/react-unicons/icons/uil-setting';
-import UilSignout from '@iconscout/react-unicons/icons/uil-signout';
-import UilUser from '@iconscout/react-unicons/icons/uil-user';
-import UilUsersAlt from '@iconscout/react-unicons/icons/uil-users-alt';
-import { Avatar } from 'antd';
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
-import Search from './Search';
-import Message from './Message';
-import Notification from './Notification';
-import Settings from './settings';
-import { Popover } from '../../popup/popup';
-import Heading from '../../heading/heading';
-import { logOut } from '../../../redux/authentication/actionCreator';
+import UilAngleDown from "@iconscout/react-unicons/icons/uil-angle-down";
+import UilBell from "@iconscout/react-unicons/icons/uil-bell";
+import UilDollarSign from "@iconscout/react-unicons/icons/uil-dollar-sign";
+import UilSetting from "@iconscout/react-unicons/icons/uil-setting";
+import UilSignout from "@iconscout/react-unicons/icons/uil-signout";
+import UilUser from "@iconscout/react-unicons/icons/uil-user";
+import UilUsersAlt from "@iconscout/react-unicons/icons/uil-users-alt";
+import { Avatar } from "antd";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import Search from "./Search";
+import Message from "./Message";
+import Notification from "./Notification";
+import Settings from "./settings";
+import { Popover } from "../../popup/popup";
+import Heading from "../../heading/heading";
+import { logOut } from "../../../redux/authentication/actionCreator";
 
 const AuthInfo = React.memo(() => {
   const dispatch = useDispatch();
   const currentUser = useSelector((state) => state.currentUser.data);
   const navigate = useNavigate();
+  const [, setLinkToken] = useState({});
 
   const SignOut = (e) => {
     e.preventDefault();
-    dispatch(logOut(() => navigate('/')));
+    setLinkToken({});
+    dispatch(logOut(() => navigate("/")));
   };
 
   const userContent = (
     <div>
       <div className="min-w-[280px] sm:min-w-full pt-4">
         <figure className="flex items-center text-sm rounded-[8px] bg-section dark:bg-white10 py-[20px] px-[25px] mb-[12px]">
-          <img className="ltr:mr-4 rtl:ml-4" src={require('../../../static/img/avatar/chat-auth.png')} alt="" />
+          <img
+            className="ltr:mr-4 rtl:ml-4"
+            src={require("../../../static/img/avatar/chat-auth.png")}
+            alt=""
+          />
           <figcaption>
             <Heading as="h5">{currentUser.name}</Heading>
             <p>
-              {currentUser.driver_count === '1' && currentUser.power_units_count === '1'
-                ? 'Owner operator'
-                : 'Fleet owner'}
+              {currentUser.driver_count === "1" &&
+              currentUser.power_units_count === "1"
+                ? "Owner operator"
+                : "Fleet owner"}
             </p>
           </figcaption>
         </figure>
@@ -104,7 +111,10 @@ const AuthInfo = React.memo(() => {
       <Settings />
       <div className="flex ltr:ml-3 rtl:mr-3 ltr:mr-4 rtl:ml-4 ssm:mr-0 ssm:rtl:ml-0">
         <Popover placement="bottomRight" content={userContent} action="click">
-          <Link to="#" className="flex items-center text-light whitespace-nowrap">
+          <Link
+            to="#"
+            className="flex items-center text-light whitespace-nowrap"
+          >
             <Avatar src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/matureman1-512.png" />
             <span className="ltr:mr-1.5 rtl:ml-1.5 ltr:ml-2.5 rtl:mr-2.5 text-body dark:text-white60 text-sm font-medium md:hidden">
               {currentUser.name}

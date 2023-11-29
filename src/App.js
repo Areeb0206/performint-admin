@@ -1,4 +1,4 @@
-import React, { useEffect, useState, lazy } from "react";
+import React, { useEffect, useState, lazy, useCallback } from "react";
 import { Provider, useSelector } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import {
@@ -21,15 +21,17 @@ const NotFound = lazy(() => import("./container/pages/404"));
 const { theme } = config;
 
 function ProviderConfig() {
-  const { rtl, isLoggedIn, topMenu, mainContent } = useSelector((state) => {
-    return {
-      rtl: state.ChangeLayoutMode.rtlData,
-      topMenu: state.ChangeLayoutMode.topMenu,
-      mainContent: state.ChangeLayoutMode.mode,
-      isLoggedIn: state.auth.login,
-    };
-  });
-
+  const { rtl, isLoggedIn, topMenu, mainContent, currentUser } = useSelector(
+    (state) => {
+      return {
+        rtl: state.ChangeLayoutMode.rtlData,
+        topMenu: state.ChangeLayoutMode.topMenu,
+        mainContent: state.ChangeLayoutMode.mode,
+        isLoggedIn: state.auth.login,
+        currentUser: state.currentUser.data,
+      };
+    }
+  );
   const [path, setPath] = useState(window.location.pathname);
 
   useEffect(() => {
@@ -39,8 +41,7 @@ function ProviderConfig() {
     }
     return () => (unmounted = true);
   }, [setPath]);
-  const [linkToken, setLinkToken] = useState("");
-  const getLinkToken = () => {};
+
   return (
     <ConfigProvider direction={rtl ? "rtl" : "ltr"}>
       <ThemeProvider theme={{ ...theme, rtl, topMenu, mainContent }}>
