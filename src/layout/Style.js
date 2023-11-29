@@ -1,5 +1,5 @@
-import { Layout } from 'antd';
-import Styled from 'styled-components';
+import { Layout } from "antd";
+import Styled from "styled-components";
 
 const { Footer } = Layout;
 
@@ -17,7 +17,7 @@ const LayoutContainer = Styled.div`
 
     /* Sidebar styles */
     .ant-layout-sider {
-        box-shadow: 0 0 20px ${({ theme }) => theme['extra-light-color']}05;
+        box-shadow: 0 0 20px ${({ theme }) => theme["extra-light-color"]}05;
         @media (max-width: 991px){
             box-shadow: 0 0 10px #00000020;
         }
@@ -31,18 +31,20 @@ const LayoutContainer = Styled.div`
                 width: 6px;
                 transition: opacity 200ms ease 0s;
                 opacity: 0;
-                ${({ theme }) => (!theme.rtl ? 'right' : 'left')}: 0;
+                ${({ theme }) => (!theme.rtl ? "right" : "left")}: 0;
                 bottom: 2px;
                 top: 2px;
                 border-radius: 3px;
                 >div{
-                    background-color: ${({ theme }) => theme[theme.mainContent]['scroll-bg']}!important;
+                    background-color: ${({ theme }) =>
+                      theme[theme.mainContent]["scroll-bg"]}!important;
                 }
             }
         }
 
         .ant-menu{
-            background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+            background-color: ${({ theme }) =>
+              theme[theme.mainContent]["white-background"]};
         }
 
         &.ant-layout-sider-collapsed{
@@ -53,7 +55,8 @@ const LayoutContainer = Styled.div`
                 }
             }
             & + .atbd-main-layout{
-                ${({ theme }) => (!theme.rtl ? 'margin-left' : 'margin-right')}: 80px;
+                ${({ theme }) =>
+                  !theme.rtl ? "margin-left" : "margin-right"}: 80px;
 
             }
             .ant-menu-item-group{
@@ -68,13 +71,15 @@ const LayoutContainer = Styled.div`
             .ant-layout-sider-children{
                 .ant-menu .ant-menu-submenu, 
                 .ant-layout-sider-children .ant-menu .ant-menu-item{
-                    ${({ theme }) => (!theme.rtl ? 'padding-right' : 'padding-left')}: 0;
+                    ${({ theme }) =>
+                      !theme.rtl ? "padding-right" : "padding-left"}: 0;
                 }
             }
         }
 
         &.ant-layout-sider-dark{
-            background: ${({ theme }) => theme[theme.mainContent]['white-background']};
+            background: ${({ theme }) =>
+              theme[theme.mainContent]["white-background"]};
             .ant-layout-sider-children{
                 .ant-menu{
                     .ant-menu-submenu-inline{
@@ -103,8 +108,8 @@ const LayoutContainer = Styled.div`
                 font-weight: 500;
                 text-transform: uppercase;
                 letter-spacing: 1px;
-                color: ${({ theme }) => theme[theme.mainContent]['light-text']};
-                padding: 0 ${({ theme }) => (theme.rtl ? '20px' : '15px')} 0 0;
+                color: ${({ theme }) => theme[theme.mainContent]["light-text"]};
+                padding: 0 ${({ theme }) => (theme.rtl ? "20px" : "15px")} 0 0;
                 margin: 20px 0 0 0;
             }
 
@@ -117,59 +122,74 @@ const LayoutContainer = Styled.div`
             .ant-menu{
                 font-size: 14px;
                 overflow-x: hidden;
-                ${({ theme }) => (theme.rtl ? 'border-left' : 'border-right')}: 0 none;
+                ${({ theme }) =>
+                  theme.rtl ? "border-left" : "border-right"}: 0 none;
                 &.ant-menu-dark, &.ant-menu-dark .ant-menu-sub, &.ant-menu-dark .ant-menu-inline.ant-menu-sub {
-                    background-color: ${({ theme }) => theme[theme.mainContent]['light-background']};
+                    background-color: ${({ theme }) =>
+                      theme[theme.mainContent]["light-background"]};
                     
                 }
                 .ant-menu-sub.ant-menu-inline{
-                    background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+                    background-color: ${({ theme }) =>
+                      theme[theme.mainContent]["white-background"]};
                 }
                 
                 .ant-menu-submenu-selected{
-                    color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["light-text"]};
                 }
                 .ant-menu-submenu, 
                 .ant-menu-item{
-                    ${({ theme }) => (!theme.rtl ? 'padding-right' : 'padding-left')}: 5px;
+                    ${({ theme }) =>
+                      !theme.rtl ? "padding-right" : "padding-left"}: 5px;
                     &.ant-menu-item-selected{
                         border-radius: 0 21px 21px 0;
-                        background-color: ${({ theme }) => theme[theme.mainContent]['menu-active-bg']};
+                        background-color: ${({ theme }) =>
+                          theme[theme.mainContent]["menu-active-bg"]};
                         &:after{
                             content: none;
                         }
                         a{
-                            color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                            color: ${({ theme }) =>
+                              theme[theme.mainContent]["menu-active"]};
                         }
                     }
                     &.ant-menu-submenu-active{
                         >svg,
                         >.ant-menu-submenu-title .ant-menu-title-content{
-                            color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                            color: ${({ theme }) =>
+                              theme[theme.mainContent]["menu-active"]};
                         }
 
                         >.ant-menu-submenu-title{
                             .ant-menu-submenu-arrow:before,
                             .ant-menu-submenu-arrow:after{
-                                background-color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                                background-color: ${({ theme }) =>
+                                  theme[theme.mainContent]["menu-active"]};
                             }
                             svg{
-                                color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                                color: ${({ theme }) =>
+                                  theme[theme.mainContent]["menu-active"]};
                             }
                         }
                     }
                     &.ant-menu-item-active{
                         .ant-menu-item-icon{
                             svg{
-                                color: ${({ theme }) => theme[theme.mainContent]['menu-active']}!important;
+                                color: ${({ theme }) =>
+                                  theme[theme.mainContent][
+                                    "menu-active"
+                                  ]}!important;
                             }
                         }
                         svg{
-                            color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                            color: ${({ theme }) =>
+                              theme[theme.mainContent]["menu-active"]};
                         }
                         .ant-menu-title-content{
                             a{
-                                color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                                color: ${({ theme }) =>
+                                  theme[theme.mainContent]["menu-active"]};
                             }
                         }
                     }
@@ -182,14 +202,16 @@ const LayoutContainer = Styled.div`
                     img{
                         width: 16px;
                         font-size: 16px;
-                        color: ${({ theme }) => theme[theme.mainContent]['menu-icon-color']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["menu-icon-color"]};
                     }
                     span{
                         display: inline-block;
                         transition: 0.3s ease;
                     }
                     .ant-menu-title-content{
-                        ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 16px;
+                        ${({ theme }) =>
+                          !theme.rtl ? "padding-left" : "padding-right"}: 16px;
                     }
                 }
                 .ant-menu-item{
@@ -200,7 +222,8 @@ const LayoutContainer = Styled.div`
                         margin-bottom: 0;
                     }
                     a{
-                        color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["gray-text"]};
                     }
                 }
                 .ant-menu-submenu{
@@ -212,30 +235,43 @@ const LayoutContainer = Styled.div`
                                 padding-left: 0;
                             }
                             .badge{
-                                ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 45px;
+                                ${({ theme }) =>
+                                  theme.rtl ? "left" : "right"}: 45px;
                             }
                             span{
                                 font-weight: 500;
-                                color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                                color: ${({ theme }) =>
+                                  theme[theme.mainContent]["menu-active"]};
                             }
                             svg,
                             i,
                             .ant-menu-submenu-arrow{
-                                color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                                color: ${({ theme }) =>
+                                  theme[theme.mainContent]["menu-active"]};
                                 &:after,
                                 &:before{
-                                    background: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                                    background: ${({ theme }) =>
+                                      theme[theme.mainContent]["menu-active"]};
                                 }
                             }
                         }
                         .ant-menu-sub{
                             .ant-menu-item{
                                 &.ant-menu-item-selected{
-                                    background-color: ${({ theme }) => theme[theme.mainContent]['menu-active-bg']};
-                                    border-radius: ${({ theme }) => (!theme.rtl ? '0 21px 21px 0' : '21px 0 0 21px')};
+                                    background-color: ${({ theme }) =>
+                                      theme[theme.mainContent][
+                                        "menu-active-bg"
+                                      ]};
+                                    border-radius: ${({ theme }) =>
+                                      !theme.rtl
+                                        ? "0 21px 21px 0"
+                                        : "21px 0 0 21px"};
                                     a{
                                         font-weight: 500;
-                                        color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                                        color: ${({ theme }) =>
+                                          theme[theme.mainContent][
+                                            "menu-active"
+                                          ]};
                                     }
                                 }
                             }
@@ -244,7 +280,8 @@ const LayoutContainer = Styled.div`
                     .ant-menu-submenu-title{
                         .ant-menu-title-content{
                             font-weight: 500;
-                            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                            color: ${({ theme }) =>
+                              theme[theme.mainContent]["gray-text"]};
                         }
                     }
                 }
@@ -258,19 +295,22 @@ const LayoutContainer = Styled.div`
                     a{
                         font-size: 14px;
                         font-weight: 500;
-                        color: ${({ theme }) => theme['gray-text']};
+                        color: ${({ theme }) => theme["gray-text"]};
                         position: relative;
                     }
                     >span{
                         width: 100%;
                         margin-left: 0;
                         .pl-0{
-                            ${({ theme }) => (theme.rtl ? 'padding-right' : 'padding-left')}: 0px;
+                            ${({ theme }) =>
+                              theme.rtl
+                                ? "padding-right"
+                                : "padding-left"}: 0px;
                         }
                     }
                     .badge{
                         position: absolute;                        
-                        ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 30px;
+                        ${({ theme }) => (theme.rtl ? "left" : "right")}: 30px;
                         top: 50%;
                         transform: translateY(-50%);
                         display: inline-block;
@@ -282,10 +322,12 @@ const LayoutContainer = Styled.div`
                         letter-spacing: 1px;
                         color: #fff;
                         &.badge-primary{
-                            background-color: ${({ theme }) => theme['primary-color']};
+                            background-color: ${({ theme }) =>
+                              theme["primary-color"]};
                         }
                         &.badge-success{
-                            background-color: ${({ theme }) => theme['success-color']};
+                            background-color: ${({ theme }) =>
+                              theme["success-color"]};
                         }
                     }
                 }
@@ -304,20 +346,26 @@ const LayoutContainer = Styled.div`
                                                 
                         .ant-menu-submenu-arrow{
                             right: auto;
-                            ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 15px;
+                            ${({ theme }) =>
+                              theme.rtl ? "left" : "right"}: 15px;
                             &:after,
                             &:before{
                                 width: 6px;
-                                background: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                                background: ${({ theme }) =>
+                                  theme[theme.mainContent]["light-text"]};
                                 height: 1.2px;
                             }
                             &:before{
                                 transform: rotate(45deg) ${({ theme }) =>
-                                  !theme.rtl ? 'translateY(-3px)' : 'translateY(3px)'};
+                                  !theme.rtl
+                                    ? "translateY(-3px)"
+                                    : "translateY(3px)"};
                             }
                             &:after{
                                 transform: rotate(-45deg) ${({ theme }) =>
-                                  theme.rtl ? 'translateY(-3px)' : 'translateY(3px)'};
+                                  theme.rtl
+                                    ? "translateY(-3px)"
+                                    : "translateY(3px)"};
                             }
                         }
                     }
@@ -335,10 +383,16 @@ const LayoutContainer = Styled.div`
                         }
                     }
                     .ant-menu-item{
-                        ${({ theme }) => (theme.rtl ? 'padding-right' : 'padding-left')}: 0 !important;
+                        ${({ theme }) =>
+                          theme.rtl
+                            ? "padding-right"
+                            : "padding-left"}: 0 !important;
                         transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
                         a{
-                            ${({ theme }) => (theme.rtl ? 'padding-right' : 'padding-left')}: 36px !important;
+                            ${({ theme }) =>
+                              theme.rtl
+                                ? "padding-right"
+                                : "padding-left"}: 36px !important;
                         }
                     }
                 }
@@ -353,18 +407,22 @@ const LayoutContainer = Styled.div`
                         text-transform: capitalize;
                         .feather{
                             width: 16px;
-                            color: ${({ theme }) => theme['extra-light-color']};
+                            color: ${({ theme }) => theme["extra-light-color"]};
                         }
                         span{
-                            ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 20px;
+                            ${({ theme }) =>
+                              !theme.rtl
+                                ? "padding-left"
+                                : "padding-right"}: 20px;
                             display: inline-block;
-                            color: ${({ theme }) => theme['dark-color']};
+                            color: ${({ theme }) => theme["dark-color"]};
                         }
                     }
                     &.ant-menu-item-selected{
                         svg,
                         i{
-                            color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                            color: ${({ theme }) =>
+                              theme[theme.mainContent]["menu-active"]};
                         }
                     }
                 }
@@ -372,7 +430,10 @@ const LayoutContainer = Styled.div`
                 
                 &.ant-menu-inline-collapsed{
                     .ant-menu-submenu{
-                        text-align: ${({ theme }) => (!theme.rtl ? 'left' : 'right')};                        
+                        text-align: ${({ theme }) =>
+                          !theme.rtl
+                            ? "left"
+                            : "right"};                        
                         .ant-menu-submenu-title{
                             padding: 0 20px;
                             justify-content: center;
@@ -399,19 +460,21 @@ const LayoutContainer = Styled.div`
     }
     @media only screen and (max-width: 1150px){
         .ant-layout-sider.ant-layout-sider-collapsed{
-            ${({ theme }) => (!theme.rtl ? 'left' : 'right')}: -80px !important;
+            ${({ theme }) => (!theme.rtl ? "left" : "right")}: -80px !important;
         }
 
     }
 
     .atbd-main-layout{
-        ${({ theme }) => (!theme.rtl ? 'margin-left' : 'margin-right')}: ${({ theme }) =>
-  theme.topMenu ? 0 : '280px'};
+        ${({ theme }) => (!theme.rtl ? "margin-left" : "margin-right")}: ${({
+  theme,
+}) => (theme.topMenu ? 0 : "280px")};
         margin-top: 74px;
         transition: 0.3s ease;
         
         @media only screen and (max-width: 1150px){
-            ${({ theme }) => (!theme.rtl ? 'margin-left' : 'margin-right')}: auto !important;
+            ${({ theme }) =>
+              !theme.rtl ? "margin-left" : "margin-right"}: auto !important;
         }
         @media print {
             width: 100%;
@@ -420,7 +483,8 @@ const LayoutContainer = Styled.div`
         }
     }
     .admin-footer{
-        background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background-color: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
         @media print {
             display: none;
         }
@@ -428,7 +492,7 @@ const LayoutContainer = Styled.div`
             display: inline-block;
             width: 100%;
             font-weight: 500;
-            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
             @media only screen and (max-width: 767px){
                 text-align: center;
                 margin-bottom: 10px;
@@ -437,7 +501,7 @@ const LayoutContainer = Styled.div`
                 display: inline-block;
                 margin-left: 4px;
                 font-weight: 500;
-                color: ${({ theme }) => theme['primary-color']};
+                color: ${({ theme }) => theme["primary-color"]};
             }
         }
         
@@ -446,10 +510,12 @@ const LayoutContainer = Styled.div`
     .ant-radio-button-wrapper-checked {
         &:not(.ant-radio-button-wrapper-disabled){
             background: ${({ theme }) => theme[theme.mainContent].white};
-            border-color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
-            color: ${({ theme }) => theme[theme.mainContent]['white-text']};
+            border-color: ${({ theme }) =>
+              theme[theme.mainContent]["menu-active"]};
+            color: ${({ theme }) => theme[theme.mainContent]["white-text"]};
             &:hover{
-                border-color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                border-color: ${({ theme }) =>
+                  theme[theme.mainContent]["menu-active"]};
             }
         }
     }
@@ -469,12 +535,13 @@ const LayoutContainer = Styled.div`
 `;
 
 const SmallScreenAuthInfo = Styled.div`
-    background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+    background-color: ${({ theme }) =>
+      theme[theme.mainContent]["white-background"]};
     width: 100%;
     position: fixed;
-    margin-top: ${({ hide }) => (hide ? '0px' : '72px')};
+    margin-top: ${({ hide }) => (hide ? "0px" : "72px")};
     top: 0;
-    ${({ theme }) => (!theme.rtl ? 'left' : 'right')}: 0;
+    ${({ theme }) => (!theme.rtl ? "left" : "right")}: 0;
     transition: .3s;
     opacity: ${({ hide }) => (hide ? 0 : 1)};
     z-index: ${({ hide }) => (hide ? -1 : 1)};
@@ -482,7 +549,8 @@ const SmallScreenAuthInfo = Styled.div`
     padding: 10px 0;
     @media only screen and (max-width: 767px){
         padding: 10px 15px;
-        border-top: 1px solid  ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+        border-top: 1px solid  ${({ theme }) =>
+          theme[theme.mainContent]["border-color-default"]};
     }
     .hexadash-nav-actions__searchbar{
         display: none !important;
@@ -490,12 +558,13 @@ const SmallScreenAuthInfo = Styled.div`
 `;
 
 const SmallScreenSearch = Styled.div`
-        background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background-color: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
         width: 100%;
         position: fixed;
-        margin-top: ${({ hide }) => (hide ? '0px' : '64px')};
+        margin-top: ${({ hide }) => (hide ? "0px" : "64px")};
         top: 0;
-        ${({ theme }) => (!theme.rtl ? 'left' : 'right')}: 0;
+        ${({ theme }) => (!theme.rtl ? "left" : "right")}: 0;
         transition: .3s;
         opacity: ${({ hide }) => (hide ? 0 : 1)};
         z-index: ${({ hide }) => (hide ? -1 : 999)};
@@ -507,7 +576,7 @@ const ModeSwitch = Styled.div`
     background: #ddd;
     width: 200px;
     position: fixed;
-    ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 0;
+    ${({ theme }) => (theme.rtl ? "left" : "right")}: 0;
     top: 50%;
     margin-top: -100px;
     z-index: 9999;
@@ -523,13 +592,13 @@ const ModeSwitch = Styled.div`
 const TopMenuSearch = Styled.div`
     .top-right-wrap{
         position: relative;
-        float: ${({ theme }) => (theme.rtl ? 'left' : 'right')};
+        float: ${({ theme }) => (theme.rtl ? "left" : "right")};
     }
     .search-toggle{
         display: flex;
         align-items: center;
-        ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 10px;
-        color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+        ${({ theme }) => (theme.rtl ? "margin-left" : "margin-right")}: 10px;
+        color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
         .feather-x{
             display: none;
         }
@@ -551,11 +620,11 @@ const TopMenuSearch = Styled.div`
     }
     .topMenu-search-form{
         position: absolute;
-        ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 100%;
-        ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 15px;
+        ${({ theme }) => (theme.rtl ? "left" : "right")}: 100%;
+        ${({ theme }) => (theme.rtl ? "margin-left" : "margin-right")}: 15px;
         top: 12px;
         background-color: #fff;
-        border: 1px solid ${({ theme }) => theme['border-color-normal']};
+        border: 1px solid ${({ theme }) => theme["border-color-normal"]};
         border-radius: 6px;
         height: 40px;
         width: 280px;
@@ -568,7 +637,7 @@ const TopMenuSearch = Styled.div`
             line-height: 1;
             position: absolute;
             left: 15px;
-            ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 15px;
+            ${({ theme }) => (theme.rtl ? "right" : "left")}: 15px;
             top: 50%;
             transform: translateY(-50%);
             z-index: 9999;
@@ -576,7 +645,8 @@ const TopMenuSearch = Styled.div`
         i,
         svg{
             width: 18px;
-            background-color: ${({ theme }) => theme[theme.mainContent]['gray-light-text']};
+            background-color: ${({ theme }) =>
+              theme[theme.mainContent]["gray-light-text"]};
         }
         form{
             height: auto;
@@ -591,7 +661,8 @@ const TopMenuSearch = Styled.div`
             height: 38px;
             padding-left: 40px;
             z-index: 999;
-            ${({ theme }) => (theme.rtl ? 'padding-right' : 'padding-left')}: 40px;
+            ${({ theme }) =>
+              theme.rtl ? "padding-right" : "padding-left"}: 40px;
             &:focus{
                 border: 0 none;
                 box-shadow: 0 0;
@@ -608,41 +679,51 @@ const TopMenuStyle = Styled.div`
             li{
                 display: inline-block;
                 position: relative;
-                ${({ theme }) => (theme.rtl ? 'padding-left' : 'padding-right')}: 14px;
+                ${({ theme }) =>
+                  theme.rtl ? "padding-left" : "padding-right"}: 14px;
                 @media only screen and (max-width: 1024px){
-                    ${({ theme }) => (theme.rtl ? 'padding-left' : 'padding-right')}: 10px;
+                    ${({ theme }) =>
+                      theme.rtl ? "padding-left" : "padding-right"}: 10px;
                 }
                 &:not(:last-child){
-                    ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 34px;
+                    ${({ theme }) =>
+                      theme.rtl ? "margin-left" : "margin-right"}: 34px;
                     @media only screen and (max-width: 1399px){
-                        ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 30px;
+                        ${({ theme }) =>
+                          theme.rtl ? "margin-left" : "margin-right"}: 30px;
                     }
                     @media only screen and (max-width: 1199px){
-                        ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 20px;
+                        ${({ theme }) =>
+                          theme.rtl ? "margin-left" : "margin-right"}: 20px;
                     }
                     @media only screen and (max-width: 1024px){
-                        ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 13px;
+                        ${({ theme }) =>
+                          theme.rtl ? "margin-left" : "margin-right"}: 13px;
                     }
                 }
                 .parent.active{
-                    color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["menu-active"]};
                 }
                 &.has-subMenu{
                     >a{
                         position: relative;
                         &:before{
                             position: absolute;
-                            ${({ theme }) => (theme.rtl ? 'left' : 'right')}: -14px;
+                            ${({ theme }) =>
+                              theme.rtl ? "left" : "right"}: -14px;
                             top: 50%;
                             transform: translateY(-50%);
                             font-family: "FontAwesome";
                             content: '\f107';
                             line-height: 1;
-                            color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                            color: ${({ theme }) =>
+                              theme[theme.mainContent]["light-text"]};
                         }
                         &.active{
                             &:before{
-                                color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                                color: ${({ theme }) =>
+                                  theme[theme.mainContent]["menu-active"]};
                             }
                         }
                     }
@@ -652,13 +733,15 @@ const TopMenuStyle = Styled.div`
                         position: relative;
                         &:before{
                             position: absolute;
-                            ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 30px;
+                            ${({ theme }) =>
+                              theme.rtl ? "left" : "right"}: 30px;
                             top: 50%;
                             transform: translateY(-50%);
                             font-family: "FontAwesome";
                             content: '\f105';
                             line-height: 1;
-                            color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                            color: ${({ theme }) =>
+                              theme[theme.mainContent]["light-text"]};
                         }
                     }
                 }
@@ -683,14 +766,17 @@ const TopMenuStyle = Styled.div`
                     display: flex;
                     align-items: center;
                     font-weight: 500;
-                    color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["light-text"]};
                     &.active{
-                        color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["light-text"]};
                     }
                     svg,
                     img,
                     i{
-                        ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 14px;
+                        ${({ theme }) =>
+                          theme.rtl ? "margin-left" : "margin-right"}: 14px;
                         width: 16px;
                     }
                 }
@@ -698,27 +784,39 @@ const TopMenuStyle = Styled.div`
                     li{
                         display: block;
                         position: relative;
-                        ${({ theme }) => (theme.rtl ? 'padding-left' : 'padding-right')}: 0;
-                        ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 0 !important;
+                        ${({ theme }) =>
+                          theme.rtl ? "padding-left" : "padding-right"}: 0;
+                        ${({ theme }) =>
+                          theme.rtl
+                            ? "margin-left"
+                            : "margin-right"}: 0 !important;
                         a{
                             font-weight: 400;
                             padding: 0 30px;
                             line-height: 3;
-                            color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                            color: ${({ theme }) =>
+                              theme[theme.mainContent]["light-text"]};
                             transition: .3s;
                             &:hover,
                             &[aria-current="page"]{
-                                color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
-                                background-color: ${({ theme }) => theme[theme.mainContent]['menu-active']}06;
-                                ${({ theme }) => (theme.rtl ? 'padding-right' : 'padding-left')}: 40px;
+                                color: ${({ theme }) =>
+                                  theme[theme.mainContent]["menu-active"]};
+                                background-color: ${({ theme }) =>
+                                  theme[theme.mainContent]["menu-active"]}06;
+                                ${({ theme }) =>
+                                  theme.rtl
+                                    ? "padding-right"
+                                    : "padding-left"}: 40px;
                             }
                         }
                         &:hover{
                             .subMenu{
                                 top: 0;
-                                ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 250px;
+                                ${({ theme }) =>
+                                  theme.rtl ? "right" : "left"}: 250px;
                                 @media only screen and (max-width: 1300px){
-                                    ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 180px;
+                                    ${({ theme }) =>
+                                      theme.rtl ? "right" : "left"}: 180px;
                                 }
                             }
                         }
@@ -728,10 +826,11 @@ const TopMenuStyle = Styled.div`
         }
         .subMenu{
             width: 250px;
-            background: ${({ theme }) => theme[theme.mainContent]['white-background']};
+            background: ${({ theme }) =>
+              theme[theme.mainContent]["white-background"]};
             border-radius: 6px;
             position: absolute;
-            ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 0;
+            ${({ theme }) => (theme.rtl ? "right" : "left")}: 0;
             top: 80px;
             padding: 12px 0;
             visibility: hidden;
@@ -744,9 +843,10 @@ const TopMenuStyle = Styled.div`
             }
             .subMenu{
                 width: 250px;
-                background:${({ theme }) => theme[theme.mainContent]['white-background']};
+                background:${({ theme }) =>
+                  theme[theme.mainContent]["white-background"]};
                 position: absolute;
-                ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 250px;
+                ${({ theme }) => (theme.rtl ? "right" : "left")}: 250px;
                 top: 0px;
                 padding: 12px 0;
                 visibility: hidden;
@@ -756,7 +856,7 @@ const TopMenuStyle = Styled.div`
                 box-shadow: 0px 15px 40px 0px rgba(82, 63, 105, 0.15);
                 @media only screen and (max-width: 1300px){
                     width: 200px;
-                    ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 180px;
+                    ${({ theme }) => (theme.rtl ? "right" : "left")}: 180px;
                 }
             }
         }
@@ -787,8 +887,8 @@ const TopMenuStyle = Styled.div`
                 .megaMenu-wrapper{
                     display: flex;
                     position: absolute;
-                    text-align: ${({ theme }) => (theme.rtl ? 'right' : 'left')}
-                    ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 0;
+                    text-align: ${({ theme }) => (theme.rtl ? "right" : "left")}
+                    ${({ theme }) => (theme.rtl ? "right" : "left")}: 0;
                     top: 100%;
                     overflow: hidden;
                     z-index: -1;
@@ -798,7 +898,8 @@ const TopMenuStyle = Styled.div`
                     opacity: 0;
                     visibility: hidden;
                     transition: .4s;
-                    background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+                    background-color: ${({ theme }) =>
+                      theme[theme.mainContent]["white-background"]};
                     &.megaMenu-small{
                         width: 590px;
                         >li{
@@ -814,7 +915,8 @@ const TopMenuStyle = Styled.div`
                                         height: 5px;
                                         border-radius: 50%;
                                         position: absolute;
-                                        ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 30px;
+                                        ${({ theme }) =>
+                                          theme.rtl ? "right" : "left"}: 30px;
                                         top: 50%;
                                         transform: translateY(-50%);
                                         background-color: #C6D0DC;
@@ -823,10 +925,17 @@ const TopMenuStyle = Styled.div`
                                     }
                                     &:hover,
                                     &[aria-current="page"]{
-                                        ${({ theme }) => (theme.rtl ? 'padding-right' : 'padding-left')}: 35px;
-                                        color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                                        ${({ theme }) =>
+                                          theme.rtl
+                                            ? "padding-right"
+                                            : "padding-left"}: 35px;
+                                        color: ${({ theme }) =>
+                                          theme[theme.mainContent][
+                                            "menu-active"
+                                          ]};
                                         &:after{
-                                            background-color: ${({ theme }) => theme['primary-color']};;
+                                            background-color: ${({ theme }) =>
+                                              theme["primary-color"]};;
                                         }
                                     }
                                 }
@@ -850,14 +959,19 @@ const TopMenuStyle = Styled.div`
                                 font-size: 14px;
                                 font-weight: 500;
                                 padding-left: 35px;
-                                ${({ theme }) => (theme.rtl ? 'padding-right' : 'padding-left')}: 45px;
-                                color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                                ${({ theme }) =>
+                                  theme.rtl
+                                    ? "padding-right"
+                                    : "padding-left"}: 45px;
+                                color: ${({ theme }) =>
+                                  theme[theme.mainContent]["dark-text"]};
                                 &:after{
                                     position: absolute;
                                     height: 5px;
                                     width: 5px;
                                     border-radius: 50%;
-                                    ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 30px;
+                                    ${({ theme }) =>
+                                      theme.rtl ? "right" : "left"}: 30px;
                                     top: 50%;
                                     transform: translateY(-50%);
                                     background-color: #C6D0DC;
@@ -880,11 +994,13 @@ const TopMenuStyle = Styled.div`
                             }
                             >a{
                                 line-height: 3;
-                                color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                                color: ${({ theme }) =>
+                                  theme[theme.mainContent]["light-text"]};
                                 font-weight: 400;
                                 transition: .3s;
                                 &:hover{
-                                    color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                                    color: ${({ theme }) =>
+                                      theme[theme.mainContent]["menu-active"]};
                                 }
                             }
                             
@@ -893,10 +1009,12 @@ const TopMenuStyle = Styled.div`
                                 height: 1px;
                                 border-radius: 50%;
                                 position: absolute;
-                                ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 20px;
+                                ${({ theme }) =>
+                                  theme.rtl ? "right" : "left"}: 20px;
                                 top: 50%;
                                 transform: translateY(-50%);
-                                background-color: ${({ theme }) => theme[theme.mainContent]['gray-light-text']};
+                                background-color: ${({ theme }) =>
+                                  theme[theme.mainContent]["gray-light-text"]};
                                 content: '';
                                 transition: .3s;
                                 opacity: 0;
@@ -913,24 +1031,26 @@ const TopMenuStyle = Styled.div`
 const FooterStyle = Styled(Footer)`
     padding: 20px 30px 18px;    
     font-size: 14px;
-    background-color: ${({ theme }) => theme[theme.mainContent]['light-background']};
+    background-color: ${({ theme }) =>
+      theme[theme.mainContent]["light-background"]};
     width: 100%;
     box-shadow: 0 -5px 10px rgba(146,153,184, 0.05);   
     
     .admin-footer__links{
         margin: 0 -9px;
-        text-align: ${({ theme }) => (theme.rtl ? 'left' : 'right')};
+        text-align: ${({ theme }) => (theme.rtl ? "left" : "right")};
         @media only screen and (max-width: 767px){
             text-align: center;
         }
         a {
             margin: 0 9px;
-            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
             &:hover{
-                color: ${({ theme }) => theme['primary-color']};
+                color: ${({ theme }) => theme["primary-color"]};
             }
             &:not(:last-child) {
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 15px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 15px;
             }
 
             

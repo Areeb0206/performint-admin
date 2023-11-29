@@ -1,10 +1,10 @@
-import React, { lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, { lazy } from "react";
+import { Route, Routes } from "react-router-dom";
 
-const AxiosView = lazy(() => import('../../container/crud/axios/Index'));
-const AxiosAdd = lazy(() => import('../../container/crud/axios/Add'));
-const AxiosEdit = lazy(() => import('../../container/crud/axios/Edit'));
-const NotFound = lazy(() => import('../../container/pages/404'));
+const AxiosView = lazy(() => import("../../container/crud/axios/Index"));
+const AxiosAdd = lazy(() => import("../../container/crud/axios/Add"));
+const AxiosEdit = lazy(() => import("../../container/crud/axios/Edit"));
+const NotFound = lazy(() => import("../../container/pages/404"));
 
 function AxiosRoute() {
   return (

@@ -1,33 +1,33 @@
 /* eslint-disable no-underscore-dangle */
-import axios from 'axios';
-import { getItem, clearAll } from '../../utility/localStorageControl';
+import axios from "axios";
+import { getItem, clearAll } from "../../utility/localStorageControl";
 
 const hostname = () => {
-  let hostUrl = '';
+  let hostUrl = "";
   switch (window.location.hostname) {
-    case 'broker-411.web.app': // production
-      hostUrl = 'https://broker.upforks.com/api';
+    case "broker-411.web.app": // production
+      hostUrl = "https://broker.upforks.com/api";
       break;
-    case 'localhost': // dev
-      hostUrl = 'http://localhost:4000/api';
+    case "localhost": // dev
+      hostUrl = "http://localhost:5001/api";
       // hostUrl = 'https://broker.upforks.com/api';
       break;
     default:
-      hostUrl = 'https://broker.upforks.com/api';
+      hostUrl = "https://broker.upforks.com/api";
       break;
   }
   return hostUrl;
 };
 
 const authHeader = () => ({
-  Authorization: `Bearer ${getItem('access_token')}`,
+  Authorization: `Bearer ${getItem("access_token")}`,
 });
 
 const client = axios.create({
   baseURL: hostname(),
   headers: {
-    Authorization: `Bearer ${getItem('access_token')}`,
-    'Content-Type': 'application/json',
+    Authorization: `Bearer ${getItem("access_token")}`,
+    "Content-Type": "application/json",
   },
 });
 
@@ -35,51 +35,52 @@ const addQueryParamsToUrl = (url, pathParams) => {
   let urlPath = `${url}?`;
   if (pathParams) {
     Object.entries(pathParams).forEach(([key, value]) => {
-      if (value !== null && value !== undefined && value !== '') urlPath = urlPath.concat(`${key}=${value}&`);
+      if (value !== null && value !== undefined && value !== "")
+        urlPath = urlPath.concat(`${key}=${value}&`);
     });
   }
   return urlPath;
 };
 
 class DataService {
-  static get(path = '') {
+  static get(path = "") {
     return client({
-      method: 'GET',
+      method: "GET",
       url: path,
       headers: { ...authHeader() },
     });
   }
 
-  static post(path = '', data = {}, optionalHeader = {}) {
+  static post(path = "", data = {}, optionalHeader = {}) {
     return client({
-      method: 'POST',
+      method: "POST",
       url: path,
       data,
       headers: { ...authHeader(), ...optionalHeader },
     });
   }
 
-  static patch(path = '', data = {}) {
+  static patch(path = "", data = {}) {
     return client({
-      method: 'PATCH',
+      method: "PATCH",
       url: path,
       data: JSON.stringify(data),
       headers: { ...authHeader() },
     });
   }
 
-  static put(path = '', data = {}) {
+  static put(path = "", data = {}) {
     return client({
-      method: 'PUT',
+      method: "PUT",
       url: path,
       data: JSON.stringify(data),
       headers: { ...authHeader() },
     });
   }
 
-  static delete(path = '', data = {}) {
+  static delete(path = "", data = {}) {
     return client({
-      method: 'DELETE',
+      method: "DELETE",
       url: path,
       data: JSON.stringify(data),
       headers: { ...authHeader() },
@@ -96,7 +97,10 @@ client.interceptors.request.use((config) => {
   // For example tag along the bearer access token to request header or set a cookie
   const requestConfig = config;
   const { headers } = config;
-  requestConfig.headers = { ...headers, Authorization: `Bearer ${getItem('access_token')}` };
+  requestConfig.headers = {
+    ...headers,
+    Authorization: `Bearer ${getItem("access_token")}`,
+  };
 
   return requestConfig;
 });
@@ -115,9 +119,9 @@ client.interceptors.response.use(
         // if the error is 401 and hasn't already been retried
         if (!originalRequest._retry) {
           originalRequest._retry = true; // now it can be retried
-          const refreshToken = getItem('refresh_token');
+          const refreshToken = getItem("refresh_token");
           return client
-            .post('/auth/refresh-token', { refreshToken })
+            .post("/auth/refresh-token", { refreshToken })
             .then((res) => {
               if (res.status === 200) {
                 // save the new tokens
@@ -128,8 +132,8 @@ client.interceptors.response.use(
               }
             })
             .catch((err) => {
-              console.log('error', err);
-              console.log('asdasdads');
+              console.log("error", err);
+              console.log("asdasdads");
               clearAll();
               window.location.href = `${window.location.hostname}/login`;
               // window.location.reload();
@@ -138,6 +142,6 @@ client.interceptors.response.use(
       }
     }
     return Promise.reject(error.response.data.error);
-  },
+  }
 );
 export { DataService, addQueryParamsToUrl };

@@ -1,20 +1,24 @@
-import React, { lazy, Suspense } from 'react';
-import { Row, Col, Skeleton } from 'antd';
-import { PageHeader } from '../../components/page-headers/page-headers';
-import { Cards } from '../../components/cards/frame/cards-frame';
-import { GlobalUtilityStyle } from '../styled';
+import React, { lazy, Suspense } from "react";
+import { Row, Col, Skeleton } from "antd";
+import { PageHeader } from "../../components/page-headers/page-headers";
+import { Cards } from "../../components/cards/frame/cards-frame";
+import { GlobalUtilityStyle } from "../styled";
 
-const OverviewDataList = lazy(() => import('./overview/index/OverviewDataList'));
-const SalesReport = lazy(() => import('./overview/index/SalesReport'));
-const SalesGrowth = lazy(() => import('./overview/index/SalesGrowth'));
-const SalesByLocation = lazy(() => import('./overview/index/SalesByLocation'));
-const TopSellingProduct = lazy(() => import('./overview/index/TopSellingProducts'));
-const BrowserState = lazy(() => import('./overview/index/BrowserState'));
+const OverviewDataList = lazy(() =>
+  import("./overview/index/OverviewDataList")
+);
+const SalesReport = lazy(() => import("./overview/index/SalesReport"));
+const SalesGrowth = lazy(() => import("./overview/index/SalesGrowth"));
+const SalesByLocation = lazy(() => import("./overview/index/SalesByLocation"));
+const TopSellingProduct = lazy(() =>
+  import("./overview/index/TopSellingProducts")
+);
+const BrowserState = lazy(() => import("./overview/index/BrowserState"));
 
 function Dashboard() {
   return (
     <>
-      <PageHeader
+      {/* <PageHeader
         title="Dashboard"
         className="flex items-center justify-between px-8 xl:px-[15px] pt-2 pb-6 sm:pb-[30px] bg-transparent sm:flex-col"
       />
@@ -91,7 +95,7 @@ function Dashboard() {
             </Col>
           </Row>
         </div>
-      </GlobalUtilityStyle>
+      </GlobalUtilityStyle> */}
     </>
   );
 }

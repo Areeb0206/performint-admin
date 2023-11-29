@@ -1,5 +1,5 @@
-import React, { useLayoutEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import React, { useLayoutEffect } from "react";
+import { NavLink, Link } from "react-router-dom";
 import {
   UilEnvelope,
   UilChat,
@@ -10,7 +10,6 @@ import {
   UilUsersAlt,
   UilAt,
   UilClipboardAlt,
-  // UilExpandArrowsAlt,
   UilCheckSquare,
   UilExchange,
   UilFile,
@@ -22,40 +21,46 @@ import {
   UilApps,
   UilEdit,
   UilMap,
-} from '@iconscout/react-unicons';
-import { TopMenuStyle } from './Style';
+} from "@iconscout/react-unicons";
+import { TopMenuStyle } from "./Style";
 
 function TopMenu() {
-  const path = '/admin';
+  const path = "/admin";
 
   useLayoutEffect(() => {
-    const active = document.querySelector('.hexadash-top-menu a.active');
+    const active = document.querySelector(".hexadash-top-menu a.active");
     const activeDefault = () => {
-      const megaMenu = active.closest('.megaMenu-wrapper');
-      const hasSubMenuLeft = active.closest('.has-subMenu-left');
+      const megaMenu = active.closest(".megaMenu-wrapper");
+      const hasSubMenuLeft = active.closest(".has-subMenu-left");
       if (!megaMenu) {
-        active.closest('ul').previousSibling.classList.add('active');
-        if (hasSubMenuLeft) hasSubMenuLeft.closest('ul').previousSibling.classList.add('active');
+        active.closest("ul").previousSibling.classList.add("active");
+        if (hasSubMenuLeft)
+          hasSubMenuLeft.closest("ul").previousSibling.classList.add("active");
       } else {
-        active.closest('.megaMenu-wrapper').previousSibling.classList.add('active');
+        active
+          .closest(".megaMenu-wrapper")
+          .previousSibling.classList.add("active");
       }
     };
-    window.addEventListener('load', active && activeDefault);
-    return () => window.removeEventListener('load', activeDefault);
+    window.addEventListener("load", active && activeDefault);
+    return () => window.removeEventListener("load", activeDefault);
   }, []);
 
   const addParentActive = (event) => {
-    document.querySelectorAll('.parent').forEach((element) => {
-      element.classList.remove('active');
+    document.querySelectorAll(".parent").forEach((element) => {
+      element.classList.remove("active");
     });
 
-    const hasSubMenuLeft = event.currentTarget.closest('.has-subMenu-left');
-    const megaMenu = event.currentTarget.closest('.megaMenu-wrapper');
+    const hasSubMenuLeft = event.currentTarget.closest(".has-subMenu-left");
+    const megaMenu = event.currentTarget.closest(".megaMenu-wrapper");
     if (!megaMenu) {
-      event.currentTarget.closest('ul').previousSibling.classList.add('active');
-      if (hasSubMenuLeft) hasSubMenuLeft.closest('ul').previousSibling.classList.add('active');
+      event.currentTarget.closest("ul").previousSibling.classList.add("active");
+      if (hasSubMenuLeft)
+        hasSubMenuLeft.closest("ul").previousSibling.classList.add("active");
     } else {
-      event.currentTarget.closest('.megaMenu-wrapper').previousSibling.classList.add('active');
+      event.currentTarget
+        .closest(".megaMenu-wrapper")
+        .previousSibling.classList.add("active");
     }
   };
   return (
@@ -132,19 +137,28 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/email/inbox`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/email/inbox`}
+                    >
                       Inbox
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/email/single/1585118055048`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/email/single/1585118055048`}
+                    >
                       Read Email
                     </NavLink>
                   </li>
                 </ul>
               </li>
               <li>
-                <NavLink onClick={addParentActive} to={`${path}/main/chat/private/rofiq@gmail.com`}>
+                <NavLink
+                  onClick={addParentActive}
+                  to={`${path}/main/chat/private/rofiq@gmail.com`}
+                >
                   <UilChat />
                   Chat
                 </NavLink>
@@ -156,42 +170,66 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/ecommerce/products/grid`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/ecommerce/products/grid`}
+                    >
                       Products
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/ecommerce/productDetails/1`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/ecommerce/productDetails/1`}
+                    >
                       Products Details
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/ecommerce/add-product`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/ecommerce/add-product`}
+                    >
                       Product Add
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/ecommerce/edit-product`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/ecommerce/edit-product`}
+                    >
                       Product Edit
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/ecommerce/cart`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/ecommerce/cart`}
+                    >
                       Cart
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/ecommerce/orders`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/ecommerce/orders`}
+                    >
                       Orders
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/ecommerce/sellers`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/ecommerce/sellers`}
+                    >
                       Sellers
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/ecommerce/Invoice`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/ecommerce/Invoice`}
+                    >
                       Invoices
                     </NavLink>
                   </li>
@@ -204,17 +242,26 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/profile/myProfile/overview`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/profile/myProfile/overview`}
+                    >
                       My Profile
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/profile/myProfile/timeline`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/profile/myProfile/timeline`}
+                    >
                       Timeline
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/profile/myProfile/activity`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/profile/myProfile/activity`}
+                    >
                       Activity
                     </NavLink>
                   </li>
@@ -227,22 +274,34 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/project/view/grid`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/project/view/grid`}
+                    >
                       Project Grid
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/project/view/list`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/project/view/list`}
+                    >
                       Project List
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/project/create`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/project/create`}
+                    >
                       Create Project
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/project/projectDetails/1`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/project/projectDetails/1`}
+                    >
                       Project Details
                     </NavLink>
                   </li>
@@ -250,7 +309,10 @@ function TopMenu() {
               </li>
 
               <li>
-                <NavLink onClick={addParentActive} to={`${path}/app/calendar/month`}>
+                <NavLink
+                  onClick={addParentActive}
+                  to={`${path}/app/calendar/month`}
+                >
                   <UilCalendarAlt />
                   Calendar
                 </NavLink>
@@ -262,37 +324,58 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/users/team`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/users/team`}
+                    >
                       Team
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/users/grid`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/users/grid`}
+                    >
                       Users Grid
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/users/list`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/users/list`}
+                    >
                       Users List
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/users/grid-style`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/users/grid-style`}
+                    >
                       Users Grid Style
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/users/grid-group`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/users/grid-group`}
+                    >
                       Users Group
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/users/add-user/info`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/users/add-user/info`}
+                    >
                       Add User
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/users/dataTable`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/users/dataTable`}
+                    >
                       User Table
                     </NavLink>
                   </li>
@@ -305,17 +388,26 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/contact/addNew`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/contact/addNew`}
+                    >
                       Contact Create
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/contact/grid`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/contact/grid`}
+                    >
                       Contact Grid
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/contact/list`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/contact/list`}
+                    >
                       Contact List
                     </NavLink>
                   </li>
@@ -346,12 +438,18 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/importExport/import`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/importExport/import`}
+                    >
                       Import
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/importExport/export`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/importExport/export`}
+                    >
                       Export
                     </NavLink>
                   </li>
@@ -364,7 +462,10 @@ function TopMenu() {
                 </NavLink>
               </li>
               <li>
-                <NavLink onClick={addParentActive} to={`${path}/app/support/tickets`}>
+                <NavLink
+                  onClick={addParentActive}
+                  to={`${path}/app/support/tickets`}
+                >
                   <UilHeadphones />
                   Support
                 </NavLink>
@@ -376,12 +477,18 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/importExport/import`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/importExport/import`}
+                    >
                       Course
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/importExport/export`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/importExport/export`}
+                    >
                       Course Single
                     </NavLink>
                   </li>
@@ -418,7 +525,10 @@ function TopMenu() {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/testimonials`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/testimonials`}
+                    >
                       Testimonials
                     </NavLink>
                   </li>
@@ -428,7 +538,10 @@ function TopMenu() {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/pages/search`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/pages/search`}
+                    >
                       Search Results
                     </NavLink>
                   </li>
@@ -437,12 +550,18 @@ function TopMenu() {
               <li>
                 <ul>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}pages//starter`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}pages//starter`}
+                    >
                       Blank Page
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/pages/maintenance`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/pages/maintenance`}
+                    >
                       Maintenance
                     </NavLink>
                   </li>
@@ -453,17 +572,26 @@ function TopMenu() {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/pages/comingSoon`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/pages/comingSoon`}
+                    >
                       Coming Soon
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/pages/termCondition`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/pages/termCondition`}
+                    >
                       Terms & Conditions
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/pages/changelog`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/pages/changelog`}
+                    >
                       Changelog
                     </NavLink>
                   </li>
@@ -472,37 +600,58 @@ function TopMenu() {
               <li>
                 <ul>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/knowledgebase/plugins`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/knowledgebase/plugins`}
+                    >
                       Knowledgebase
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/all-articles`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/all-articles`}
+                    >
                       All Article
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/knowledgebaseSingle/1`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/knowledgebaseSingle/1`}
+                    >
                       Single Article
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/pages/blog/blogone`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/pages/blog/blogone`}
+                    >
                       Blog One
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/pages/blog/blogtwo`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/pages/blog/blogtwo`}
+                    >
                       Blog Two
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/pages/blog/blogthree`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/pages/blog/blogthree`}
+                    >
                       Blog Three
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/pages/blog/details`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/pages/blog/details`}
+                    >
                       Blog Details
                     </NavLink>
                   </li>
@@ -519,62 +668,98 @@ function TopMenu() {
                 <span className="mega-title">Components</span>
                 <ul>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/alerts`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/alerts`}
+                    >
                       Alert
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/auto-complete`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/auto-complete`}
+                    >
                       AutoComplete
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/avatar`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/avatar`}
+                    >
                       Avatar
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/badge`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/badge`}
+                    >
                       Badge
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/breadcrumb`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/breadcrumb`}
+                    >
                       Breadcrumb
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/button`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/button`}
+                    >
                       Buttons
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/calendar`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/calendar`}
+                    >
                       Calendar
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/cards`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/cards`}
+                    >
                       Card
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/carousel`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/carousel`}
+                    >
                       Carousel
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/cascader`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/cascader`}
+                    >
                       Cascader
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/checkbox`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/checkbox`}
+                    >
                       Checkbox
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/collapse`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/collapse`}
+                    >
                       Collapse
                     </NavLink>
                   </li>
@@ -584,57 +769,90 @@ function TopMenu() {
                 <span className="mega-title">Components</span>
                 <ul>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/comments`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/comments`}
+                    >
                       Comments
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/base`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/base`}
+                    >
                       Dashboard Base
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/date-picker`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/date-picker`}
+                    >
                       DataPicker
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/drag`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/drag`}
+                    >
                       Drag & Drop
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/drawer`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/drawer`}
+                    >
                       Drawer
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/dropdown`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/dropdown`}
+                    >
                       Dropdown
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/empty`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/empty`}
+                    >
                       Empty
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/grid`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/grid`}
+                    >
                       Grid
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/input`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/input`}
+                    >
                       Input
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/list`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/list`}
+                    >
                       List
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/menu`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/menu`}
+                    >
                       Menu
                     </NavLink>
                   </li>
@@ -644,62 +862,98 @@ function TopMenu() {
                 <span className="mega-title">Components</span>
                 <ul>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/message`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/message`}
+                    >
                       Message
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/modals`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/modals`}
+                    >
                       Modals
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/notification`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/notification`}
+                    >
                       Notifications
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/page-headers`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/page-headers`}
+                    >
                       Page Headers
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/pagination`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/pagination`}
+                    >
                       Pagination
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/confirm`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/confirm`}
+                    >
                       PopConfirm
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/popover`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/popover`}
+                    >
                       PopOver
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/progress`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/progress`}
+                    >
                       Progress
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/radio`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/radio`}
+                    >
                       Radio
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/rate`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/rate`}
+                    >
                       Rate
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/result`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/result`}
+                    >
                       Result
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/select`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/select`}
+                    >
                       Select
                     </NavLink>
                   </li>
@@ -709,63 +963,99 @@ function TopMenu() {
                 <span className="mega-title">Components</span>
                 <ul>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/skeleton`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/skeleton`}
+                    >
                       Skeleton
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/slider`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/slider`}
+                    >
                       Slider
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/spiner`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/spiner`}
+                    >
                       Spiner
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/statistic`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/statistic`}
+                    >
                       Statistics
                     </NavLink>
                   </li>
 
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/steps`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/steps`}
+                    >
                       Steps
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/switch`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/switch`}
+                    >
                       Switch
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/tabs`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/tabs`}
+                    >
                       Tabs
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/tags`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/tags`}
+                    >
                       Tags
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/timeline`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/timeline`}
+                    >
                       Timeline
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/timepicker`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/timepicker`}
+                    >
                       TimePicker
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/tree-select`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/tree-select`}
+                    >
                       Tree Select
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/components/upload`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/components/upload`}
+                    >
                       Upload
                     </NavLink>
                   </li>
@@ -785,55 +1075,84 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/charts/chartjs`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/charts/chartjs`}
+                    >
                       Chart Js
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to={`${path}/charts/google-chart`}>Google Chart</NavLink>
+                    <NavLink to={`${path}/charts/google-chart`}>
+                      Google Chart
+                    </NavLink>
                   </li>
                   <li className="has-subMenu-left">
                     <Link to="#">Rechart</Link>
                     <ul className="subMenu">
                       <li>
-                        <NavLink onClick={addParentActive} to={`${path}/charts/recharts/bar`}>
+                        <NavLink
+                          onClick={addParentActive}
+                          to={`${path}/charts/recharts/bar`}
+                        >
                           Bar Chart
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink onClick={addParentActive} to={`${path}/charts/recharts/area`}>
+                        <NavLink
+                          onClick={addParentActive}
+                          to={`${path}/charts/recharts/area`}
+                        >
                           Area Charts
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink onClick={addParentActive} to={`${path}/charts/recharts/composed`}>
+                        <NavLink
+                          onClick={addParentActive}
+                          to={`${path}/charts/recharts/composed`}
+                        >
                           Composed Charts
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink onClick={addParentActive} to={`${path}/charts/recharts/line`}>
+                        <NavLink
+                          onClick={addParentActive}
+                          to={`${path}/charts/recharts/line`}
+                        >
                           Line Charts
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink onClick={addParentActive} to={`${path}/charts/recharts/pie`}>
+                        <NavLink
+                          onClick={addParentActive}
+                          to={`${path}/charts/recharts/pie`}
+                        >
                           Pie Charts
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink onClick={addParentActive} to={`${path}/charts/recharts/radar`}>
+                        <NavLink
+                          onClick={addParentActive}
+                          to={`${path}/charts/recharts/radar`}
+                        >
                           Radar Charts
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink onClick={addParentActive} to={`${path}/charts/recharts/radial`}>
+                        <NavLink
+                          onClick={addParentActive}
+                          to={`${path}/charts/recharts/radial`}
+                        >
                           Radial Charts
                         </NavLink>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/charts/peity`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/charts/peity`}
+                    >
                       Peity Chart
                     </NavLink>
                   </li>
@@ -846,22 +1165,34 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/form-layout`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/form-layout`}
+                    >
                       Form Layouts
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/form-elements`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/form-elements`}
+                    >
                       Form Elements
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/form-components`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/form-components`}
+                    >
                       Form Components
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/form-validation`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/form-validation`}
+                    >
                       Form Validation
                     </NavLink>
                   </li>
@@ -874,12 +1205,18 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/tables/basic`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/tables/basic`}
+                    >
                       Basic Table
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/tables/dataTable`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/tables/dataTable`}
+                    >
                       Data Table
                     </NavLink>
                   </li>
@@ -892,17 +1229,26 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/widgets/chart`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/widgets/chart`}
+                    >
                       Chart
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/widgets/card`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/widgets/card`}
+                    >
                       Card
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/widgets/mixed`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/widgets/mixed`}
+                    >
                       Mixed
                     </NavLink>
                   </li>
@@ -921,17 +1267,26 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/icons/feathers`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/icons/feathers`}
+                    >
                       Feather Icons(svg)
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/icons/font-awesome`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/icons/font-awesome`}
+                    >
                       Font Awesome
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/icons/antd`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/icons/antd`}
+                    >
                       Ant Design Icons
                     </NavLink>
                   </li>
@@ -951,17 +1306,26 @@ function TopMenu() {
                 </Link>
                 <ul className="subMenu">
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/maps/google`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/maps/google`}
+                    >
                       Google Maps
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/maps/leaflet`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/maps/leaflet`}
+                    >
                       Leaflet Maps
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink onClick={addParentActive} to={`${path}/maps/Vector`}>
+                    <NavLink
+                      onClick={addParentActive}
+                      to={`${path}/maps/Vector`}
+                    >
                       Vector Maps
                     </NavLink>
                   </li>

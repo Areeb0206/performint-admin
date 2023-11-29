@@ -1,5 +1,5 @@
-import Styled from 'styled-components';
-import { Alert, AutoComplete } from 'antd';
+import Styled from "styled-components";
+import { Alert, AutoComplete } from "antd";
 
 const GlobalUtilityStyle = Styled.div`
   .ant-card-body-p-25{
@@ -65,13 +65,15 @@ const GlobalUtilityStyle = Styled.div`
 
   .bg-regularBG-header-bg{
     .ant-card-head{
-      background-color: ${({ theme }) => theme[theme.mainContent]['main-background-light']};
+      background-color: ${({ theme }) =>
+        theme[theme.mainContent]["main-background-light"]};
     }
   }
 
   .ant-card-title-bb-default{··
     .ant-card-head{
-      border-bottom: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+      border-bottom: 1px solid ${({ theme }) =>
+        theme[theme.mainContent]["border-color-default"]};
     }
   }
 
@@ -87,7 +89,7 @@ const GlobalUtilityStyle = Styled.div`
         padding: 18px 0;
         font-size: 18px;
         font-weight: 600;
-        color: ${({ theme }) => theme[theme.mainContent]['text-dark']};
+        color: ${({ theme }) => theme[theme.mainContent]["text-dark"]};
         @media only screen and (max-width: 575px){
           padding-bottom: 5px;
         }
@@ -105,7 +107,7 @@ const GlobalUtilityStyle = Styled.div`
   .ant-card-extra{
     .ant-dropdown-trigger{
       >svg,>img{
-        color:${({ theme }) => theme[theme.mainContent]['gray-light-text']};
+        color:${({ theme }) => theme[theme.mainContent]["gray-light-text"]};
         width: 24px;
         height: 24px;
       }
@@ -114,13 +116,14 @@ const GlobalUtilityStyle = Styled.div`
 
   .ant-dropdown{
     a i, a svg, a img {
-        ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 8px;
+        ${({ theme }) => (theme.rtl ? "margin-left" : "margin-right")}: 8px;
     }
     a {
-        color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+        color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
     }
 
-      background-color:${({ theme }) => theme[theme.mainContent]['white-background']};
+      background-color:${({ theme }) =>
+        theme[theme.mainContent]["white-background"]};
       border: 0;
       border-radius: 5px;
       box-shadow: 0 5px 20px #9299b820;
@@ -131,17 +134,19 @@ const GlobalUtilityStyle = Styled.div`
           font-weight:400;
           font-size:14px;
           padding:6px 12px;
-          color:${({ theme }) => theme[theme.mainContent]['gray-text']};
+          color:${({ theme }) => theme[theme.mainContent]["gray-text"]};
           transition:0.3s;
           svg{
-              color:${({ theme }) => theme[theme.mainContent]['gray-light-text']};
+              color:${({ theme }) =>
+                theme[theme.mainContent]["gray-light-text"]};
               width: 14px;
               height: 14px;
               margin-right: 8px;
               transition:0.3s;
           }
           &:hover{
-              background: rgba(${({ theme }) => theme[theme.mainContent]['primary-color-rgb']},.10);
+              background: rgba(${({ theme }) =>
+                theme[theme.mainContent]["primary-color-rgb"]},.10);
               color:${({ theme }) => theme[theme.mainContent].primary};
               svg{
                   color:currentColor;
@@ -157,8 +162,9 @@ const GlobalUtilityStyle = Styled.div`
       }
     }
     .ant-table-thead > tr > th {
-      background-color: ${({ theme }) => theme[theme.mainContent]['light-background']};
-      border-color: ${({ theme }) => theme[theme.mainContent]['light-border']};
+      background-color: ${({ theme }) =>
+        theme[theme.mainContent]["light-background"]};
+      border-color: ${({ theme }) => theme[theme.mainContent]["light-border"]};
       background:transparent;
     }
     .ant-table-tbody > tr:hover > td {
@@ -179,7 +185,8 @@ const GlobalUtilityStyle = Styled.div`
       tr{
         td{
           &:first-child{
-            ${({ theme }) => (theme.rtl ? 'padding-right' : 'padding-left')}: 0 !important;
+            ${({ theme }) =>
+              theme.rtl ? "padding-right" : "padding-left"}: 0 !important;
           }
         }
       }
@@ -274,7 +281,7 @@ const GlobalUtilityStyle = Styled.div`
   .table-th-text-light {
     thead {
       th {
-        color: ${({ theme }) => theme['light-color']};
+        color: ${({ theme }) => theme["light-color"]};
       }
     }
   }
@@ -330,7 +337,7 @@ const GlobalUtilityStyle = Styled.div`
     tbody {
       tr {
         td {
-          color: ${({ theme }) => theme['gray-color']};
+          color: ${({ theme }) => theme["gray-color"]};
         }
       }
     }
@@ -407,18 +414,18 @@ const GlobalUtilityStyle = Styled.div`
   }
 
   .anticon svg {
-    color: ${({ theme }) => theme[theme.mainContent]['white-color']};
+    color: ${({ theme }) => theme[theme.mainContent]["white-color"]};
   }
 
   .ant-progress-status-success {
     .anticon svg {
-      color: ${({ theme }) => theme['success-color']};
+      color: ${({ theme }) => theme["success-color"]};
     }
   }
 
   .progress-text-body dark:text-white60 {
     .ant-progress-text {
-      color: ${({ theme }) => theme['gray-color']};
+      color: ${({ theme }) => theme["gray-color"]};
     }
   }
 
@@ -427,7 +434,7 @@ const GlobalUtilityStyle = Styled.div`
       .ant-radio-inner {
         border-width: 4px;
         &:after {
-          background: ${({ theme }) => theme['white-color']};
+          background: ${({ theme }) => theme["white-color"]};
         }
       }
     }
@@ -447,7 +454,7 @@ const GlobalUtilityStyle = Styled.div`
 
   .form-label-text-dark {
     .ant-form-item-label label {
-      color: ${({ theme }) => theme['dark-color']};
+      color: ${({ theme }) => theme["dark-color"]};
     }
   }
 
@@ -479,7 +486,7 @@ const GlobalUtilityStyle = Styled.div`
         li {
           margin-right: 2px;
           svg {
-            color: ${({ theme }) => theme['warning-color']};
+            color: ${({ theme }) => theme["warning-color"]};
           }
         }
       }
@@ -501,20 +508,21 @@ const TestimonialStyleWrapper = Styled.div`
       top: 50%;
       transform: translateY(-80%);
       z-index: 22;
-      background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+      background-color: ${({ theme }) =>
+        theme[theme.mainContent]["white-background"]};
     }
     .swiper-button-prev{
       left: 0;
       &:before{
         font-family: 'Jost', sans-serif;
-        content: url('${require('../static/img/icon/arrow-left.png')}');
+        content: url('${require("../static/img/icon/arrow-left.png")}');
       }
     }
     .swiper-button-next{
       right: 0;
       &:before{
         font-family: 'Jost', sans-serif;
-        content: url('${require('../static/img/icon/arrow-right.png')}');
+        content: url('${require("../static/img/icon/arrow-right.png")}');
       }
     }
     .theme-1 {
@@ -598,7 +606,8 @@ const TestimonialStyleWrapper = Styled.div`
       top: 50%;
       transform: translateY(-80%);
       z-index: 22;
-      background-color: ${({ theme }) => theme[theme.mainContent]['white-color']} ;
+      background-color: ${({ theme }) =>
+        theme[theme.mainContent]["white-color"]} ;
     }
     .swiper-button-next {
       right: 10px;
@@ -609,10 +618,12 @@ const TestimonialStyleWrapper = Styled.div`
 
 const FaqWrapper = Styled.div`
   .ant-card-custom-style {
-    border: 1px solid ${({ theme }) => theme[theme.mainContent]['light-border']} !important;
+    border: 1px solid ${({ theme }) =>
+      theme[theme.mainContent]["light-border"]} !important;
     .ant-collapse-header {
       padding: 18px 20px !important;
-      background-color:${({ theme }) => theme[theme.mainContent]['white-color']};
+      background-color:${({ theme }) =>
+        theme[theme.mainContent]["white-color"]};
       svg {
         width: 16px;
         height: 16px;
@@ -631,7 +642,7 @@ const PaginationStyle = Styled.div`
     .ant-pagination {
       li {
         a {
-          color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+          color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
         }
         .ant-pagination-item-link {
           display: flex;
@@ -639,13 +650,13 @@ const PaginationStyle = Styled.div`
           justify-content: center;  
           border:none;
           .anticon svg {
-            color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["light-text"]};
           }
         }
         &.ant-pagination-item-active {
           background: ${({ theme }) => theme[theme.mainContent].primary};
           a {
-            color: ${({ theme }) => theme[theme.mainContent]['white-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["white-text"]};
           }
         }
         &.ant-pagination-options{
@@ -662,7 +673,7 @@ const PaginationStyle = Styled.div`
     .ant-pagination-options {
       .ant-select-selection-item,
       .ant-select-arrow span svg {
-        color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+        color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
       }
       .ant-select-selector {
         padding: 0 7px;
@@ -683,7 +694,7 @@ const PaginationStyle = Styled.div`
     }
     .ant-select-item-dropdown-option-dark {
       .ant-select-item-option-content {
-        color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+        color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
       }
       .ant-select-item.ant-select-item-option-selected {
         background-color: ${({ theme }) => theme[theme.mainContent].primary}06;
@@ -731,7 +742,8 @@ const KnowledgebaseTopWrap = Styled.div`
             .ant-select-single:not(.ant-select-customize-input) .ant-select-selector{
                 height: 54px !important;
                 border: 0 none;
-                background-color: ${({ theme }) => theme[theme.mainContent]['input-bg']};
+                background-color: ${({ theme }) =>
+                  theme[theme.mainContent]["input-bg"]};
                 border-radius: 6px 0 0 6px !important;
                 @media only screen and (max-width: 575px){
                     border-radius: 6px !important;
@@ -740,7 +752,7 @@ const KnowledgebaseTopWrap = Styled.div`
             .ant-select{
                 min-width: 160px;
                 .ant-select-arrow{
-                    ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 30px;
+                    ${({ theme }) => (theme.rtl ? "left" : "right")}: 30px;
                     @media only screen and (max-width: 575px){
                         top: 40%;
                     }
@@ -750,9 +762,12 @@ const KnowledgebaseTopWrap = Styled.div`
                 @media only screen and (max-width: 575px){
                     width: calc(100% - 22px);
                     position: relative;
-                    ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 11px;
+                    ${({ theme }) => (theme.rtl ? "right" : "left")}: 11px;
                     border-radius: 4px;
-                    border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-secondary']} !important;
+                    border: 1px solid ${({ theme }) =>
+                      theme[theme.mainContent][
+                        "border-color-secondary"
+                      ]} !important;
                     margin-bottom: 15px;
                 }
                 .ant-select-selection-search{
@@ -763,14 +778,22 @@ const KnowledgebaseTopWrap = Styled.div`
                 }
                 .ant-select-selection-item{
                     font-size: 15px;
-                    color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
-                    text-align: ${({ theme }) => (theme.rtl ? 'right' : 'left')};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["gray-text"]};
+                    text-align: ${({ theme }) =>
+                      theme.rtl ? "right" : "left"};
                     line-height: 54px !important;
-                    ${({ theme }) => (theme.rtl ? 'border-left' : 'border-right')}: 1px solid ${({ theme }) =>
-  theme[theme.mainContent]['border-color-secondary']};
+                    ${({ theme }) =>
+                      theme.rtl
+                        ? "border-left"
+                        : "border-right"}: 1px solid ${({ theme }) =>
+  theme[theme.mainContent]["border-color-secondary"]};
                     @media only screen and (max-width: 575px){
-                        ${({ theme }) => (theme.rtl ? 'border-left' : 'border-right')}: 0px solid ${({ theme }) =>
-  theme[theme.mainContent]['border-color-secondary']};
+                        ${({ theme }) =>
+                          theme.rtl
+                            ? "border-left"
+                            : "border-right"}: 0px solid ${({ theme }) =>
+  theme[theme.mainContent]["border-color-secondary"]};
                     }
                 }
             }
@@ -787,7 +810,8 @@ const KnowledgebaseTopWrap = Styled.div`
                     height: 54px;
                     @media only screen and (max-width: 575px){
                         border-radius: 4px;
-                        border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
+                        border: 1px solid ${({ theme }) =>
+                          theme[theme.mainContent]["border-color-secondary"]};
                         margin-bottom: 15px;
                     }
                     @media only screen and (max-width: 575px){
@@ -798,10 +822,12 @@ const KnowledgebaseTopWrap = Styled.div`
                     line-height: 2;
                     border: 0 none;
                     border-radius: 0px;
-                    background-color: ${({ theme }) => theme[theme.mainContent]['input-bg']};
+                    background-color: ${({ theme }) =>
+                      theme[theme.mainContent]["input-bg"]};
                     @media only screen and (max-width: 575px){
                         border-radius: 6px;
-                        border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
+                        border: 1px solid ${({ theme }) =>
+                          theme[theme.mainContent]["border-color-secondary"]};
                     }
                     &:focus{
                         outline: none;
@@ -813,7 +839,8 @@ const KnowledgebaseTopWrap = Styled.div`
                 font-size: 15px;
                 height: 54px;
                 border-radius: 0 6px 6px 0;
-                border-radius: ${({ theme }) => (theme.rtl ? '4px 0 0 4px' : '0 4px 4px 0')};
+                border-radius: ${({ theme }) =>
+                  theme.rtl ? "4px 0 0 4px" : "0 4px 4px 0"};
                 padding: 6.4px 27.7px;
                 @media only screen and (max-width: 575px){
                     border-radius: 4px;
@@ -837,28 +864,36 @@ const KnowledgebaseTopWrap = Styled.div`
                 width: 100%;
             }
             &:first-child{
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 25px !important;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 25px !important;
                 @media only screen and (max-width: 379px){
-                    ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 0px !important;
+                    ${({ theme }) =>
+                      theme.rtl
+                        ? "margin-left"
+                        : "margin-right"}: 0px !important;
                 }
                 
             }
             &:not(:last-child){
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 20px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 20px;
                 @media only screen and (max-width: 379px){
-                    ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 0px;
+                    ${({ theme }) =>
+                      theme.rtl ? "margin-left" : "margin-right"}: 0px;
                 }
             }
             a,
             span{
                 font-size: 14px;
-                color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
             }
             a{
-                color: ${({ theme }) => theme[theme.mainContent]['light-gray-color']} !important;
+                color: ${({ theme }) =>
+                  theme[theme.mainContent]["light-gray-color"]} !important;
                 transition: .35s;
                 &:hover{
-                    color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["dark-text"]};
                     text-decoration: underline;
                 }
             }
@@ -897,7 +932,7 @@ const ChangelogWrapper = Styled.div`
     }
     .ant-collapse-content{
       border-radius: 0 0 6px 6px;
-      border-color: ${({ theme }) => theme[theme.mainContent]['light-border']};
+      border-color: ${({ theme }) => theme[theme.mainContent]["light-border"]};
       > .ant-collapse-content-box{
         padding: 30px 30px 25px;
         @media only screen and (max-width: 480px){
@@ -911,17 +946,20 @@ const ChangelogWrapper = Styled.div`
 const CollapseStyle = Styled.div`
 /* Ant Collapse */
   .ant-collapse{
-    background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
-    border-color: ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+    background-color: ${({ theme }) =>
+      theme[theme.mainContent]["white-background"]};
+    border-color: ${({ theme }) =>
+      theme[theme.mainContent]["border-color-default"]};
     border-radius: 5px;
   }
   .ant-collapse.ant-collapse-icon-position-left .ant-collapse-header{
-      color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+      color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
       padding: 12px 16px 10px 45px;
-      background-color: ${({ theme }) => theme[theme.mainContent]['light-background']};
+      background-color: ${({ theme }) =>
+        theme[theme.mainContent]["light-background"]};
   }
   .ant-collapse-content p{
-      color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+      color: ${({ theme }) => theme[theme.mainContent]["light-text"]};
       margin-bottom: 0;
   }
   .ant-collapse-content > .ant-collapse-content-box {
@@ -932,10 +970,12 @@ const CollapseStyle = Styled.div`
   }
   .ant-collapse > .ant-collapse-item,
   .ant-collapse .ant-collapse-content{
-      border-color: ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+      border-color: ${({ theme }) =>
+        theme[theme.mainContent]["border-color-default"]};
   }
   .ant-collapse > .ant-collapse-item.ant-collapse-item-disabled .ant-collapse-header{
-      color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']} !important;
+      color: ${({ theme }) =>
+        theme[theme.mainContent]["extra-light-text"]} !important;
   }
   .ant-collapse > .ant-collapse-item .ant-collapse-header{
     align-items: center;
@@ -946,26 +986,30 @@ const CollapseStyle = Styled.div`
 
   .ant-collapse .ant-collapse {
       border: 0 none;
-      background: ${({ theme }) => theme[theme.mainContent]['white-text']};
+      background: ${({ theme }) => theme[theme.mainContent]["white-text"]};
   }
 
   .ant-collapse .ant-collapse > .ant-collapse-item {
       border-bottom: 0;
   }
   .ant-collapse .ant-collapse .ant-collapse-header{
-      border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
-      background: ${({ theme }) => theme[theme.mainContent]['light-background']};
+      border: 1px solid ${({ theme }) =>
+        theme[theme.mainContent]["border-color-secondary"]};
+      background: ${({ theme }) =>
+        theme[theme.mainContent]["light-background"]};
   }
   .ant-collapse .ant-collapse .ant-collapse-content{
       margin: 20px 0 10px 0;
-      border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
+      border: 1px solid ${({ theme }) =>
+        theme[theme.mainContent]["border-color-secondary"]};
       border-radius: 0;
   }
   .ant-collapse{
     .ant-collapse-item{
       &:last-child{
         &.ant-collapse-item-disabled{
-          background-color: ${({ theme }) => theme[theme.mainContent]['light-background']};
+          background-color: ${({ theme }) =>
+            theme[theme.mainContent]["light-background"]};
         }
       }
       .ant-collapse-item{
@@ -974,11 +1018,14 @@ const CollapseStyle = Styled.div`
         }
         .ant-collapse-header{
           border-radius: 6px;
-          border-color: ${({ theme }) => theme[theme.mainContent]['light-border']};
-          background-color: ${({ theme }) => theme[theme.mainContent]['light-background']};
+          border-color: ${({ theme }) =>
+            theme[theme.mainContent]["light-border"]};
+          background-color: ${({ theme }) =>
+            theme[theme.mainContent]["light-background"]};
         }
         .ant-collapse-content{
-          border-color: ${({ theme }) => theme[theme.mainContent]['light-border']};
+          border-color: ${({ theme }) =>
+            theme[theme.mainContent]["light-border"]};
         }
       }
     }
@@ -986,7 +1033,7 @@ const CollapseStyle = Styled.div`
       display: flex;
       svg{
         width: 12px;
-        color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+        color: ${({ theme }) => theme[theme.mainContent]["light-text"]};
       }
     }
   }
@@ -999,7 +1046,7 @@ const CommentStyle = Styled.div`
       padding: 0;
   }
   .ant-comment-content-detail p{
-      color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+      color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
   }
   .ant-list-items{
       padding-top: 22px;
@@ -1014,7 +1061,7 @@ const CommentStyle = Styled.div`
       margin-top: 22px;
   }
   .ant-comment-actions li span{
-    color: ${({ theme }) => theme[theme.mainContent]['extra-light']};
+    color: ${({ theme }) => theme[theme.mainContent]["extra-light"]};
    + span{
     padding-inline-start: 6px !important;
     padding-inline-end: 0 !important;
@@ -1026,7 +1073,7 @@ const CommentStyle = Styled.div`
       border-radius: 5px;
   }
   .ant-comment-content-author-time{
-    color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+    color: ${({ theme }) => theme[theme.mainContent]["light-text"]};
   }
   // Ant comment action
   .ant-comment-actions{
@@ -1042,7 +1089,8 @@ const CommentStyle = Styled.div`
                   transform: translateY(-50%);
                   width: 1px;
                   height: 12px;
-                  background-color: ${({ theme }) => theme[theme.mainContent]['border-color-deep']};
+                  background-color: ${({ theme }) =>
+                    theme[theme.mainContent]["border-color-deep"]};
                   content: '';
               }
           }
@@ -1055,20 +1103,20 @@ const CommentStyle = Styled.div`
       }
   }
   .ant-list-split .ant-list-header {
-    color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
-    border-color: ${({ theme }) => theme[theme.mainContent]['light-border']};
+    color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
+    border-color: ${({ theme }) => theme[theme.mainContent]["light-border"]};
   }
   .ant-comment-actions li {
       margin-bottom: 0!important;
   }
   .ant-comment-actions>li {
-    color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+    color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
     display: inline-block;
 }
 `;
 
 const AlertWrap = Styled(Alert)`
-  border-radius: ${({ shape }) => (!shape ? '4px' : '40px')} !important;
+  border-radius: ${({ shape }) => (!shape ? "4px" : "40px")} !important;
   border-width: 0 !important;
   margin: 0!important;
   padding: 16.5px 20px!important;
@@ -1109,7 +1157,7 @@ const AlertWrap = Styled(Alert)`
     font-size: 12px;
     line-height: 1.5;
     font-weight: 500;
-    color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+    color: ${({ theme }) => theme[theme.mainContent]["extra-light-text"]};
   }
 
   ${({ showIcon, theme }) =>
@@ -1120,7 +1168,7 @@ const AlertWrap = Styled(Alert)`
     }
     .ant-alert-icon{
       top: 20px !important;
-      ${theme.rtl ? 'right' : 'left'}: 15px !important;
+      ${theme.rtl ? "right" : "left"}: 15px !important;
     }
     .ant-alert-message{
       margin-top: -2px;
@@ -1132,13 +1180,13 @@ const AlertWrap = Styled(Alert)`
       width: 50px;
       position: absolute;
       top: 0;
-      ${theme.rtl ? 'right' : 'left'}: 0;
+      ${theme.rtl ? "right" : "left"}: 0;
     }`}
 
 
   .ant-alert-close-icon {
     top: 12px !important;
-    ${({ theme }) => (!theme.rtl ? 'right' : 'left')}: 20px !important;
+    ${({ theme }) => (!theme.rtl ? "right" : "left")}: 20px !important;
     svg,
     span,
     img,
@@ -1153,8 +1201,8 @@ const AutoCompleteStyled = Styled(AutoComplete)`
     display: block !important;
     .ant-select-selection-placeholder{
         padding: 0 20px !important;
-        text-align: ${({ theme }) => (theme.rtl ? 'right' : 'left')};
-        ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 2px !important;
+        text-align: ${({ theme }) => (theme.rtl ? "right" : "left")};
+        ${({ theme }) => (theme.rtl ? "right" : "left")}: 2px !important;
     }
     &.ant-select{
         .ant-select-selector{
@@ -1163,37 +1211,46 @@ const AutoCompleteStyled = Styled(AutoComplete)`
             height: 37px;
             border-radius: 4px;
             padding: 0 !important;
-            background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
-            border-color: ${({ theme }) => theme[theme.mainContent]['border-color-default']} !important;
+            background-color: ${({ theme }) =>
+              theme[theme.mainContent]["white-background"]};
+            border-color: ${({ theme }) =>
+              theme[theme.mainContent]["border-color-default"]} !important;
             .ant-select-selection-search{
                 .ant-input-affix-wrapper{
                     padding: 0 20px;
-                    background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
-                    border-color: ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+                    background-color: ${({ theme }) =>
+                      theme[theme.mainContent]["white-background"]};
+                    border-color: ${({ theme }) =>
+                      theme[theme.mainContent]["border-color-default"]};
                     input{
-                        background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+                        background-color: ${({ theme }) =>
+                          theme[theme.mainContent]["white-background"]};
                     }
                 }
                 .ant-input-suffix{
                     svg,
                     i{
-                        color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["extra-light-text"]};
                     }
                 }
             }
             textarea{
-                background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
-                border-color: ${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
+                background-color: ${({ theme }) =>
+                  theme[theme.mainContent]["white-background"]};
+                border-color: ${({ theme }) =>
+                  theme[theme.mainContent]["border-color-secondary"]};
             }
         }
     }
     
     .ant-select-selector input{
         height: 33px !important;
-        ${({ theme }) => (theme.rtl ? 'padding-right' : 'padding-left')}: 0 !important;
+        ${({ theme }) =>
+          theme.rtl ? "padding-right" : "padding-left"}: 0 !important;
     }
     .ant-select-selection-search{
-        ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 20px;
+        ${({ theme }) => (theme.rtl ? "right" : "left")}: 20px;
         width: auto;
         @media only screen and (max-width: 575px){
             width: 100% !important;
@@ -1209,17 +1266,20 @@ const AutoCompleteStyled = Styled(AutoComplete)`
         }
         .ant-input-suffix{
             height: auto;
-            border-radius: ${({ theme }) => (theme.rtl ? '4px 0 0 4px' : '0 4px 4px 0')}; 
+            border-radius: ${({ theme }) =>
+              theme.rtl ? "4px 0 0 4px" : "0 4px 4px 0"}; 
             svg,
             i{
-                color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+                color: ${({ theme }) =>
+                  theme[theme.mainContent]["extra-light-text"]};
             }
             .search-btn{
                 height: 38px;
                 border-radius: 0px 4px 4px 0px;
                 svg,
                 i{
-                    color: ${({ theme }) => theme[theme.mainContent]['white-color']} !important;
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["white-color"]} !important;
                 }
             }
         }
@@ -1254,9 +1314,11 @@ const CalendarWrapperPage = Styled.div`
         width: 100%;
         border-radius: 10px;
         border: 0 none;
-        background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background-color: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
         margin-bottom: 25px;
-        box-shadow: 0 5px 20px ${({ theme }) => theme[theme.mainContent]['light-text']}03;
+        box-shadow: 0 5px 20px ${({ theme }) =>
+          theme[theme.mainContent]["light-text"]}03;
         @media only screen and (max-width: 1599px){
             padding: 40px 35px 50px;
         }
@@ -1270,7 +1332,7 @@ const CalendarWrapperPage = Styled.div`
                 }
                 &.react-calendar__tile--hasActive{
                     background-color: transparent;
-                    color: ${({ theme }) => theme['primary-color']}
+                    color: ${({ theme }) => theme["primary-color"]}
                 }
             }
         }
@@ -1281,19 +1343,20 @@ const CalendarWrapperPage = Styled.div`
         height: auto;
         button{
           background-color: transparent !important;
-          color: color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+          color: color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
         }
         .react-calendar__navigation__arrow{
             font-size: 20px;
             min-width: auto;
-            color: color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: color: ${({ theme }) =>
+              theme[theme.mainContent]["gray-text"]};
         }
         .react-calendar__navigation__label{
             flex-grow: 0 !important;
             font-size: 16px;
             font-weight: 500;
             margin: 0 15px;
-            color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
             &:hover{
               background-color: transparent
             }
@@ -1309,7 +1372,8 @@ const CalendarWrapperPage = Styled.div`
                 font-size: 13px;
                 font-weight: 500;
                 text-decoration: none;
-                color: ${({ theme }) => theme[theme.mainContent]['gray-light-text']};
+                color: ${({ theme }) =>
+                  theme[theme.mainContent]["gray-light-text"]};
                 @media only screen and (max-width: 1300px){
                     font-size: 11px;
                 }
@@ -1330,22 +1394,24 @@ const CalendarWrapperPage = Styled.div`
             &:hover{
                 background-color: transparent;
                 font-weight: 500;
-                color: color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                color: color: ${({ theme }) =>
+                  theme[theme.mainContent]["dark-text"]};
             }
             &.react-calendar__month-view__days__day--neighboringMonth{
                 abbr{
-                    color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["extra-light-text"]};
                 }
             }
             abbr{
                 font-size: 12px;
-                color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
             }
             &.react-calendar__tile--now{
                 padding: 0.929em 0.5em;
                 background-color: transparent;
                 border-radius: 6px;
-                border: 1px solid ${({ theme }) => theme['primary-color']};
+                border: 1px solid ${({ theme }) => theme["primary-color"]};
             }
             &.react-calendar__tile--active{
                 border-radius: 6px;
@@ -1383,15 +1449,18 @@ const CalendarWrapperPage = Styled.div`
                 border-radius: 4px;
                 text-transform: capitalize;
                 cursor: pointer;
-                color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
-                border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
-                background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+                color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
+                border: 1px solid ${({ theme }) =>
+                  theme[theme.mainContent]["border-color-default"]};
+                background-color: ${({ theme }) =>
+                  theme[theme.mainContent]["white-background"]};
                 @media only screen and (max-width: 479px){
                     margin-bottom: 15px;
                 }
             }
             .react-calendar{
-                ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: 30px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-right" : "margin-left"}: 30px;
                 padding: 0;
                 border: none;
                 .react-calendar__navigation{
@@ -1402,7 +1471,8 @@ const CalendarWrapperPage = Styled.div`
                         padding: 0 20px;
                     }
                     .react-calendar__navigation__arrow {
-                        border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+                        border: 1px solid ${({ theme }) =>
+                          theme[theme.mainContent]["border-color-default"]};
                         border-radius: 5px;
                         width: 34px;
                         height: 34px;
@@ -1414,7 +1484,8 @@ const CalendarWrapperPage = Styled.div`
                 }
                 .react-calendar__viewContainer{
                     position: absolute;
-                    background: ${({ theme }) => theme[theme.mainContent]['white-background']};
+                    background: ${({ theme }) =>
+                      theme[theme.mainContent]["white-background"]};
                     z-index: 999;
                     border: 1px solid #ddd;
                     display: none;
@@ -1426,9 +1497,11 @@ const CalendarWrapperPage = Styled.div`
             .calender-head__navigation{
                 display: flex;
                 align-items: center;
-                ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: 30px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-right" : "margin-left"}: 30px;
                 @media only screen and (max-width: 479px){
-                    ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: 0px;
+                    ${({ theme }) =>
+                      theme.rtl ? "margin-right" : "margin-left"}: 0px;
                 }
                 .btn-navigate{
                     display: flex;
@@ -1438,11 +1511,14 @@ const CalendarWrapperPage = Styled.div`
                     height: 34px;
                     padding: 0;
                     cursor: pointer;
-                    border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
-                    background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+                    border: 1px solid ${({ theme }) =>
+                      theme[theme.mainContent]["border-color-default"]};
+                    background-color: ${({ theme }) =>
+                      theme[theme.mainContent]["white-background"]};
                     i,
                     svg{
-                        color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["light-text"]};
                     }
                 }
                 .date-label{
@@ -1450,7 +1526,8 @@ const CalendarWrapperPage = Styled.div`
                     margin: 0 20px;
                     font-size: 16px;
                     font-weight: 500;
-                    color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["dark-text"]};
                     @media only screen and (max-width: 575px){
                       font-size: 12px;
                     }
@@ -1471,46 +1548,66 @@ const CalendarWrapperPage = Styled.div`
                 li{
                     display: inline-block;
                     &:first-child{
-                        ${({ theme }) => (theme.rtl ? 'border-right' : 'border-left')}: 1px solid ${({ theme }) =>
-  theme[theme.mainContent]['border-color-default']};
+                        ${({ theme }) =>
+                          theme.rtl
+                            ? "border-right"
+                            : "border-left"}: 1px solid ${({ theme }) =>
+  theme[theme.mainContent]["border-color-default"]};
                     }
                     &:not(:first-child){
                         a{
-                            ${({ theme }) => (theme.rtl ? 'border-top-right-radius' : 'border-top-left-radius')}: 0px;
                             ${({ theme }) =>
-                              theme.rtl ? 'border-bottom-right-radius' : 'border-bottom-left-radius'}: 0px;
+                              theme.rtl
+                                ? "border-top-right-radius"
+                                : "border-top-left-radius"}: 0px;
+                            ${({ theme }) =>
+                              theme.rtl
+                                ? "border-bottom-right-radius"
+                                : "border-bottom-left-radius"}: 0px;
                         }
                     }
                     &:not(:last-child){
                         a{
-                            ${({ theme }) => (theme.rtl ? 'border-top-left-radius' : 'border-top-right-radius')}: 0px;
                             ${({ theme }) =>
-                              theme.rtl ? 'border-bottom-left-radius' : 'border-bottom-right-radius'}: 0px;
+                              theme.rtl
+                                ? "border-top-left-radius"
+                                : "border-top-right-radius"}: 0px;
+                            ${({ theme }) =>
+                              theme.rtl
+                                ? "border-bottom-left-radius"
+                                : "border-bottom-right-radius"}: 0px;
                         }
                     }
                     a{
                         font-size: 13px;
                         font-weight: 500;
-                        color: ${({ theme }) => theme[theme.mainContent]['gray-light-text']};
-                        border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
-                        ${({ theme }) => (theme.rtl ? 'border-right' : 'border-left')}: 0px;
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["gray-light-text"]};
+                        border: 1px solid ${({ theme }) =>
+                          theme[theme.mainContent]["border-color-default"]};
+                        ${({ theme }) =>
+                          theme.rtl ? "border-right" : "border-left"}: 0px;
                         display: block;
                         border-radius: 4px;
                         padding: 6px 13.24px;
                         &.active{
                             color: #fff;
-                            border-color: ${({ theme }) => theme['primary-color']};
-                            background-color: ${({ theme }) => theme['primary-color']};
+                            border-color: ${({ theme }) =>
+                              theme["primary-color"]};
+                            background-color: ${({ theme }) =>
+                              theme["primary-color"]};
                         }
                     }
                 }
             }
             .schedule-list{
                 margin-left: 20px;
-                ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: 20px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-right" : "margin-left"}: 20px;
                 display: flex;
                 align-items: center;
-                color: ${({ theme }) => theme[theme.mainContent]['gray-light-text']};
+                color: ${({ theme }) =>
+                  theme[theme.mainContent]["gray-light-text"]};
                 @media only screen and (max-width: 479px){
                     margin: 15px 0 0 0;
                 }
@@ -1518,11 +1615,12 @@ const CalendarWrapperPage = Styled.div`
                 img,
                 i{
                     margin-right: 6px;
-                    ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 6px;
-                    color: ${({ theme }) => theme['primary-color']};
+                    ${({ theme }) =>
+                      theme.rtl ? "margin-left" : "margin-right"}: 6px;
+                    color: ${({ theme }) => theme["primary-color"]};
                 }
                 &.active{
-                    color: ${({ theme }) => theme['primary-color']};
+                    color: ${({ theme }) => theme["primary-color"]};
                 }
             }
         }
@@ -1530,7 +1628,8 @@ const CalendarWrapperPage = Styled.div`
 
     .table-event{
         
-        border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+        border: 1px solid ${({ theme }) =>
+          theme[theme.mainContent]["border-color-default"]};
         &.table-responsive{
             @media only screen and (max-width: 1599px){
                 display: block;
@@ -1542,12 +1641,16 @@ const CalendarWrapperPage = Styled.div`
             th,
             td{
                 padding: 16px 0;
-                border-bottom: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+                border-bottom: 1px solid ${({ theme }) =>
+                  theme[theme.mainContent]["border-color-default"]};
                 &:first-child{
                     min-width: 75px;
                     padding: 16px 18px 16px 18px;
-                    ${({ theme }) => (theme.rtl ? 'border-left' : 'border-right')}: 1px solid color: ${({ theme }) =>
-  theme[theme.mainContent]['border-color-default']};
+                    ${({ theme }) =>
+                      theme.rtl
+                        ? "border-left"
+                        : "border-right"}: 1px solid color: ${({ theme }) =>
+  theme[theme.mainContent]["border-color-default"]};
                     
                 }
             }
@@ -1555,7 +1658,7 @@ const CalendarWrapperPage = Styled.div`
         thead{
             th{
                 padding: 0 22px;
-                background-color: ${({ theme }) => theme['bg-color-light']};
+                background-color: ${({ theme }) => theme["bg-color-light"]};
                 p{
                     font-size: 14px;
                     font-weight: 500;
@@ -1568,24 +1671,25 @@ const CalendarWrapperPage = Styled.div`
                 padding: 0 10px;
                 font-size: 12px;
                 min-width: 140px;
-                color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["light-text"]};
                 .currentTime{
                     width: calc(100% + 20px);
                     height: 1px;
                     display: block;
                     position: relative;
-                    ${({ theme }) => (theme.rtl ? 'right' : 'left')}: -10px;
+                    ${({ theme }) => (theme.rtl ? "right" : "left")}: -10px;
                     z-index: 222;
                     &:after{
                         position: absolute;
                         left: 0;
-                        ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 0px;
+                        ${({ theme }) => (theme.rtl ? "right" : "left")}: 0px;
                         top: -6px;
                         width: 12px;
                         height: 12px;
                         border-radius: 50%;
                         content: '';
-                        background-color: ${({ theme }) => theme['secondary-color']};
+                        background-color: ${({ theme }) =>
+                          theme["secondary-color"]};
                     }
                 }
                 .day-event-item{
@@ -1598,7 +1702,7 @@ const CalendarWrapperPage = Styled.div`
                     &:after{
                         position: absolute;
                         left: 0;
-                        ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 0px;
+                        ${({ theme }) => (theme.rtl ? "right" : "left")}: 0px;
                         bottom: 0;
                         width: 2px;
                         height: 100%;
@@ -1607,43 +1711,49 @@ const CalendarWrapperPage = Styled.div`
                     }
                     &.primary{
                         background-color: #EFEFFE;
-                        color: ${({ theme }) => theme['primary-color']};
+                        color: ${({ theme }) => theme["primary-color"]};
                         &:hover{
-                            color: ${({ theme }) => theme['primary-color']};
+                            color: ${({ theme }) => theme["primary-color"]};
                         }
                         &:after{
-                            background-color: ${({ theme }) => theme['primary-color']};
+                            background-color: ${({ theme }) =>
+                              theme["primary-color"]};
                         }
                     }
                     &.secondary{
                         background-color: #FFF0F6;
-                        color: ${({ theme }) => theme['secondary-color']};
+                        color: ${({ theme }) => theme["secondary-color"]};
                         &:hover{
-                            color: ${({ theme }) => theme['secondary-color']};
+                            color: ${({ theme }) => theme["secondary-color"]};
                         }
                         &:after{
-                            background-color: ${({ theme }) => theme['secondary-color']};
+                            background-color: ${({ theme }) =>
+                              theme["secondary-color"]};
                         }
                     }
                     &.success{
                         background-color: #E8FAF4;
-                        color: ${({ theme }) => theme['success-color']};
+                        color: ${({ theme }) => theme["success-color"]};
                         &:after{
-                            background-color: ${({ theme }) => theme['success-color']};
+                            background-color: ${({ theme }) =>
+                              theme["success-color"]};
                         }
                     }
                     &.warning{
                         background-color: #FFF3E6;
-                        color: ${({ theme }) => theme['warning-color']};
+                        color: ${({ theme }) => theme["warning-color"]};
                         &:after{
-                            background-color: ${({ theme }) => theme['warning-color']};
+                            background-color: ${({ theme }) =>
+                              theme["warning-color"]};
                         }
                     }
                     &.info{
-                        background-color: ${({ theme }) => theme['info-color']}10;
-                        color: ${({ theme }) => theme['info-color']};
+                        background-color: ${({ theme }) =>
+                          theme["info-color"]}10;
+                        color: ${({ theme }) => theme["info-color"]};
                         &:after{
-                            background-color: ${({ theme }) => theme['info-color']};
+                            background-color: ${({ theme }) =>
+                              theme["info-color"]};
                         }
                     }
                     .event-title{
@@ -1663,7 +1773,7 @@ const CalendarWrapperPage = Styled.div`
         font-size: 18px;
         align-items: center;
         justify-content: center;
-        color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+        color: ${({ theme }) => theme[theme.mainContent]["light-text"]};
     }
 
     .event-week{
@@ -1671,8 +1781,11 @@ const CalendarWrapperPage = Styled.div`
             th,
             td{
                 &:not(:last-child){
-                    ${({ theme }) => (theme.rtl ? 'border-left' : 'border-right')}: 1px solid color: ${({ theme }) =>
-  theme[theme.mainContent]['border-color-default']};
+                    ${({ theme }) =>
+                      theme.rtl
+                        ? "border-left"
+                        : "border-right"}: 1px solid color: ${({ theme }) =>
+  theme[theme.mainContent]["border-color-default"]};
                 }
             }
         }
@@ -1684,7 +1797,8 @@ const CalendarWrapperPage = Styled.div`
                         font-size: 13px;
                         font-weight: 400;
                         margin-bottom: 2px;
-                        color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["light-text"]};
                     }
                     .week-date{
                         display: inline-block;
@@ -1708,7 +1822,8 @@ const CalendarWrapperPage = Styled.div`
     .schedule-event{
         tr{
             &:hover{
-                box-shadow: 0 15px 40px ${({ theme }) => theme[theme.mainContent]['light-text']}15;
+                box-shadow: 0 15px 40px ${({ theme }) =>
+                  theme[theme.mainContent]["light-text"]}15;
                 td{
                     border-color: #fff;
                 }
@@ -1718,7 +1833,8 @@ const CalendarWrapperPage = Styled.div`
                 vertical-align: top;
                 font-size: 14px;
                 &:first-child{
-                    ${({ theme }) => (theme.rtl ? 'border-left' : 'border-right')}: 0 none;
+                    ${({ theme }) =>
+                      theme.rtl ? "border-left" : "border-right"}: 0 none;
                 }
                 &.schedule-time{
                     direction: ltr;
@@ -1732,14 +1848,16 @@ const CalendarWrapperPage = Styled.div`
                 }
                 .schedule-date{
                     font-weight: 500;
-                    color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["dark-text"]};
                 }
                 .schedule-date-name{
                     margin-left: 10px;
                 }
                 .event-title{
                     font-weight: 500;
-                    color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["dark-text"]};
                     @media only screen and (max-width: 575px){
                         display: inline-block;
                         margin-top: 6px; 
@@ -1747,7 +1865,8 @@ const CalendarWrapperPage = Styled.div`
                 }
                 .schedule-time{
                     font-size: 13px;
-                    color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["light-text"]};
                 }
             }
         }
@@ -1761,7 +1880,7 @@ const CalendarWrapperPage = Styled.div`
                 position: absolute;
                 top: 0;
                 left: 0;
-                ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 0;
+                ${({ theme }) => (theme.rtl ? "right" : "left")}: 0;
                 padding: 5px 12px;
                 z-index: 1;
                 border-radius: 4px;
@@ -1803,7 +1922,8 @@ const CalendarWrapperPage = Styled.div`
         align-items: stretch;
         padding: 25px;
         border-radius: 10px;
-        background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background-color: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
         @media only screen and (max-width: 575px){
           padding: 10px;
         }
@@ -1844,7 +1964,8 @@ const CalendarWrapperPage = Styled.div`
         vertical-align: middle;
         font-size: 15px;
         min-height: 0;
-        background-color: ${({ theme }) => theme[theme.mainContent]['main-background']};
+        background-color: ${({ theme }) =>
+          theme[theme.mainContent]["main-background"]};
         @media only screen and (max-width: 575px){
           padding: 10px;
         }
@@ -1855,7 +1976,7 @@ const CalendarWrapperPage = Styled.div`
           border-radius: 0 10px 0 0;
         }
         span{
-          color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+          color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
           @media only screen and (max-width: 575px){
             font-size: 12px;
           }
@@ -1898,19 +2019,19 @@ const CalendarWrapperPage = Styled.div`
           font-size: 12px;
         }
         &.primary{
-          background-color: ${({ theme }) => theme['primary-color']};
+          background-color: ${({ theme }) => theme["primary-color"]};
         }
         &.secondary{
-          background-color: ${({ theme }) => theme['secondary-color']};
+          background-color: ${({ theme }) => theme["secondary-color"]};
         }
         &.info{
-          background-color: ${({ theme }) => theme['info-color']};
+          background-color: ${({ theme }) => theme["info-color"]};
         }
         &.warning{
-          background-color: ${({ theme }) => theme['warning-color']};
+          background-color: ${({ theme }) => theme["warning-color"]};
         }
         &.success{
-          background-color: ${({ theme }) => theme['success-color']};
+          background-color: ${({ theme }) => theme["success-color"]};
         }
       }
       .rbc-slot-selecting .rbc-event {
@@ -1960,32 +2081,36 @@ const CalendarWrapperPage = Styled.div`
       }
       .rbc-month-view {
         position: relative;
-        border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+        border: 1px solid ${({ theme }) =>
+          theme[theme.mainContent]["border-color-default"]};
         display: flex;
         flex-direction: column;
         flex: 1 0 0;
         width: 100%;
         user-select: none;
         height: 100%;
-        background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background-color: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
         border-radius: 10px;
       }
       .rbc-month-row{
         &:not(:last-child){
           .rbc-day-bg {
-            border-bottom: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+            border-bottom: 1px solid ${({ theme }) =>
+              theme[theme.mainContent]["border-color-default"]};
           }
         }
       }
       .rbc-date-cell{
         &.rbc-off-range{
           .rbc-button-link{
-            color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+            color: ${({ theme }) =>
+              theme[theme.mainContent]["extra-light-text"]};
           }
         }
         .rbc-button-link{
           margin-top: 5px;
-          color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+          color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
           @media only screen and (max-width: 575px){
             font-size: 12px;
           }
@@ -2030,11 +2155,12 @@ const CalendarWrapperPage = Styled.div`
       .rbc-day-bg {
         flex: 1 0 0%;
         &:not(:last-child){
-          border-right: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+          border-right: 1px solid ${({ theme }) =>
+            theme[theme.mainContent]["border-color-default"]};
         }
         &.rbc-today{
           position: relative;
-          background-color: ${({ theme }) => theme['primary-color']}15;
+          background-color: ${({ theme }) => theme["primary-color"]}15;
           &:after{
             position: absolute;
             left: 0;
@@ -2042,7 +2168,7 @@ const CalendarWrapperPage = Styled.div`
             width: 100%;
             height: 2px;
             content: '';
-            background-color: ${({ theme }) => theme['primary-color']};
+            background-color: ${({ theme }) => theme["primary-color"]};
           }
         }
       }
@@ -2093,7 +2219,8 @@ const CalendarWrapperPage = Styled.div`
         width: 100%;
         border-spacing: 0;
         border-collapse: collapse;
-        border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+        border: 1px solid ${({ theme }) =>
+          theme[theme.mainContent]["border-color-default"]};
       }
       .rbc-agenda-view table.rbc-agenda-table{
         thead{
@@ -2102,7 +2229,8 @@ const CalendarWrapperPage = Styled.div`
         tbody{
           >tr{
             &:not(:last-child){
-              border-bottom: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+              border-bottom: 1px solid ${({ theme }) =>
+                theme[theme.mainContent]["border-color-default"]};
             }
             &:hover{
               box-shadow: 0 15px 40px rgba(146,153,184,.08);
@@ -2117,14 +2245,14 @@ const CalendarWrapperPage = Styled.div`
             .rbc-agenda-date-cell,
             .rbc-agenda-event-cell{
               font-weight: 500;
-              color: ${({ theme }) => theme[theme.mainContent]['dark-text']}
+              color: ${({ theme }) => theme[theme.mainContent]["dark-text"]}
             }
             .rbc-agenda-time-cell{
               span{
                 font-size: 13px;
                 position: relative;
                 padding-left: 20px;
-                color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["light-text"]};
                 &:after{
                   position: absolute;
                   top: 50%;
@@ -2141,7 +2269,7 @@ const CalendarWrapperPage = Styled.div`
               .rbc-agenda-time-cell{
                 span{
                   &:after{
-                    background-color: ${({ theme }) => theme['primary-color']};
+                    background-color: ${({ theme }) => theme["primary-color"]};
                   }
                 }
               }
@@ -2150,7 +2278,8 @@ const CalendarWrapperPage = Styled.div`
               .rbc-agenda-time-cell{
                 span{
                   &:after{
-                    background-color: ${({ theme }) => theme['secondary-color']};
+                    background-color: ${({ theme }) =>
+                      theme["secondary-color"]};
                   }
                 }
               }
@@ -2159,7 +2288,7 @@ const CalendarWrapperPage = Styled.div`
               .rbc-agenda-time-cell{
                 span{
                   &:after{
-                    background-color: ${({ theme }) => theme['info-color']};
+                    background-color: ${({ theme }) => theme["info-color"]};
                   }
                 }
               }
@@ -2168,7 +2297,7 @@ const CalendarWrapperPage = Styled.div`
               .rbc-agenda-time-cell{
                 span{
                   &:after{
-                    background-color: ${({ theme }) => theme['success-color']};
+                    background-color: ${({ theme }) => theme["success-color"]};
                   }
                 }
               }
@@ -2344,13 +2473,16 @@ const CalendarWrapperPage = Styled.div`
         width: 100%;
         min-height: 0;
         border-radius: 10px;
-        border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+        border: 1px solid ${({ theme }) =>
+          theme[theme.mainContent]["border-color-default"]};
         .rbc-time-header{
           .rbc-label{
-            background-color: ${({ theme }) => theme[theme.mainContent]['main-background']};
+            background-color: ${({ theme }) =>
+              theme[theme.mainContent]["main-background"]};
           }
           .rbc-header{
-            border-left: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+            border-left: 1px solid ${({ theme }) =>
+              theme[theme.mainContent]["border-color-default"]};
           }
           
           .rbc-event{
@@ -2366,38 +2498,38 @@ const CalendarWrapperPage = Styled.div`
               content: "";
             }
             &.primary{
-              background-color: ${({ theme }) => theme['primary-color']}15;
-              color: ${({ theme }) => theme['primary-color']};
+              background-color: ${({ theme }) => theme["primary-color"]}15;
+              color: ${({ theme }) => theme["primary-color"]};
               &:after{
-                background-color: ${({ theme }) => theme['primary-color']};
+                background-color: ${({ theme }) => theme["primary-color"]};
               }
             }
             &.secondary{
-              background-color: ${({ theme }) => theme['secondary-color']}15;
-              color: ${({ theme }) => theme['secondary-color']};
+              background-color: ${({ theme }) => theme["secondary-color"]}15;
+              color: ${({ theme }) => theme["secondary-color"]};
               &:after{
-                background-color: ${({ theme }) => theme['secondary-color']};
+                background-color: ${({ theme }) => theme["secondary-color"]};
               }
             }
             &.info{
-              background-color: ${({ theme }) => theme['info-color']}15;
-              color: ${({ theme }) => theme['info-color']};
+              background-color: ${({ theme }) => theme["info-color"]}15;
+              color: ${({ theme }) => theme["info-color"]};
               &:after{
-                background-color: ${({ theme }) => theme['info-color']};
+                background-color: ${({ theme }) => theme["info-color"]};
               }
             }
             &.warning{
-              background-color: ${({ theme }) => theme['warning-color']}15;
-              color: ${({ theme }) => theme['warning-color']};
+              background-color: ${({ theme }) => theme["warning-color"]}15;
+              color: ${({ theme }) => theme["warning-color"]};
               &:after{
-                background-color: ${({ theme }) => theme['warning-color']};
+                background-color: ${({ theme }) => theme["warning-color"]};
               }
             }
             &.success{
-              background-color: ${({ theme }) => theme['success-color']}15;
-              color: ${({ theme }) => theme['success-color']};
+              background-color: ${({ theme }) => theme["success-color"]}15;
+              color: ${({ theme }) => theme["success-color"]};
               &:after{
-                background-color: ${({ theme }) => theme['success-color']};
+                background-color: ${({ theme }) => theme["success-color"]};
               }
             }
           }
@@ -2407,18 +2539,21 @@ const CalendarWrapperPage = Styled.div`
             .rbc-timeslot-group{
               align-items: center;
               justify-content: center;
-              border-top: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+              border-top: 1px solid ${({ theme }) =>
+                theme[theme.mainContent]["border-color-default"]};
               .rbc-time-slot{
                 span{
                   font-size: 14px;
                   display: inline-block;
-                  color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                  color: ${({ theme }) =>
+                    theme[theme.mainContent]["gray-text"]};
                 }
               }
             }
           }
           .rbc-day-slot {
-            border-left: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+            border-left: 1px solid ${({ theme }) =>
+              theme[theme.mainContent]["border-color-default"]};
           }
           .rbc-event{
             position: relative;
@@ -2433,38 +2568,38 @@ const CalendarWrapperPage = Styled.div`
               content: "";
             }
             &.primary{
-              background-color: ${({ theme }) => theme['primary-color']}15;
-              color: ${({ theme }) => theme['primary-color']};
+              background-color: ${({ theme }) => theme["primary-color"]}15;
+              color: ${({ theme }) => theme["primary-color"]};
               &:after{
-                background-color: ${({ theme }) => theme['primary-color']};
+                background-color: ${({ theme }) => theme["primary-color"]};
               }
             }
             &.secondary{
-              background-color: ${({ theme }) => theme['secondary-color']}15;
-              color: ${({ theme }) => theme['secondary-color']};
+              background-color: ${({ theme }) => theme["secondary-color"]}15;
+              color: ${({ theme }) => theme["secondary-color"]};
               &:after{
-                background-color: ${({ theme }) => theme['secondary-color']};
+                background-color: ${({ theme }) => theme["secondary-color"]};
               }
             }
             &.info{
-              background-color: ${({ theme }) => theme['info-color']}15;
-              color: ${({ theme }) => theme['info-color']};
+              background-color: ${({ theme }) => theme["info-color"]}15;
+              color: ${({ theme }) => theme["info-color"]};
               &:after{
-                background-color: ${({ theme }) => theme['info-color']};
+                background-color: ${({ theme }) => theme["info-color"]};
               }
             }
             &.warning{
-              background-color: ${({ theme }) => theme['warning-color']}15;
-              color: ${({ theme }) => theme['warning-color']};
+              background-color: ${({ theme }) => theme["warning-color"]}15;
+              color: ${({ theme }) => theme["warning-color"]};
               &:after{
-                background-color: ${({ theme }) => theme['warning-color']};
+                background-color: ${({ theme }) => theme["warning-color"]};
               }
             }
             &.success{
-              background-color: ${({ theme }) => theme['success-color']}15;
-              color: ${({ theme }) => theme['success-color']};
+              background-color: ${({ theme }) => theme["success-color"]}15;
+              color: ${({ theme }) => theme["success-color"]};
               &:after{
-                background-color: ${({ theme }) => theme['success-color']};
+                background-color: ${({ theme }) => theme["success-color"]};
               }
             }
             .rbc-event-content{
@@ -2504,7 +2639,8 @@ const CalendarWrapperPage = Styled.div`
         .rbc-row-bg{
           .rbc-day-bg{
             &:first-child{
-              border-left: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};;
+              border-left: 1px solid ${({ theme }) =>
+                theme[theme.mainContent]["border-color-default"]};;
             }
           }
         }
@@ -2526,7 +2662,8 @@ const CalendarWrapperPage = Styled.div`
         display: flex;
         min-width: 0;
         flex-direction: column;
-        background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background-color: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
         .rbc-header{
           border-radius: 0px;
           &:last-child{
@@ -2534,7 +2671,8 @@ const CalendarWrapperPage = Styled.div`
           }
         }
         .rbc-row{
-          background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+          background-color: ${({ theme }) =>
+            theme[theme.mainContent]["white-background"]};
         }
       }
       .rbc-rtl .rbc-time-header-content {
@@ -2589,11 +2727,12 @@ const DatePickerWrapper = Styled.div`
 .ant-picker{
   padding: 6px 11px 6px;
   width: 100%;
-  border-color:${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
+  border-color:${({ theme }) =>
+    theme[theme.mainContent]["border-color-secondary"]};
   border-radius: 5px;
 }
 .ant-picker-input > input{
-  color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+  color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
 }
 .ant-picker-range .ant-picker-input > input{
   text-align: center;
@@ -2622,7 +2761,7 @@ const ItemWraper = Styled.div`
         font-size: 18px;
         position: absolute;
         top: -50px;
-        ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 100px;
+        ${({ theme }) => (theme.rtl ? "right" : "left")}: 100px;
         font-weight: 400;
         @media only screen and (max-width: 767px) {
           top: -30px;
@@ -2636,8 +2775,9 @@ const ItemWraper = Styled.div`
                 &.rdrStaticRangeSelected{
                     span{
                         font-weight: 400;
-                        color: ${({ theme }) => theme['primary-color']};
-                        background-color: rgba(${({ theme }) => theme[theme.mainContent]['primary-color-rgb']},.10);
+                        color: ${({ theme }) => theme["primary-color"]};
+                        background-color: rgba(${({ theme }) =>
+                          theme[theme.mainContent]["primary-color-rgb"]},.10);
                     }
                 }
                 .rdrStaticRangeLabel{
@@ -2658,13 +2798,15 @@ const ItemWraper = Styled.div`
                 .rdrMonthName{
                     font-size: 13px;
                     font-weight: 500;
-                    color: ${({ theme }) => theme[theme.mainContent]['dark-color']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["dark-color"]};
                 }
             }
             .rdrDays{
                 .rdrSelected, 
                 .rdrInRange{                    
-                    background-color: ${({ theme }) => theme[theme.mainContent]['white-color']};
+                    background-color: ${({ theme }) =>
+                      theme[theme.mainContent]["white-color"]};
                     left: 0 !important;
                     right: 0 !important;
                 }
@@ -2693,7 +2835,8 @@ const ItemWraper = Styled.div`
                 .rdrDayEndOfMonth .rdrDayStartPreview.rdrDayEndPreview,
                 .rdrDayStartOfMonth .rdrDayStartPreview.rdrDayEndPreview{
                     border-radius: 1.042em;
-                    color: ${({ theme }) => theme[theme.mainContent]['white-color']} !important;
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["white-color"]} !important;
                 }
                 
                 .rdrDayEndPreview,
@@ -2701,7 +2844,8 @@ const ItemWraper = Styled.div`
                 .rdrDayInPreview{
                     border: 0 none;
                     background-color: #EFEFFE;
-                    color: ${({ theme }) => theme[theme.mainContent]['dark-color']} !important;
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["dark-color"]} !important;
                     top: 0;
                     bottom: 0;
                 }
@@ -2710,23 +2854,26 @@ const ItemWraper = Styled.div`
                 .rdrEndEdge,
                 .rdrDayStartPreview,
                 .rdrDayEndPreview{
-                    background-color: ${({ theme }) => theme['primary-color']};
+                    background-color: ${({ theme }) => theme["primary-color"]};
                 }
 
                 .rdrDay:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span,
                 .rdrDay:not(.rdrDayPassive) .rdrDayInPreview ~ .rdrDayNumber span, 
                 .rdrDay:not(.rdrDayPassive) .rdrSelected ~ .rdrDayNumber span{
-                    color: ${({ theme }) => theme[theme.mainContent]['dark-color']} !important;
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["dark-color"]} !important;
                 }
                 .rdrDay:not(.rdrDayPassive).rdrDayHovered .rdrInRange ~ .rdrDayNumber span,
                 .rdrDay:not(.rdrDayPassive).rdrDayHovered .rdrDayInPreview ~ .rdrDayNumber span, 
                 .rdrDay:not(.rdrDayPassive).rdrDayHovered .rdrSelected ~ .rdrDayNumber span{
-                    color: ${({ theme }) => theme[theme.mainContent]['white-color']} !important;
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["white-color"]} !important;
                 }
                 .rdrDay:not(.rdrDayPassive) .rdrDayEndPreview ~ .rdrDayNumber span,
                 .rdrDay:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span, 
                 .rdrDay:not(.rdrDayPassive) .rdrEndEdge ~ .rdrDayNumber span{
-                    color: ${({ theme }) => theme[theme.mainContent]['white-color']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["white-color"]};
                 }
                 .rdrDay{
                     margin-bottom: 3px;
@@ -2742,12 +2889,15 @@ const ItemWraper = Styled.div`
                         z-index: 10;
                     }
                     &.rdrDayToday{
-                        background-color: ${({ theme }) => theme['primary-color']};
-                        color: ${({ theme }) => theme[theme.mainContent]['white-color']};
+                        background-color: ${({ theme }) =>
+                          theme["primary-color"]};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["white-color"]};
                         border-radius: 50%;
                         .rdrDayNumber{
                             span{
-                                color: ${({ theme }) => theme[theme.mainContent]['white-color']};
+                                color: ${({ theme }) =>
+                                  theme[theme.mainContent]["white-color"]};
                                 &:after{
                                     display: none;
                                 }
@@ -2789,7 +2939,8 @@ const ArticleListWrap = Styled.div`
     .ant-collapse-header{
         display: flex;
         padding: 0 0 0 18px !important;
-        padding: ${({ theme }) => (theme.rtl ? '0 18px 0 0' : '0 0 0 18px')} !important;
+        padding: ${({ theme }) =>
+          theme.rtl ? "0 18px 0 0" : "0 0 0 18px"} !important;
         background-color: transparent;
         .ant-collapse-expand-icon{
             display: flex;
@@ -2799,7 +2950,7 @@ const ArticleListWrap = Styled.div`
             margin-right: 8px;
             margin-top: 7px;
             top: 6px;
-            ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 0px;
+            ${({ theme }) => (theme.rtl ? "right" : "left")}: 0px;
         }
     }
     .ant-collapse-content {
@@ -2889,16 +3040,18 @@ const TopToolBox = Styled.div`
 const KnowledgeDetailsWrap = Styled.div`
   .knowledge-details-custom-collapse {
     border: 0 none;
-    background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+    background-color: ${({ theme }) =>
+      theme[theme.mainContent]["white-background"]};
     > .ant-collapse-item .ant-collapse-header .ant-collapse-arrow{
-        top: ${({ theme }) => (!theme.rtl ? '-3px' : '15px')};
+        top: ${({ theme }) => (!theme.rtl ? "-3px" : "15px")};
     }
     .ant-collapse-item{
       border: 0 none;
       .ant-collapse-header{
         position: relative;
         padding: 0;
-        background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background-color: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
         .anticon{
           display: inline-flex;
           align-items: center;
@@ -2909,20 +3062,21 @@ const KnowledgeDetailsWrap = Styled.div`
           background-color: #fff;
           box-shadow: 0 2px 2px #92949F30;
           &.anticon-right{
-            ${({ theme }) => (theme.rtl ? 'right' : 'left')}: auto;
-            ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 0;
+            ${({ theme }) => (theme.rtl ? "right" : "left")}: auto;
+            ${({ theme }) => (theme.rtl ? "left" : "right")}: 0;
           }
           svg,
           img,
           i{
             min-width: 14px;
-            color: ${({ theme }) => theme['primary-color']};
+            color: ${({ theme }) => theme["primary-color"]};
           } 
         }
       }
       .ant-collapse-content {
         border: 0 none;
-        background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background-color: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
         .ant-collapse-content-box{
           padding: 0;
         }
@@ -2966,14 +3120,15 @@ const MixedCardWrap = Styled.div`
 `;
 
 const OverviewCard = Styled.div`
-    background: ${({ theme }) => theme[theme.mainContent]['white-background']};
+    background: ${({ theme }) => theme[theme.mainContent]["white-background"]};
     border-radius: 10px;
     padding: 25px 25px 20px;
     overflow: hidden;
     position: relative;
     z-index: 0;
     margin-bottom: 30px;
-    ${({ theme }) => (theme.topMenu ? 'min-height: 595px' : 'min-height: auto')};
+    ${({ theme }) =>
+      theme.topMenu ? "min-height: 595px" : "min-height: auto"};
     @media only screen and (max-width: 991px){
         min-height: auto;
     }
@@ -2982,9 +3137,9 @@ const OverviewCard = Styled.div`
         content: '';
         width: 100%;
         height: 215px;
-        background:linear-gradient(45deg, ${({ theme }) => theme['secondary-color']}, ${({ theme }) =>
-  theme['warning-color']});
-  ${({ theme }) => (theme.rtl ? 'right' : 'left')}:0;
+        background:linear-gradient(45deg, ${({ theme }) =>
+          theme["secondary-color"]}, ${({ theme }) => theme["warning-color"]});
+  ${({ theme }) => (theme.rtl ? "right" : "left")}:0;
         top: 0;
         z-index:-1;
     }
@@ -3003,13 +3158,14 @@ const OverviewCard = Styled.div`
                 margin-bottom: 0;
             }
             p{
-                color: ${({ theme }) => theme['light-color']};
+                color: ${({ theme }) => theme["light-color"]};
             }
         }
         .growth-downward,
         .growth-upward{
             span{
-                ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: 6px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-right" : "margin-left"}: 6px;
             }
         }
         .overview-box-percentage{
@@ -3019,23 +3175,23 @@ const OverviewCard = Styled.div`
     .ant-card{
         box-shadow: 0 10px 30px rgba(146,153,184,0.15);
         .growth-upward{
-            color: ${({ theme }) => theme['success-color']};
+            color: ${({ theme }) => theme["success-color"]};
             font-weight: 600;
             display: inline-flex;
             align-items: center;
             span{
-                color: ${({ theme }) => theme['light-gray-color']};
+                color: ${({ theme }) => theme["light-gray-color"]};
                 font-weight: 400;
                 font-size: 13px;
             }
         }
         .growth-downward{
-            color: ${({ theme }) => theme['danger-color']};
+            color: ${({ theme }) => theme["danger-color"]};
             font-weight: 600;
             display: inline-flex;
             align-items: center;
             span{
-                color: ${({ theme }) => theme['light-gray-color']};
+                color: ${({ theme }) => theme["light-gray-color"]};
                 font-weight: 400;
                 font-size: 13px;
             }
@@ -3057,7 +3213,8 @@ const OverviewCard = Styled.div`
             svg,
             img,
             i{
-                ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: 8px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-right" : "margin-left"}: 8px;
             }
         }
     }
@@ -3076,24 +3233,26 @@ const ProjectHeader = Styled.div`
     }
     .ant-page-header-heading{
         .ant-page-header-heading-title{
-            color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
             @media only screen and (max-width: 767px){
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 12px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 12px;
             }
         }
     }
     .ant-page-header-heading-sub-title{
-        ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 0;
+        ${({ theme }) => (theme.rtl ? "margin-left" : "margin-right")}: 0;
         position: relative;
-        ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 15px;
+        ${({ theme }) => (!theme.rtl ? "padding-left" : "padding-right")}: 15px;
         font-weight: 500;
         &:before{
             position: absolute;
             content: '';
             width: 1px;
             height: 24px;
-            background: ${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
-            ${({ theme }) => (!theme.rtl ? 'left' : 'right')}: 0;
+            background: ${({ theme }) =>
+              theme[theme.mainContent]["border-color-secondary"]};
+            ${({ theme }) => (!theme.rtl ? "left" : "right")}: 0;
             top:0;
         }
     }
@@ -3129,9 +3288,11 @@ const ProjectSorting = Styled.div`
         }
 
         .project-sort-group{
-            ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: auto;
+            ${({ theme }) =>
+              theme.rtl ? "margin-right" : "margin-left"}: auto;
             @media only screen and (max-width: 1299px){
-                ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: 0;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-right" : "margin-left"}: 0;
             }
             @media only screen and (max-width: 1199px){
                 margin: 15px 0 0;
@@ -3153,9 +3314,11 @@ const ProjectSorting = Styled.div`
                 li{
                     
                     a{
-                        color: ${({ theme }) => theme[theme.mainContent]['gray-light-text']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["gray-light-text"]};
                         &:hover{
-                            color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                            color: ${({ theme }) =>
+                              theme[theme.mainContent]["menu-active"]};
                         }
                     }
                 }
@@ -3190,8 +3353,9 @@ const ProjectSorting = Styled.div`
         }
         .project-sort-group .sort-group .ant-select {
             min-width: 170px;
-            ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 5px;
-            ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 5px;
+            ${({ theme }) =>
+              !theme.rtl ? "padding-left" : "padding-right"}: 5px;
+            ${({ theme }) => (theme.rtl ? "margin-left" : "margin-right")}: 5px;
         }
     }
     @media (max-width: 1199px){
@@ -3215,13 +3379,15 @@ const ProjectSorting = Styled.div`
     }
     @media (max-width: 991px){
         .project-sort-group{
-            ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: unset;
+            ${({ theme }) =>
+              theme.rtl ? "margin-right" : "margin-left"}: unset;
             flex: 0 0 100%;
             margin-top: 15px;
             .sort-group{
                 justify-content: flex-start;
                 .layout-style{
-                    ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: auto;
+                    ${({ theme }) =>
+                      theme.rtl ? "margin-right" : "margin-left"}: auto;
                 }
             }
         }
@@ -3237,7 +3403,8 @@ const ProjectSorting = Styled.div`
     }
 
     nav{
-        background: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
         border-radius: 5px;
         padding: 9px 20px;
         ul{
@@ -3248,22 +3415,31 @@ const ProjectSorting = Styled.div`
             align-items: center;
             justify-content: space-between;
             li{
-                ${({ theme }) => (theme.rtl ? 'padding-left' : 'padding-right')}: 12px;
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 11px;
-                ${({ theme }) => (theme.rtl ? 'border-left' : 'border-right')}: 1px solid ${({ theme }) =>
-  theme[theme.mainContent]['border-color-default']};
+                ${({ theme }) =>
+                  theme.rtl ? "padding-left" : "padding-right"}: 12px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 11px;
+                ${({ theme }) =>
+                  theme.rtl ? "border-left" : "border-right"}: 1px solid ${({
+  theme,
+}) => theme[theme.mainContent]["border-color-default"]};
                 &:last-child{
-                    ${({ theme }) => (theme.rtl ? 'padding-left' : 'padding-right')}: 0;
-                    ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 0;
-                    ${({ theme }) => (theme.rtl ? 'border-left' : 'border-right')}: 0 none;
+                    ${({ theme }) =>
+                      theme.rtl ? "padding-left" : "padding-right"}: 0;
+                    ${({ theme }) =>
+                      theme.rtl ? "margin-left" : "margin-right"}: 0;
+                    ${({ theme }) =>
+                      theme.rtl ? "border-left" : "border-right"}: 0 none;
                 }
                 a{
-                    color: ${({ theme }) => theme[theme.mainContent]['gray-light-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["gray-light-text"]};
                     font-weight: 400;
                 }
                 &.active{
                     a{
-                        color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["menu-active"]};
                     }
                 }
             }
@@ -3272,46 +3448,56 @@ const ProjectSorting = Styled.div`
     .ant-select-selection-search-input{
         border: 0 none;
         border-radius: 23px;
-        background-color: ${({ theme }) => theme[theme.mainContent]['input-bg']};
+        background-color: ${({ theme }) =>
+          theme[theme.mainContent]["input-bg"]};
         input{
             height: 40px !important;
             border-radius: 23px;
-            background-color: ${({ theme }) => theme[theme.mainContent]['input-bg']};
+            background-color: ${({ theme }) =>
+              theme[theme.mainContent]["input-bg"]};
         }
         .ant-input-suffix{
             svg{
-                color: ${({ theme }) => theme[theme.mainContent]['gray-light-text']};
+                color: ${({ theme }) =>
+                  theme[theme.mainContent]["gray-light-text"]};
             }
         }
     }
     .ant-select-arrow{
         right: auto;
-        ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 11px !important;
+        ${({ theme }) => (theme.rtl ? "left" : "right")}: 11px !important;
         svg{
-            color: ${({ theme }) => theme[theme.mainContent]['gray-light-text']};
+            color: ${({ theme }) =>
+              theme[theme.mainContent]["gray-light-text"]};
         }
     }
     
     .sort-group{
-        color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+        color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
         display: flex;
         align-items: center;
         justify-content: flex-end;
 
                
         .ant-select{
-            ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 10px;
-            ${({ theme }) => (!theme.rtl ? 'margin-left' : 'margin-right')}: 15px;
+            ${({ theme }) =>
+              !theme.rtl ? "padding-left" : "padding-right"}: 10px;
+            ${({ theme }) =>
+              !theme.rtl ? "margin-left" : "margin-right"}: 15px;
             @media only screen and (max-width: 575px){
-                ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 0px;
-                ${({ theme }) => (!theme.rtl ? 'margin-right' : 'margin-left')}: 15px;
+                ${({ theme }) =>
+                  !theme.rtl ? "padding-left" : "padding-right"}: 0px;
+                ${({ theme }) =>
+                  !theme.rtl ? "margin-right" : "margin-left"}: 15px;
             }
             min-width: 260px;
             .ant-select-selector{
                 border: 0 none;
-                background-color: ${({ theme }) => theme[theme.mainContent]['input-bg']};
+                background-color: ${({ theme }) =>
+                  theme[theme.mainContent]["input-bg"]};
                 .ant-select-selection-item{                    
-                    color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["gray-text"]};
                 }
                 
             }
@@ -3319,7 +3505,8 @@ const ProjectSorting = Styled.div`
         .layout-style{
             display: flex;
             align-items: center;
-            ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: 20px;
+            ${({ theme }) =>
+              theme.rtl ? "margin-right" : "margin-left"}: 20px;
             a{
                 display: flex;
                 width: 40px;
@@ -3327,11 +3514,13 @@ const ProjectSorting = Styled.div`
                 border-radius: 50%;
                 align-items: center;
                 justify-content: center;
-                color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
                 &:hover,
                 &.active{
-                    color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
-                    background: ${({ theme }) => theme[theme.mainContent]['white-background']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["menu-active"]};
+                    background: ${({ theme }) =>
+                      theme[theme.mainContent]["white-background"]};
                 }
                 svg{
                     width: 16px;
@@ -3358,7 +3547,8 @@ const ProjectSorting = Styled.div`
                 justify-content: center;
                 margin-bottom: -5px;
                 li{
-                    ${({ theme }) => (theme.rtl ? 'border-left' : 'border-right')}: 0 none;
+                    ${({ theme }) =>
+                      theme.rtl ? "border-left" : "border-right"}: 0 none;
                     margin-bottom: 5px;
                 }
             }
@@ -3389,8 +3579,9 @@ const ProjectCard = Styled.div`
             align-items: center;
             margin: -2px;
             a{
-                color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 11px !important;
+                color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 11px !important;
             }
             a,
             .ant-tag{
@@ -3399,44 +3590,49 @@ const ProjectCard = Styled.div`
             .ant-tag{
                 text-transform: uppercase;
                 font-size: 10px;
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 0;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 0;
                 line-height: 18px;
                 background: red;
                 color: #fff;
                 border: 0 none;
                 &.early{
-                    background: ${({ theme }) => theme['primary-color']};
+                    background: ${({ theme }) => theme["primary-color"]};
                 }
                 &.progress{
                     background: #FF4D4F;
                 }
                 &.late{
-                    background: ${({ theme }) => theme['warning-color']};
+                    background: ${({ theme }) => theme["warning-color"]};
                 }
                 &.complete{
-                    background: ${({ theme }) => theme['success-color']};
+                    background: ${({ theme }) => theme["success-color"]};
                 }
             }
         }
         .ant-dropdown-trigger{
-            color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+            color: ${({ theme }) =>
+              theme[theme.mainContent]["extra-light-text"]};
             svg{
-                color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+                color: ${({ theme }) =>
+                  theme[theme.mainContent]["extra-light-text"]};
             }
         }
     }
     .project-desc{
         margin: 7px 0 25px 0;
-        color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+        color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
     }
     .project-timing{
         display: flex;
         align-items: center;
         margin-bottom: 15px;
         div{
-            ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 30px;
+            ${({ theme }) =>
+              theme.rtl ? "margin-left" : "margin-right"}: 30px;
             &:last-child{
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 0;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 0;
             }
             span, strong{
                 display: block;
@@ -3444,18 +3640,18 @@ const ProjectCard = Styled.div`
             span{
                 font-size: 12px;
                 margin-bottom: 2px;
-                color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
             }
             strong{
                 font-weight: 500;
-                color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
             }
         }
     }
     .project-progress{
         p{
             margin: 2px 0 0 0;
-            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
             font-size: 12px;
         }
         .ant-progress-text{
@@ -3467,18 +3663,19 @@ const ProjectCard = Styled.div`
         &.ant-progress-status-success{
             .ant-progress-text{
                 svg{
-                    color: ${({ theme }) => theme['success-color']};
+                    color: ${({ theme }) => theme["success-color"]};
                 }
             }
         }
     }
     .project-assignees{
-        border-top: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+        border-top: 1px solid ${({ theme }) =>
+          theme[theme.mainContent]["border-color-default"]};
         margin-top: 17px;
         padding-top: 16px;
         p{
             font-size: 14px;
-            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
         }
         ul{
             margin: -3px;
@@ -3516,13 +3713,13 @@ const ProjectListTitle = Styled.div`
         font-weight: 500;
         margin-bottom: 5px;
         a{
-            color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
         }
     }
     p{
         margin: 0;
         font-size: 12px;
-        color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+        color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
     }
 `;
 
@@ -3551,7 +3748,7 @@ const ProjectList = Styled.div`
         p{
             margin: 4px 0 0 0;
             font-size: 13px;
-            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
         }
     }
     .date-started,
@@ -3559,13 +3756,17 @@ const ProjectList = Styled.div`
         font-weight: 500;
     }
     .ant-table{
-        background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background-color: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
         .ant-table-thead{
             tr{
                 th{
-                    color: ${({ theme }) => theme[theme.mainContent]['gray-light-text']};
-                    background-color: ${({ theme }) => theme[theme.mainContent]['main-background-light']};
-                    border-bottom-color: ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["gray-light-text"]};
+                    background-color: ${({ theme }) =>
+                      theme[theme.mainContent]["main-background-light"]};
+                    border-bottom-color: ${({ theme }) =>
+                      theme[theme.mainContent]["border-color-default"]};
                 }
             }
         }
@@ -3573,7 +3774,8 @@ const ProjectList = Styled.div`
             tr{
                 &:hover{
                     td{
-                        background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+                        background-color: ${({ theme }) =>
+                          theme[theme.mainContent]["white-background"]};
                     }
                 }
                 .ant-tag{
@@ -3581,22 +3783,26 @@ const ProjectList = Styled.div`
                         background-color: #FF4D4F;
                     }
                     &.late{
-                        background-color: ${({ theme }) => theme['warning-color']};
+                        background-color: ${({ theme }) =>
+                          theme["warning-color"]};
                     }
                     &.complete{
-                        background-color: ${({ theme }) => theme['success-color']};
+                        background-color: ${({ theme }) =>
+                          theme["success-color"]};
                     }
                 }
                 td{
-                    color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
-                    border-bottom-color: ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["gray-text"]};
+                    border-bottom-color: ${({ theme }) =>
+                      theme[theme.mainContent]["border-color-default"]};
                 }
             }
             .ant-progress{
                 &.ant-progress-status-success{
                     .ant-progress-text{
                         svg{
-                           color: ${({ theme }) => theme['success-color']};
+                           color: ${({ theme }) => theme["success-color"]};
                         }
                     }
                 }
@@ -3611,22 +3817,30 @@ const ProjectList = Styled.div`
     }
     .ant-table-container table > thead > tr th{
         font-weight: 400;
-        color: ${({ theme }) => theme[theme.mainContent]['light-text']};
-        border-top: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+        color: ${({ theme }) => theme[theme.mainContent]["light-text"]};
+        border-top: 1px solid ${({ theme }) =>
+          theme[theme.mainContent]["border-color-default"]};
     }
     .ant-table-container table > thead > tr th:first-child{
-        border-radius: ${({ theme }) => (theme.rtl ? '0 10px 10px 0' : '10px 0 0 10px')} !important;
-        ${({ theme }) => (!theme.rtl ? 'border-left' : 'border-right')}: 1px solid ${({ theme }) =>
-  theme[theme.mainContent]['border-color-default']};
+        border-radius: ${({ theme }) =>
+          theme.rtl ? "0 10px 10px 0" : "10px 0 0 10px"} !important;
+        ${({ theme }) =>
+          !theme.rtl ? "border-left" : "border-right"}: 1px solid ${({
+  theme,
+}) => theme[theme.mainContent]["border-color-default"]};
     }
     .ant-table-container table > thead > tr th:last-child{
-        border-radius: ${({ theme }) => (!theme.rtl ? '0 10px 10px 0' : '10px 0 0 10px')} !important;
-        ${({ theme }) => (theme.rtl ? 'border-left' : 'border-right')}: 1px solid ${({ theme }) =>
-  theme[theme.mainContent]['border-color-default']};
+        border-radius: ${({ theme }) =>
+          !theme.rtl ? "0 10px 10px 0" : "10px 0 0 10px"} !important;
+        ${({ theme }) =>
+          theme.rtl ? "border-left" : "border-right"}: 1px solid ${({
+  theme,
+}) => theme[theme.mainContent]["border-color-default"]};
     }
     .ant-dropdown-trigger{
         svg{
-            color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+            color: ${({ theme }) =>
+              theme[theme.mainContent]["extra-light-text"]};
         }
     }
 `;
@@ -3649,8 +3863,9 @@ const ProjectDetailsWrapper = Styled.div`
             }
         }
         h1{
-            color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
-            ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 20px;
+            color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
+            ${({ theme }) =>
+              theme.rtl ? "margin-left" : "margin-right"}: 20px;
             margin-bottom: 0;
             font-size: 20px;
             @media only screen and (max-width: 800px) {
@@ -3663,18 +3878,21 @@ const ProjectDetailsWrapper = Styled.div`
         button{
             font-size: 12px;
             font-weight: 500;
-            ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 10px;
+            ${({ theme }) =>
+              theme.rtl ? "margin-left" : "margin-right"}: 10px;
             height: 35px;
             padding: 0px 13.5px;
             &.btn-markComplete{
-                color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
-                background: ${({ theme }) => theme[theme.mainContent]['white-background']};
+                color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
+                background: ${({ theme }) =>
+                  theme[theme.mainContent]["white-background"]};
                 transition: .25s;
-                border-color: ${({ theme }) => theme[theme.mainContent]['border-color-deep']};
+                border-color: ${({ theme }) =>
+                  theme[theme.mainContent]["border-color-deep"]};
                 &:hover{
-                    color: ${({ theme }) => theme['primary-color']};
+                    color: ${({ theme }) => theme["primary-color"]};
                     svg{
-                        color: ${({ theme }) => theme['primary-color']};
+                        color: ${({ theme }) => theme["primary-color"]};
                     }
                 }
             }
@@ -3693,25 +3911,28 @@ const ProjectDetailsWrapper = Styled.div`
             align-items: center;
             justify-content: center;
             margin: 0 5px;
-            border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
-            box-shadow: 0 3px 5px ${({ theme }) => theme[theme.mainContent]['gray-text']}05;
+            border: 1px solid ${({ theme }) =>
+              theme[theme.mainContent]["border-color-secondary"]};
+            box-shadow: 0 3px 5px ${({ theme }) =>
+              theme[theme.mainContent]["gray-text"]}05;
             svg,
             img{
                 width: 14px;
                 height: 14px;
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 6px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 6px;
             }
         }
         .project-edit{
-            color: ${({ theme }) => theme['primary-color']};
+            color: ${({ theme }) => theme["primary-color"]};
         }
         .project-remove{
-            color: ${({ theme }) => theme['danger-color']};
+            color: ${({ theme }) => theme["danger-color"]};
         }
     }
     .project-progress{
         border-radius: 10px;
-        background: ${({ theme }) => theme['success-color']};
+        background: ${({ theme }) => theme["success-color"]};
         padding: 20px 25px 20px;
         margin-bottom: 25px;
         h3{
@@ -3733,7 +3954,8 @@ const ProjectDetailsWrapper = Styled.div`
     }
     .about-project-wrapper{
         min-height: 485px;
-        background: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
         border-radius: 10px;
         margin-bottom: 25px;
         @media only screen and (max-width: 1199px) {
@@ -3748,7 +3970,8 @@ const ProjectDetailsWrapper = Styled.div`
             margin-bottom: 0;
         }
         > div{
-            ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 20px;
+            ${({ theme }) =>
+              theme.rtl ? "margin-left" : "margin-right"}: 20px;
         }
         a{
             display: flex;
@@ -3767,17 +3990,17 @@ const ProjectDetailsWrapper = Styled.div`
             font-size: 20px;
             font-weight: 600;
             margin: 0 0 3px;
-            color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
         }
         p{
-            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
             margin: 0;
         }
         .color-primary{
             a{
                 background: rgba(251,53,34,0.1);
                 svg{
-                    color: ${({ theme }) => theme['primary-color']};
+                    color: ${({ theme }) => theme["primary-color"]};
                 }
             }
         }
@@ -3785,7 +4008,7 @@ const ProjectDetailsWrapper = Styled.div`
             a{
                 background: rgba(95,99,242,0.1);
                 svg{
-                    color: ${({ theme }) => theme['secondary-color']};
+                    color: ${({ theme }) => theme["secondary-color"]};
                 }
             }
         }
@@ -3793,7 +4016,7 @@ const ProjectDetailsWrapper = Styled.div`
             a{
                 background: rgba(32,201,151,0.1);
                 svg{
-                    color: ${({ theme }) => theme['success-color']};
+                    color: ${({ theme }) => theme["success-color"]};
                 }
             }
         }
@@ -3801,7 +4024,7 @@ const ProjectDetailsWrapper = Styled.div`
             a{
                 background: rgba(250,139,12,0.1);
                 svg{
-                    color: ${({ theme }) => theme['warning-color']};
+                    color: ${({ theme }) => theme["warning-color"]};
                 }
             }
         }
@@ -3810,7 +4033,7 @@ const ProjectDetailsWrapper = Styled.div`
         p{
             font-size: 15px;
             line-height: 25px;
-            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
         }
     }
     .about-project{
@@ -3834,7 +4057,7 @@ const ProjectDetailsWrapper = Styled.div`
                 margin: 0 15px;
             }
             span{
-                color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
                 font-size: 13px;
                 display: block;
                 margin-bottom: 3px;
@@ -3843,10 +4066,10 @@ const ProjectDetailsWrapper = Styled.div`
                 font-weight: 500;
             }
             .color-primary{
-                color: ${({ theme }) => theme['primary-color']};
+                color: ${({ theme }) => theme["primary-color"]};
             }
             .color-danger{
-                color: ${({ theme }) => theme['danger-color']};
+                color: ${({ theme }) => theme["danger-color"]};
             }
         }
     }
@@ -3856,15 +4079,16 @@ const ProjectDetailsWrapper = Styled.div`
             font-size: 12px;
             font-weight: 500;
             transition: .25s;
-            border-color: ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+            border-color: ${({ theme }) =>
+              theme[theme.mainContent]["border-color-default"]};
             &:hover{
                 svg{
-                    color: ${({ theme }) => theme['primary-color']};
+                    color: ${({ theme }) => theme["primary-color"]};
                 }
             }
         }
         i +span, svg +span, img +span {
-            ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: 6px;
+            ${({ theme }) => (theme.rtl ? "margin-right" : "margin-left")}: 6px;
         }
     }
     .project-users{
@@ -3877,7 +4101,8 @@ const ProjectDetailsWrapper = Styled.div`
                 margin-bottom: 0;
             }
             & > div{
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 15px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 15px;
             }
             div{
                 img{
@@ -3891,10 +4116,12 @@ const ProjectDetailsWrapper = Styled.div`
                     font-size: 14px;
                     font-weight: 600;
                     margin-bottom: 2px;
-                    color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["dark-text"]};
                 }
                 p{
-                    color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["gray-text"]};
                     margin: 0;
                 }
             }
@@ -3916,16 +4143,18 @@ const ProjectDetailsWrapper = Styled.div`
                 &.file-name{
                     font-size: 14px;
                     font-weight: 500;
-                    color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["dark-text"]};
                 }
                 &.file-size{
                     margin: 2px 0;;
-                    color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["gray-text"]};
                 }
                 &.file-content-action{
                     a{
                         font-weight: 500;
-                        color: ${({ theme }) => theme['primary-color']};
+                        color: ${({ theme }) => theme["primary-color"]};
                     }
                     a + a{
                         margin-left: 8px;
@@ -3937,7 +4166,8 @@ const ProjectDetailsWrapper = Styled.div`
             width: 50%;
             align-items: center;
             .file-single-logo{
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 16px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 16px;
                 img{
                     max-width: 42px;
                 }
@@ -3945,7 +4175,8 @@ const ProjectDetailsWrapper = Styled.div`
         }
         .file-single-action{
             .ant-dropdown-trigger {
-                color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+                color: ${({ theme }) =>
+                  theme[theme.mainContent]["extra-light-text"]};
                 svg{
                     width: 16px;
                     height: 16px;
@@ -3960,7 +4191,8 @@ const ProjectDetailsWrapper = Styled.div`
             svg,
             i.
             img{
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 8px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 8px;
             }
         }
     }
@@ -3969,7 +4201,8 @@ const ProjectDetailsWrapper = Styled.div`
 const TaskLists = Styled.div`
     .ant-card{
         .ant-card-head{
-            border-color: ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+            border-color: ${({ theme }) =>
+              theme[theme.mainContent]["border-color-default"]};
             margin-bottom: 0;
         }
         .ant-card-body{
@@ -3980,41 +4213,45 @@ const TaskLists = Styled.div`
         a{
             font-size: 14px;
             font-weight: 500;
-            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
             position: relative;
             padding: 20px 0px;
             &:not(:last-child){
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 18px;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 18px;
             }
             &:before{
                 position: absolute;
                 content: '';
                 width: 100%;
-                ${({ theme }) => (theme.rtl ? 'right' : 'left')}: 0;
+                ${({ theme }) => (theme.rtl ? "right" : "left")}: 0;
                 bottom: -1px;
                 height: 1px;
 
             }
             &.active{
-                color: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                color: ${({ theme }) =>
+                  theme[theme.mainContent]["menu-active"]};
                 &:before{
-                    background: ${({ theme }) => theme[theme.mainContent]['menu-active']};
+                    background: ${({ theme }) =>
+                      theme[theme.mainContent]["menu-active"]};
                 }
             }
         }
     }
     .ant-table{
-        background: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
     }
     table{
         margin-top: 15px;
         .ant-checkbox.ant-checkbox-checked{
             .ant-checkbox-inner{
-                background: ${({ theme }) => theme['success-color']};
-                border-color: ${({ theme }) => theme['success-color']};
+                background: ${({ theme }) => theme["success-color"]};
+                border-color: ${({ theme }) => theme["success-color"]};
             }
             &:after{
-                border-color: ${({ theme }) => theme['success-color']};
+                border-color: ${({ theme }) => theme["success-color"]};
             }
         }
         thead{
@@ -4026,12 +4263,14 @@ const TaskLists = Styled.div`
                 border-bottom: 0;
                 padding: 10px;
                 &:first-child{
-                    ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 25px;
+                    ${({ theme }) =>
+                      theme.rtl ? "margin-left" : "margin-right"}: 25px;
                 }
                 .ant-checkbox-indeterminate {
                     .ant-checkbox-inner{
                         &:after{
-                            background: ${({ theme }) => theme['success-color']};
+                            background: ${({ theme }) =>
+                              theme["success-color"]};
                         }
                     }
                 }
@@ -4055,32 +4294,40 @@ const TaskLists = Styled.div`
                 > td{
                     padding: 10px;
                     border-bottom: 0;
-                    text-align: ${({ theme }) => (theme.rtl ? 'right' : 'left')};
+                    text-align: ${({ theme }) =>
+                      theme.rtl ? "right" : "left"};
                     &:first-child{
-                        ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 25px;
+                        ${({ theme }) =>
+                          !theme.rtl ? "padding-left" : "padding-right"}: 25px;
                     }
                     &:last-child{
-                        ${({ theme }) => (theme.rtl ? 'padding-left' : 'padding-right')}: 25px;
+                        ${({ theme }) =>
+                          theme.rtl ? "padding-left" : "padding-right"}: 25px;
                     }
                     .task-title{
-                        color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["gray-text"]};
                     }
                     .task-created{
                         font-size: 12px;
-                        color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["gray-text"]};
                     }
                     .ant-checkbox{
                         &:hover{
                             .ant-checkbox-inner{
-                                border-color: ${({ theme }) => theme['success-color']};
+                                border-color: ${({ theme }) =>
+                                  theme["success-color"]};
                             }
                         }
                     }
                 }
                 &:hover{
-                    box-shadow: 0 15px 50px ${({ theme }) => theme[theme.mainContent]['gray-text']}20;
+                    box-shadow: 0 15px 50px ${({ theme }) =>
+                      theme[theme.mainContent]["gray-text"]}20;
                     > td{
-                        background: ${({ theme }) => theme[theme.mainContent]['white-background']};
+                        background: ${({ theme }) =>
+                          theme[theme.mainContent]["white-background"]};
                     }
                 }
             }
@@ -4091,13 +4338,13 @@ const TaskLists = Styled.div`
         margin: 18px 25px 25px;
         button{
             width: 100%;
-            text-align: ${({ theme }) => (theme.rtl ? 'right' : 'left')};
+            text-align: ${({ theme }) => (theme.rtl ? "right" : "left")};
             justify-content: flex-start;
             font-size: 12px;
             font-weight: 500;
             &.ant-btn-primary{
                 border-radius: 6px;
-                background: ${({ theme }) => theme['primary-color']}10;
+                background: ${({ theme }) => theme["primary-color"]}10;
             }
         }
     }
@@ -4114,7 +4361,7 @@ const TasklistAction = Styled.div`
         line-height: normal;
     }
     span, a{
-        color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+        color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
     }
     .task-created{
         color: #9299b8 !important;
@@ -4124,7 +4371,8 @@ const TasklistAction = Styled.div`
         i{
             width: 16px;
             height: 16px;
-            color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+            color: ${({ theme }) =>
+              theme[theme.mainContent]["extra-light-text"]};
         }
     }
     .task-action{
@@ -4143,7 +4391,8 @@ const ActivitiesWrapper = Styled.div`
         &:not(:last-child){
             margin-bottom: 20px;
             padding-bottom: 20px;
-            border-bottom: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+            border-bottom: 1px solid ${({ theme }) =>
+              theme[theme.mainContent]["border-color-default"]};
         }
     }
     .activity-dateMeta{
@@ -4153,8 +4402,10 @@ const ActivitiesWrapper = Styled.div`
         flex-flow: column;
         align-items: center;
         justify-content: center;
-        background: ${({ theme }) => theme[theme.mainContent]['main-background-light']};
-        border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+        background: ${({ theme }) =>
+          theme[theme.mainContent]["main-background-light"]};
+        border: 1px solid ${({ theme }) =>
+          theme[theme.mainContent]["border-color-default"]};
         @media only screen and (max-width: 575px) {
             height: auto;
             padding: 30px 0px;
@@ -4165,7 +4416,7 @@ const ActivitiesWrapper = Styled.div`
             margin-bottom: 0px;
         }
         .activity-month{
-            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
         }
     }
 
@@ -4183,18 +4434,19 @@ const ActivitiesWrapper = Styled.div`
             height: 24px;
             width: 24px;
             border-radius: 50%;
-            margin: ${({ theme }) => (theme.rtl ? '4px 0 0 10px' : '4px 10px 0 0')};
+            margin: ${({ theme }) =>
+              theme.rtl ? "4px 0 0 10px" : "4px 10px 0 0"};
             &.bg-primary{
-                background: ${({ theme }) => theme['primary-color']}15;
-                color: ${({ theme }) => theme['primary-color']};
+                background: ${({ theme }) => theme["primary-color"]}15;
+                color: ${({ theme }) => theme["primary-color"]};
             }
             &.bg-secondary{
-                background: ${({ theme }) => theme['secondary-color']}15;
-                color: ${({ theme }) => theme['secondary-color']};
+                background: ${({ theme }) => theme["secondary-color"]}15;
+                color: ${({ theme }) => theme["secondary-color"]};
             }
             &.bg-success{
-                background: ${({ theme }) => theme['success-color']}15;
-                color: ${({ theme }) => theme['success-color']};
+                background: ${({ theme }) => theme["success-color"]}15;
+                color: ${({ theme }) => theme["success-color"]};
             }
             svg{
                 width: 16px;
@@ -4202,7 +4454,8 @@ const ActivitiesWrapper = Styled.div`
             }
         }
         img{
-            ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 12px;
+            ${({ theme }) =>
+              theme.rtl ? "margin-left" : "margin-right"}: 12px;
         }
         .activity-title{
             font-size: 14px;
@@ -4211,13 +4464,14 @@ const ActivitiesWrapper = Styled.div`
             span{
                 font-weight: 400;
                 margin: 0 2px;
-                color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
             }
         }
         .activity-timeMeta{
             font-size: 12px;
             margin-bottom: 0;
-            color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+            color: ${({ theme }) =>
+              theme[theme.mainContent]["extra-light-text"]};
         }
     }
 `;
@@ -4231,12 +4485,12 @@ const WizardWrapper = Styled.div`
         padding: 0;
     }
     .steps-action button.btn-next svg {
-        ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: 10px;
-        transform: rotateY(${({ theme }) => (theme.rtl ? '180deg' : '0deg')})
+        ${({ theme }) => (theme.rtl ? "margin-right" : "margin-left")}: 10px;
+        transform: rotateY(${({ theme }) => (theme.rtl ? "180deg" : "0deg")})
     }
     .steps-action button.btn-prev svg {
-        ${({ theme }) => (!theme.rtl ? 'margin-right' : 'margin-left')}: 10px;
-        transform: rotateY(${({ theme }) => (theme.rtl ? '180deg' : '0deg')})
+        ${({ theme }) => (!theme.rtl ? "margin-right" : "margin-left")}: 10px;
+        transform: rotateY(${({ theme }) => (theme.rtl ? "180deg" : "0deg")})
     }
     .ant-steps-vertical > .ant-steps-item:not(:last-child) > .ant-steps-item-container > .ant-steps-item-tail{
         @media only screen and (max-width: 575px) {
@@ -4254,10 +4508,11 @@ const WizardWrapper = Styled.div`
         flex-flow: column;
         align-items: center;
         width: 50%;
-        ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 15px;
+        ${({ theme }) => (!theme.rtl ? "padding-left" : "padding-right")}: 15px;
         @media only screen and (max-width: 991px) {
             width: 100%;
-            ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 0;
+            ${({ theme }) =>
+              !theme.rtl ? "padding-left" : "padding-right"}: 0;
         }
         @media only screen and (max-width: 767px) {
             font-size: 15px;
@@ -4291,10 +4546,10 @@ const WizardWrapper = Styled.div`
         position: relative;
         &:after{
             position: absolute;
-            ${({ theme }) => (!theme.rtl ? 'left' : 'right')}: 100%;
+            ${({ theme }) => (!theme.rtl ? "left" : "right")}: 100%;
             top: 35px;
             color: #333;
-            background-image: url(${require('../static/img/progress.png')});
+            background-image: url(${require("../static/img/progress.png")});
             width: 110%;
             height: 6px;
             background-size: cover;
@@ -4318,14 +4573,14 @@ const WizardWrapper = Styled.div`
     .wizard-step-item{
         .ant-steps-item-container{
             &:after{
-                background-image: url(${require('../static/img/progress.png')});
+                background-image: url(${require("../static/img/progress.png")});
             }
         }
     }
     .wizard-steps-item-active{
         .ant-steps-item-container{
             &:after{
-                background-image: url(${require('../static/img/progress-active.png')});
+                background-image: url(${require("../static/img/progress-active.png")});
             }
         }
     }
@@ -4333,12 +4588,13 @@ const WizardWrapper = Styled.div`
     .ant-steps-item-finish{
         .ant-steps-item-container{
             &:after{
-                background-image: url(${require('../static/img/progress-success.png')});
+                background-image: url(${require("../static/img/progress-success.png")});
             }
         }
     }
     .ant-steps-item{
-        padding: ${({ theme }) => (theme.rtl ? '0 0 0 25px !important' : '0 25px 0 0 !important')} ;
+        padding: ${({ theme }) =>
+          theme.rtl ? "0 0 0 25px !important" : "0 25px 0 0 !important"} ;
         @media only screen and (max-width: 767px) {
             padding: 0 !important;
             &:not(:last-child){
@@ -4346,7 +4602,8 @@ const WizardWrapper = Styled.div`
             }
         }
         &:last-child{
-            ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 15px !important;
+            ${({ theme }) =>
+              !theme.rtl ? "padding-left" : "padding-right"}: 15px !important;
             @media only screen and (max-width: 767px) {
                 padding: 0 !important;
             }
@@ -4365,11 +4622,14 @@ const WizardWrapper = Styled.div`
             font-size: 15px;
             font-weight: 500;
             margin-top: 8px;
-            padding: ${({ theme }) => (theme.rtl ? '0 10px 0 0' : '0 0 0 10px')};
+            padding: ${({ theme }) =>
+              theme.rtl ? "0 10px 0 0" : "0 0 0 10px"};
             
-            color: ${({ theme }) => theme[theme.mainContent]['light-text']}!important;
+            color: ${({ theme }) =>
+              theme[theme.mainContent]["light-text"]}!important;
             @media only screen and (max-width: 1210px) {
-                padding: ${({ theme }) => (!theme.rtl ? '0 0 0 20px' : '0 20px 0 0')};
+                padding: ${({ theme }) =>
+                  !theme.rtl ? "0 0 0 20px" : "0 20px 0 0"};
             }
             @media only screen and (max-width: 767px) {
                 padding: 0;
@@ -4386,10 +4646,13 @@ const WizardWrapper = Styled.div`
             height: 50px;
             line-height: 50px;
             border: 0 none;
-            background-color: ${({ theme }) => theme[theme.mainContent]['input-bg']};
-            box-shadow: 10px 0 20px ${({ theme }) => theme[theme.mainContent]['gray-text']}15;
+            background-color: ${({ theme }) =>
+              theme[theme.mainContent]["input-bg"]};
+            box-shadow: 10px 0 20px ${({ theme }) =>
+              theme[theme.mainContent]["gray-text"]}15;
             @media only screen and (max-width: 767px) {
-                ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 0;
+                ${({ theme }) =>
+                  theme.rtl ? "margin-left" : "margin-right"}: 0;
                 width: 35px;
                 height: 35px;
                 line-height: 35px;
@@ -4397,7 +4660,7 @@ const WizardWrapper = Styled.div`
             .ant-steps-icon{
                 font-size: 16px;
                 font-weight: 500;
-                color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
                 @media only screen and (max-width: 767px) {
                     font-size: 15px;
                 }
@@ -4405,32 +4668,38 @@ const WizardWrapper = Styled.div`
         }
         &.ant-steps-item-active{
             .ant-steps-item-icon{
-                background-color: ${({ theme }) => theme['primary-color']};
+                background-color: ${({ theme }) => theme["primary-color"]};
                 .ant-steps-icon{
-                    color: ${({ theme }) => theme[theme.mainContent]['white-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["white-text"]};
                 }
                 svg{
-                    color: ${({ theme }) => theme[theme.mainContent]['white-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["white-text"]};
                 }
             }
             .ant-steps-item-title{
-                color: ${({ theme }) => theme[theme.mainContent]['dark-text']} !important;
+                color: ${({ theme }) =>
+                  theme[theme.mainContent]["dark-text"]} !important;
             }
             &.ant-steps-item-finish{
                 .ant-steps-item-title{
-                    color: ${({ theme }) => theme[theme.mainContent]['light-text']}; !important;
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["light-text"]}; !important;
                 }
             }
         }
         &.ant-steps-item-finish{
             .ant-steps-item-icon{
-                background: ${({ theme }) => theme['success-color']} !important;
+                background: ${({ theme }) => theme["success-color"]} !important;
                 .ant-steps-icon{
-                    color: ${({ theme }) => theme[theme.mainContent]['white-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["white-text"]};
                 }
                 .ant-steps-finish-icon{
                     svg{
-                        color: ${({ theme }) => theme[theme.mainContent]['white-text']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["white-text"]};
                     }
                 }
                 
@@ -4444,15 +4713,18 @@ const WizardWrapper = Styled.div`
         }
         .ant-form-item{
             .ant-input-password.ant-input-affix-wrapper{
-                background-color: ${({ theme }) => theme[theme.mainContent]['input-bg']};
-                border-color: ${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
-                ${({ theme }) => (!theme.rtl ? 'padding-left' : 'padding-right')}: 0;
+                background-color: ${({ theme }) =>
+                  theme[theme.mainContent]["input-bg"]};
+                border-color: ${({ theme }) =>
+                  theme[theme.mainContent]["border-color-secondary"]};
+                ${({ theme }) =>
+                  !theme.rtl ? "padding-left" : "padding-right"}: 0;
             }
         }
         .ant-form-item-label{
             label{
                 font-weight: 400;
-                color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
             }
         }
         .ant-form-item-control-input{
@@ -4464,28 +4736,30 @@ const WizardWrapper = Styled.div`
     .steps-action{
         .btn-next{
             &:focus{
-                background-color: ${({ theme }) => theme['primary-color']};
+                background-color: ${({ theme }) => theme["primary-color"]};
             }
         }
         button.ant-btn-light{
-            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
             &:hover{
-                color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
-                border-color: ${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
+                color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
+                border-color: ${({ theme }) =>
+                  theme[theme.mainContent]["border-color-secondary"]};
             }
         }
     }
     .atbd-form-checkout{
         .ant-input-affix-wrapper-rtl{
             input[type="password"]{
-                ${({ theme }) => (theme.rtl ? 'padding-left' : 'padding-right')}: 15px;
+                ${({ theme }) =>
+                  theme.rtl ? "padding-left" : "padding-right"}: 15px;
             }
         }
        h1{
             font-size: 20px;
             font-weight: 500;
             margin-bottom: 46px;
-            color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
             @media only screen and (max-width: 991px){
                 font-size: 18px;
                 margin-bottom: 22px;
@@ -4500,18 +4774,19 @@ const WizardWrapper = Styled.div`
            }
        }
        input::placeholder{
-        color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+        color: ${({ theme }) => theme[theme.mainContent]["extra-light-text"]};
        }
        .input-message{
            margin-top: -6px;
            display: inline-block;
            font-size: 13px;
-           color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+           color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
        }
        .shipping-selection{
            > .ant-card{
                .ant-card-body{
-                    border: 1px solid ${({ theme }) => theme['border-color-light']};
+                    border: 1px solid ${({ theme }) =>
+                      theme["border-color-light"]};
                }
            }
            .ant-card{
@@ -4527,7 +4802,8 @@ const WizardWrapper = Styled.div`
                         width: 100%;
                     }
                    .ant-radio{
-                        ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 15px;
+                        ${({ theme }) =>
+                          theme.rtl ? "margin-left" : "margin-right"}: 15px;
                     }
                }
            }
@@ -4539,10 +4815,12 @@ const WizardWrapper = Styled.div`
                     }
                 }
                .input-leftText{
-                   ${({ theme }) => (!theme.rtl ? 'margin-left' : 'margin-right')}: 10px;
+                   ${({ theme }) =>
+                     !theme.rtl ? "margin-left" : "margin-right"}: 10px;
                    @media only screen and (max-width: 479px) {
                         display: block;
-                        ${({ theme }) => (!theme.rtl ? 'margin-left' : 'margin-right')}: 0px;
+                        ${({ theme }) =>
+                          !theme.rtl ? "margin-left" : "margin-right"}: 0px;
                     }
                }
            }
@@ -4550,7 +4828,8 @@ const WizardWrapper = Styled.div`
                .ant-card .ant-card{
                    border: 0 none;
                    border-radius: 20px;
-                   box-shadow: 0 10px 30px ${({ theme }) => theme[theme.mainContent]['light-text']}10;
+                   box-shadow: 0 10px 30px ${({ theme }) =>
+                     theme[theme.mainContent]["light-text"]}10;
                }
                .ant-radio-wrapper{
                     .ant-radio{
@@ -4565,7 +4844,7 @@ const WizardWrapper = Styled.div`
                        max-width: 120px;
                    }
                    .input-leftText{
-                       color: ${({ theme }) => theme['color-info']};
+                       color: ${({ theme }) => theme["color-info"]};
                    }
                }
             }
@@ -4594,8 +4873,10 @@ const WizardWrapper = Styled.div`
                         display: flex;
                         align-items: center;
                         border-radius: 10px;
-                        color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
-                        border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["gray-text"]};
+                        border: 1px solid ${({ theme }) =>
+                          theme[theme.mainContent]["border-color-secondary"]};
                     }
                 }
            }
@@ -4607,14 +4888,16 @@ const WizardWrapper = Styled.div`
                     flex-flow: column;
                 }
                 span{
-                    color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["gray-text"]};
                 }
                .supported-card_logos{
                     @media only screen and (max-width: 479px) {
                         margin-top: 12px;
                     }
                    img + img{
-                       ${({ theme }) => (!theme.rtl ? 'margin-left' : 'margin-right')}: 15px;
+                       ${({ theme }) =>
+                         !theme.rtl ? "margin-left" : "margin-right"}: 15px;
                    }
                }
            }
@@ -4622,10 +4905,11 @@ const WizardWrapper = Styled.div`
    }
    .profile-hints{
        p{
-        color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+        color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
            font-size: 15px;
            span{
-               color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+               color: ${({ theme }) =>
+                 theme[theme.mainContent]["extra-light-text"]};
            }
        }
    }
@@ -4635,7 +4919,8 @@ const WizardWrapper = Styled.div`
        padding: 30px;
        min-height: 248px;
        border-radius: 6px;
-       border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
+       border: 1px solid ${({ theme }) =>
+         theme[theme.mainContent]["border-color-secondary"]};
        h1,
        h2,
        h3,
@@ -4643,46 +4928,49 @@ const WizardWrapper = Styled.div`
        h5,
        h6{
             margin-bottom: 16px;
-            color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
        }
        .ant-checkbox{
            &:hover{
                .ant-checkbox-inner{
-                    border-color: ${({ theme }) => theme['success-color']};
+                    border-color: ${({ theme }) => theme["success-color"]};
                }
            }
        }
        .ant-checkbox-checked{
            &:after{
-                border-color: ${({ theme }) => theme['success-color']};
+                border-color: ${({ theme }) => theme["success-color"]};
            }
            .ant-checkbox-inner{
-                background-color: ${({ theme }) => theme['success-color']};
-                border-color: ${({ theme }) => theme['success-color']};
+                background-color: ${({ theme }) => theme["success-color"]};
+                border-color: ${({ theme }) => theme["success-color"]};
            }
        }
        .ant-checkbox-input{
            &:focus + .ant-checkbox-inner{
-            border-color: ${({ theme }) => theme['success-color']};
+            border-color: ${({ theme }) => theme["success-color"]};
            }
        }
        .checkbox-label{
-            ${({ theme }) => (theme.rtl ? 'margin-right' : 'margin-left')}: 10px;
+            ${({ theme }) =>
+              theme.rtl ? "margin-right" : "margin-left"}: 10px;
             font-size: 15px;
-            color: ${({ theme }) => theme[theme.mainContent]['extra-light-text']};
+            color: ${({ theme }) =>
+              theme[theme.mainContent]["extra-light-text"]};
        }
    }
    .atbd-review-order{
        > .ant-card{
            > .ant-card-body{
-               border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+               border: 1px solid ${({ theme }) =>
+                 theme[theme.mainContent]["border-color-default"]};
            }
        }
        h1{
            font-size: 20px;
            font-weight: 500;
            margin-bottom: 45px;
-           color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+           color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
            @media only screen and (max-width: 479px) {
                 font-size: 16px;
                 margin-bottom: 25px;
@@ -4691,7 +4979,8 @@ const WizardWrapper = Styled.div`
        .atbd-review-order__single{
            .ant-card{
                .ant-card-body{
-                   background-color: ${({ theme }) => theme[theme.mainContent]['main-background-light']};
+                   background-color: ${({ theme }) =>
+                     theme[theme.mainContent]["main-background-light"]};
                }
            }
            .ant-radio-wrapper{
@@ -4702,7 +4991,8 @@ const WizardWrapper = Styled.div`
                 .ant-card-body{
                     padding: 25px !important;
                     border-radius: 15px;
-                    box-shadow: 0 10px 30px ${({ theme }) => theme['gray-solid']}10;
+                    box-shadow: 0 10px 30px ${({ theme }) =>
+                      theme["gray-solid"]}10;
                 }
             }
             h1{
@@ -4713,7 +5003,8 @@ const WizardWrapper = Styled.div`
             .method-info{
                 margin-top: -2px;
                 font-weight: 500;
-                color: color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                color: color: ${({ theme }) =>
+                  theme[theme.mainContent]["dark-text"]};
                 img{
                     margin-top: -4px;
                     max-width: 40px;
@@ -4724,13 +5015,14 @@ const WizardWrapper = Styled.div`
                 display: inline-block;
                 font-size: 13px;
                 margin-top: 20px;
-                color: ${({ theme }) => theme['info-color']};
+                color: ${({ theme }) => theme["info-color"]};
             }
             
             .cart-single{
                 .cart-single__info{
                     h1{
-                        color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["dark-text"]};
                         margin-bottom: 8px;
                     }
                 }
@@ -4741,7 +5033,7 @@ const WizardWrapper = Styled.div`
                 display: flex;
                 margin-bottom: 30px;
                 justify-content: space-between;
-                color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
                 @media only screen and (max-width: 479px) {
                     flex-flow: column;
                 }
@@ -4755,7 +5047,8 @@ const WizardWrapper = Styled.div`
                     svg{
                         width: 14px;
                         height: 14px;
-                        ${({ theme }) => (theme.rtl ? 'margin-left' : 'margin-right')}: 4px;
+                        ${({ theme }) =>
+                          theme.rtl ? "margin-left" : "margin-right"}: 4px;
                     }
                 }
             }
@@ -4770,13 +5063,14 @@ const WizardWrapper = Styled.div`
                 }
                 p{
                     font-size: 15px;
-                    color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["gray-text"]};
                 }
             }
             .btn-addNew{
                 font-size: 13px;
                 font-weight: 500;
-                color: ${({ theme }) => theme['info-color']};
+                color: ${({ theme }) => theme["info-color"]};
             }
         }
    }
@@ -4789,7 +5083,7 @@ const WizardWrapper = Styled.div`
         margin: 20px 0 10px !important;
         .summary-list-text{
             font-size: 15px;
-            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
         }
         li{
             &:not(:last-child){
@@ -4800,7 +5094,8 @@ const WizardWrapper = Styled.div`
    .checkout-successful{
        text-align: center;
         .ant-card {
-            box-shadow: 0 10px 30px ${({ theme }) => theme[theme.mainContent]['light-text']}10;
+            box-shadow: 0 10px 30px ${({ theme }) =>
+              theme[theme.mainContent]["light-text"]}10;
             .ant-card{
                 padding: 25px;
                     margin-bottom: 0 !important;
@@ -4814,8 +5109,8 @@ const WizardWrapper = Styled.div`
             display: flex;
             align-items: center;
             justify-content: center;
-            color: ${({ theme }) => theme[theme.mainContent]['white-text']};
-            background: ${({ theme }) => theme['success-color']};
+            color: ${({ theme }) => theme[theme.mainContent]["white-text"]};
+            background: ${({ theme }) => theme["success-color"]};
             svg{
                 width: 18px;
             }
@@ -4824,11 +5119,11 @@ const WizardWrapper = Styled.div`
             font-size: 20px;
             font-weight: 500;
             margin-bottom: 16px;
-            color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
         }
         p{
             margin-bottom: 0;
-            color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+            color: ${({ theme }) => theme[theme.mainContent]["gray-text"]};
         }
    }
 `;
@@ -4840,7 +5135,8 @@ const FormComponentsWrap = Styled.div`
         }
     }
     .sDash_editor{
-        border: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-secondary']};
+        border: 1px solid ${({ theme }) =>
+          theme[theme.mainContent]["border-color-secondary"]};
         border-radius: 4px;
         .EditorToolbar__root___3_Aqz{
             padding: 12px 20px 0;
@@ -4857,8 +5153,8 @@ const FormComponentsWrap = Styled.div`
         .Dropdown__value___34Py9{
             &:after,
             &:before{
-                ${({ theme }) => (theme.rtl ? 'right' : 'left')}: auto;
-                ${({ theme }) => (theme.rtl ? 'left' : 'right')}: 10px;
+                ${({ theme }) => (theme.rtl ? "right" : "left")}: auto;
+                ${({ theme }) => (theme.rtl ? "left" : "right")}: 10px;
             }
         }
     }
@@ -4874,32 +5170,32 @@ const RevenueGeneratedWrapper = Styled.div`
     .custom-progress {
     .progress-bg-primary{
         .ant-progress-bg{
-            background-color: ${({ theme }) => theme['primary-color']};
+            background-color: ${({ theme }) => theme["primary-color"]};
         }
     }
     .progress-bg-info{
         .ant-progress-bg{
-            background-color: ${({ theme }) => theme['info-color']};
+            background-color: ${({ theme }) => theme["info-color"]};
         }
     }
     .progress-bg-success{
         .ant-progress-bg{
-            background-color: ${({ theme }) => theme['success-color']};
+            background-color: ${({ theme }) => theme["success-color"]};
         }
     }
     .progress-bg-violet{
         .ant-progress-bg{
-            background-color: ${({ theme }) => theme['secondary-color']};
+            background-color: ${({ theme }) => theme["secondary-color"]};
         }
     }
     .progress-bg-warning{
         .ant-progress-bg{
-            background-color: ${({ theme }) => theme['warning-color']};
+            background-color: ${({ theme }) => theme["warning-color"]};
         }
     }
     .progress-bg-google{
         .ant-progress-bg{
-            background-color: ${({ theme }) => theme['primary-color']};
+            background-color: ${({ theme }) => theme["primary-color"]};
         }
     }
     .progress-bg-facebook{
@@ -4909,17 +5205,20 @@ const RevenueGeneratedWrapper = Styled.div`
     }
     .progress-bg-twitter{
         .ant-progress-bg{
-            background-color: ${({ theme }) => theme[theme.mainContent].success};
+            background-color: ${({ theme }) =>
+              theme[theme.mainContent].success};
         }
     }
     .progress-bg-linkedin{
         .ant-progress-bg{
-            background-color: ${({ theme }) => theme[theme.mainContent].secondary};
+            background-color: ${({ theme }) =>
+              theme[theme.mainContent].secondary};
         }
     }
     .progress-bg-instagram{
         .ant-progress-bg{
-            background-color: ${({ theme }) => theme[theme.mainContent].warning};
+            background-color: ${({ theme }) =>
+              theme[theme.mainContent].warning};
         }
     }
     }
@@ -4928,7 +5227,8 @@ const RevenueGeneratedWrapper = Styled.div`
 
 const TaskListStyle = Styled.div`
     .hexadash-tassklist-wrap{
-        background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
+        background-color: ${({ theme }) =>
+          theme[theme.mainContent]["white-background"]};
         border-radius: 10px;
         min-height: 220px;
     }
@@ -4938,7 +5238,8 @@ const TaskListStyle = Styled.div`
             font-weight: 500;
             padding: 15px 30px;
             margin-bottom: 0;
-            border-bottom: 1px solid ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+            border-bottom: 1px solid ${({ theme }) =>
+              theme[theme.mainContent]["border-color-default"]};
         }
     }
     .hexadash-tasklist-body{
@@ -4959,26 +5260,30 @@ const TaskListStyle = Styled.div`
             }
             .hexadash-tasklist-item__title{
                 font-size: 16px;
-                color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
                 .ant-checkbox + span{
                     position: relative;
                     top: -2px;
-                    ${({ theme }) => (theme.rtl ? 'padding-right' : 'padding-left')}: 10px;
+                    ${({ theme }) =>
+                      theme.rtl ? "padding-right" : "padding-left"}: 10px;
                 }
                 .ant-checkbox-wrapper{
                     &:hover{
                         .ant-checkbox-inner{
-                            border-color: ${({ theme }) => theme['success-color']};
+                            border-color: ${({ theme }) =>
+                              theme["success-color"]};
                         }
                     }
                     span{
                         font-size: 15px;
                         font-weight: 400;
-                        color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                        color: ${({ theme }) =>
+                          theme[theme.mainContent]["gray-text"]};
                     }
                     .ant-checkbox-input{
                         &:focus + .ant-checkbox-inner{
-                            border-color: ${({ theme }) => theme['success-color']};
+                            border-color: ${({ theme }) =>
+                              theme["success-color"]};
                         }
                     }
                     .ant-checkbox-inner{
@@ -4993,11 +5298,14 @@ const TaskListStyle = Styled.div`
                     }
                     .ant-checkbox-checked{
                         &:after{
-                            border-color: ${({ theme }) => theme['success-color']};
+                            border-color: ${({ theme }) =>
+                              theme["success-color"]};
                         }
                         .ant-checkbox-inner{
-                            background-color: ${({ theme }) => theme['success-color']};
-                            border-color: ${({ theme }) => theme['success-color']};
+                            background-color: ${({ theme }) =>
+                              theme["success-color"]};
+                            border-color: ${({ theme }) =>
+                              theme["success-color"]};
                             &:after{
                                 border-color: #fff;
                             }
@@ -5010,7 +5318,8 @@ const TaskListStyle = Styled.div`
                 p{
                     font-size: 14px;
                     font-weight: 400;
-                    color: ${({ theme }) => theme[theme.mainContent]['gray-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["gray-text"]};
                     &:last-child{
                         margin-bottom: 0;
                     }
@@ -5030,14 +5339,15 @@ const TaskListStyle = Styled.div`
                 i{
                     width: 16px;
                     height: 16px;
-                    color: ${({ theme }) => theme[theme.mainContent]['gray-light-text']};
+                    color: ${({ theme }) =>
+                      theme[theme.mainContent]["gray-light-text"]};
                 }
                 .task-favourite{
                     line-height: 1;
                     &.active{
                         svg,
                         i{
-                            color: ${({ theme }) => theme['warning-color']}; 
+                            color: ${({ theme }) => theme["warning-color"]}; 
                         }
                     }
                     svg,
@@ -5063,7 +5373,7 @@ const TaskListStyle = Styled.div`
                     &:hover{
                         svg,
                         i{
-                            color: ${({ theme }) => theme['info-color']}; 
+                            color: ${({ theme }) => theme["info-color"]}; 
                         }
                     }
                 }
@@ -5071,7 +5381,7 @@ const TaskListStyle = Styled.div`
                     &:hover{
                         svg,
                         i{
-                            color: ${({ theme }) => theme['danger-color']}; 
+                            color: ${({ theme }) => theme["danger-color"]}; 
                         } 
                     }
                 }
@@ -5085,7 +5395,7 @@ const TaskListStyle = Styled.div`
             span{
                 font-size: 18px;
                 font-weight: 500;
-                color: ${({ theme }) => theme[theme.mainContent]['light-text']};
+                color: ${({ theme }) => theme[theme.mainContent]["light-text"]};
             }
         }
     }
@@ -5107,12 +5417,15 @@ const GmapWraper = Styled.div`
         height: ${(props) => props.height};
     }
     .leaflet-bar{
-        border-color: ${({ theme }) => theme[theme.mainContent]['border-color-default']} !important;
+        border-color: ${({ theme }) =>
+          theme[theme.mainContent]["border-color-default"]} !important;
         a,
         a:hover{
-            color: ${({ theme }) => theme[theme.mainContent]['dark-text']};
-            background-color: ${({ theme }) => theme[theme.mainContent]['white-background']};
-            border-color: ${({ theme }) => theme[theme.mainContent]['border-color-default']};
+            color: ${({ theme }) => theme[theme.mainContent]["dark-text"]};
+            background-color: ${({ theme }) =>
+              theme[theme.mainContent]["white-background"]};
+            border-color: ${({ theme }) =>
+              theme[theme.mainContent]["border-color-default"]};
         }
         
     }

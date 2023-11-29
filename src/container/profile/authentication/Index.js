@@ -1,5 +1,5 @@
-import { Spin } from 'antd';
-import React, { Suspense } from 'react';
+import { Spin } from "antd";
+import React, { Suspense } from "react";
 
 const AuthLayout = (WraperContent) => {
   return function () {
@@ -12,25 +12,27 @@ const AuthLayout = (WraperContent) => {
         }
       >
         <div
-          style={{ backgroundImage: `url("${require('../../../static/img/admin-bg-light.png')}")` }}
+          style={{
+            backgroundImage: `url("${require("../../../static/img/admin-bg-light.png")}")`,
+          }}
           className="bg-top bg-no-repeat"
         >
           <div className="py-[120px] 2xl:py-[80px] px-[15px]">
             <div className="flex justify-center">
               <img
                 style={{
-                  maxWidth: '200px',
+                  maxWidth: "300px",
                 }}
                 className="dark:hidden"
-                src={require(`../../../static/img/broker_logo.png`)}
+                src={require(`../../../static/performmint/logo/logo.png`)}
                 alt=""
               />
               <img
                 style={{
-                  maxWidth: '200px',
+                  maxWidth: "300px",
                 }}
                 className="hidden dark:block"
-                src={require(`../../../static/img/broker_logo.png`)}
+                src={require(`../../../static/performmint/logo/logo.png`)}
                 alt=""
               />
             </div>

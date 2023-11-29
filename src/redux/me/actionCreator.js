@@ -1,6 +1,6 @@
-import actions from './actions';
-import { DataService } from '../../config/dataService/dataService';
-import { logOut } from '../authentication/actionCreator';
+import actions from "./actions";
+import { DataService } from "../../config/dataService/dataService";
+import { logOut } from "../authentication/actionCreator";
 
 const { getMeBegin, getMeSuccess, getMeErr } = actions;
 
@@ -8,7 +8,7 @@ const getMe = (callback) => {
   return async (dispatch) => {
     dispatch(getMeBegin());
     try {
-      const response = await DataService.get('/me');
+      const response = await DataService.get("/user/me");
       if (response.data.errors) {
         dispatch(logOut());
         dispatch(getMeErr(response.data.errors));
