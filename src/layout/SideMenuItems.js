@@ -7,6 +7,8 @@ import { NavLink } from "react-router-dom";
 import UilEllipsisV from "@iconscout/react-unicons/icons/uil-ellipsis-v";
 import propTypes from "prop-types";
 
+const { SubMenu, Item } = Menu;
+
 function MenuItems({ toggleCollapsed }) {
   const { t } = useTranslation();
 
@@ -110,7 +112,9 @@ function MenuItems({ toggleCollapsed }) {
       ]
     ),
   ];
-
+  const updatedItem = items?.map((i) => {
+    return <></>;
+  });
   return (
     <Menu
       onOpenChange={onOpenChange}
@@ -137,8 +141,70 @@ function MenuItems({ toggleCollapsed }) {
       style={{
         backgroundColor: "#000000",
       }}
-      items={items}
-    />
+      // items={items}
+    >
+      {items.map((item) => {
+        if (item.children) {
+          return (
+            <SubMenu
+              className="!py-2"
+              style={{
+                paddingTop: "20px !important",
+                paddingBottom: "20px !important",
+              }}
+              key={item.key}
+              icon={item.icon}
+              title={
+                <span className="ant-menu-title-content">
+                  <span>{item.label}</span>
+                </span>
+              }
+            >
+              {item.children.map((child) => {
+                return (
+                  <Item
+                    style={
+                      {
+                        // paddingTop: "20px !important",
+                        // paddingBottom: "20px !important",
+                      }
+                    }
+                    // className="!py-2"
+                    key={child.key}
+                    icon={child.icon}
+                  >
+                    <NavLink
+                      className="-ml-10"
+                      onClick={toggleCollapsed}
+                      to={`${path}${child.key}`}
+                    >
+                      {child.label}
+                    </NavLink>
+                  </Item>
+                );
+              })}
+            </SubMenu>
+          );
+        }
+        return (
+          <Item
+            style={
+              {
+                // paddingTop: "20px !important",
+                // paddingBottom: "20px !important",
+              }
+            }
+            className="!py-2"
+            key={item.key}
+            icon={item.icon}
+          >
+            <NavLink onClick={toggleCollapsed} to={`${path}${item.key}`}>
+              {item.label}
+            </NavLink>
+          </Item>
+        );
+      })}
+    </Menu>
   );
 }
 

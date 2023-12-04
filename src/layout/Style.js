@@ -84,11 +84,11 @@ const LayoutContainer = Styled.div`
                 .ant-menu{
                     .ant-menu-submenu-inline{
                         > .ant-menu-submenu-title{
-                            padding: 0 15px !important;
+                            padding: 30px 15px !important;
                         }
                     }
                     .ant-menu-item{
-                        padding: 0 15px !important;
+                        padding: 30px 15px !important;
                     }
                 }
             }
@@ -336,7 +336,7 @@ const LayoutContainer = Styled.div`
                     > .ant-menu-submenu-title{
                         display: flex;
                         align-items: center;
-                        padding: 0 15px !important;
+                        padding: 30px 15px !important;
                         margin: 0;
                         svg,
                         img{
@@ -399,7 +399,7 @@ const LayoutContainer = Styled.div`
                 .ant-menu-item{
                     display: flex;
                     align-items: center;
-                    padding: 0 15px !important;
+                    padding: 30px 15px !important;
                     a{
                         width: 100%;
                         display: flex !important;
