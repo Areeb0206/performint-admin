@@ -509,10 +509,11 @@ hr {
 .ant-menu-item-active .ant-menu-item-icon svg {
   @apply !text-currentColor;
 }
+/*selected dropdown,*/
 
 .ant-menu-submenu.ant-menu-submenu-inline .ant-menu-submenu-title,
 .ant-menu-item {
-  @apply inline-flex;
+  @apply inline-flex bg-black;
 }
 
 .ant-menu-submenu-popup {

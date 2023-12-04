@@ -10,6 +10,7 @@ import {
 import { ContextProvider } from "../../ContextProvider";
 import { useAtom } from "jotai";
 import { plaidAtom } from "../../jotaiStore/plaid";
+import axios from "axios";
 const SecurityWrapper = ({ children }) => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -51,6 +52,29 @@ function ProtectedRoute({ Component, path }) {
   useEffect(() => {
     getLinkToken();
   }, [currentUser?._id]);
+
+  // useEffect(() => {
+  //   var config = {
+  //     method: "get",
+  //     maxBodyLength: Infinity,
+  //     url: "https://gateway.fppdashboard.com/payments",
+  //     headers: {
+  //       "Cache-Control": "no-cache",
+  //       "Content-Type": "application/x-www-form-urlencoded",
+  //       Authorization: "Bearer DN7lG.nxUQROu3wMu3eC_g-umYvtGFFMThyUnf",
+  //     },
+  //     withCredentials: false,
+  //     crossDomain: true,
+  //   };
+
+  //   axios(config)
+  //     .then(function (response) {
+  //       console.log(JSON.stringify(response.data));
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // }, []);
   return isLoggedIn ? (
     <SecurityWrapper>
       <Routes>
@@ -63,7 +87,7 @@ function ProtectedRoute({ Component, path }) {
             </ContextProvider.Provider>
           }
           path={path}
-        />{" "}
+        />
       </Routes>
     </SecurityWrapper>
   ) : (

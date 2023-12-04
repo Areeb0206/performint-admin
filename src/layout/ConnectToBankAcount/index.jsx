@@ -8,13 +8,14 @@ import { getMe } from "../../redux/me/actionCreator";
 export default function ConnectToBankAccount({ setLoading }) {
   const [linkToken] = useAtom(plaidAtom);
   const dispatch = useDispatch();
+
   const { open, ready } = usePlaidLink({
     token: linkToken?.linkToken?.link_token,
     onSuccess: async (public_token, metadata) => {
-      setLoading(true);
+      // setLoading(true);
       await creatAccessToken(metadata);
       await dispatch(getMe());
-      setLoading(false);
+      // setLoading(false);
     },
     onExit: () => {},
     onLoad: () => {},

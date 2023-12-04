@@ -80,7 +80,7 @@ const ThemeLayout = (WrappedComponent) => {
         position: "fixed",
         [left]: 0,
         zIndex: 988,
-        backgroundColor: theme["primary-color"],
+        backgroundColor: theme["side-menu-bg-color"],
       };
 
       function renderThumb({ style }) {
@@ -145,7 +145,7 @@ const ThemeLayout = (WrappedComponent) => {
                           <div
                             className={`transition-all duration-300 ease-in-out rtl:ssm:pr-[15px] bg-primary ltr:pr-5 rtl:pl-5 ltr:ssm:pl-[15px] ltr:ssm:pr-[15px] rtl:ssm::pl:[15px] ltr:pl-[30px] rtl:pr-[30px] xs:ltr:pl-[20px] xs:rtl:pr-[20px] ${
                               !collapsed ? "w-[280px]" : "w-20"
-                            } xs:w-[150px] h-full grid align-middle dark:bg-[#323541]`}
+                            } xs:w-[150px] h-full grid align-middle bg-[#000]`}
                           >
                             <div className="flex items-center justify-between border-b-2 border-[#979797]">
                               {!collapsed ? (
@@ -245,7 +245,7 @@ const ThemeLayout = (WrappedComponent) => {
                           </ThemeProvider>
                         ) : null}
 
-                        {!currentUser?.hasBankAccountLinked &&
+                        {/* {!currentUser?.hasBankAccountLinked &&
                         currentUser?._id ? (
                           <Layout className="atbd-main-layout">
                             <Content>
@@ -255,14 +255,14 @@ const ThemeLayout = (WrappedComponent) => {
                             </Content>
                           </Layout>
                         ) : (
-                          <>
-                            <Layout className="atbd-main-layout">
-                              <Content>
-                                <WrappedComponent {...this.props} />
-                              </Content>
-                            </Layout>
-                          </>
-                        )}
+                          <> */}
+                        <Layout className="atbd-main-layout">
+                          <Content>
+                            <WrappedComponent {...this.props} />
+                          </Content>
+                        </Layout>
+                        {/* </>
+                        )} */}
                       </Layout>
                     </Layout>
                     {window.innerWidth <= 991 ? (

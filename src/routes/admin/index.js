@@ -3,6 +3,7 @@ import React, { lazy, Suspense, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import withAdminLayout from "../../layout/withAdminLayout";
 const Dashboard = lazy(() => import("../../container/dashboard"));
+const IBOSelection = lazy(() => import("../../container/charts/ChartJs.js"));
 const NotFound = lazy(() => import("../../container/pages/404"));
 
 const Admin = React.memo(() => {
@@ -19,7 +20,8 @@ const Admin = React.memo(() => {
       }
     >
       <Routes>
-        <Route index path="/*" element={<Dashboard />} />
+        <Route index path="/dashboard/*" element={<Dashboard />} />
+        <Route path="/merchant/*" element={<IBOSelection />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

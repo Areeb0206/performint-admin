@@ -1,6 +1,6 @@
 import { UilCreateDashboard } from "@iconscout/react-unicons";
 import { Menu } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
@@ -26,12 +26,11 @@ function MenuItems({ toggleCollapsed }) {
     };
   });
 
-  const path = "/";
+  const [path, setPath] = useState("ibo/dashboard");
   const pathName = window.location.pathname;
   const pathArray = pathName || [];
   const mainPath = pathArray;
   const mainPathSplit = mainPath.split("/");
-
   const [openKeys, setOpenKeys] = React.useState(
     !topMenu
       ? [`${mainPathSplit.length > 1 ? [mainPathSplit[1]] : "dashboard"}`]
@@ -47,14 +46,14 @@ function MenuItems({ toggleCollapsed }) {
   };
 
   const onClick = (item) => {
+    setPath(item.key);
     if (item.keyPath.length === 1) setOpenKeys([]);
   };
-
   const items = [
     getItem(
       <NavLink
         onClick={toggleCollapsed}
-        to={`${path}`}
+        to={`dashboard`}
         className="text-white text-xl"
       >
         {t("Dashboard")}
@@ -71,6 +70,45 @@ function MenuItems({ toggleCollapsed }) {
         />
       )
     ),
+    getItem(
+      <NavLink onClick={toggleCollapsed} className="text-white text-xl">
+        {t("Merchant")}
+      </NavLink>,
+      "merchant",
+      !topMenu && (
+        <img
+          style={{
+            maxWidth: "20px",
+          }}
+          className="w-full max-w-[20px] xs:max-w-[20px] object-contain"
+          src={require(`../static/performmint/dashboard/dashboard.png`)}
+          alt=""
+        />
+      ),
+      [
+        getItem(
+          <NavLink onClick={toggleCollapsed} to={`merchant`}>
+            {t("Merchant")}
+          </NavLink>,
+          "merchant",
+          null
+        ),
+        getItem(
+          <NavLink onClick={toggleCollapsed} to={`merchant`}>
+            {t("In-House Check-ins")}
+          </NavLink>,
+          "In-House",
+          null
+        ),
+        getItem(
+          <NavLink onClick={toggleCollapsed} to={`donor/network-client`}>
+            {t("Network Check-ins")}
+          </NavLink>,
+          "Network",
+          null
+        ),
+      ]
+    ),
   ];
 
   return (
@@ -78,18 +116,15 @@ function MenuItems({ toggleCollapsed }) {
       onOpenChange={onOpenChange}
       onClick={onClick}
       mode={!topMenu || window.innerWidth <= 991 ? "inline" : "horizontal"}
-      // // eslint-disable-next-line no-nested-ternary
-      defaultSelectedKeys={
+      selectedKeys={
         !topMenu
-          ? [
-              `${
-                mainPathSplit.length === 1
-                  ? "dashboard"
-                  : mainPathSplit.length === 2
-                  ? mainPathSplit[1]
-                  : mainPathSplit[2]
-              }`,
-            ]
+          ? `${
+              mainPathSplit.length === 1
+                ? "dashboard"
+                : mainPathSplit.length === 2
+                ? mainPathSplit[1]
+                : mainPathSplit[2]
+            }`
           : []
       }
       defaultOpenKeys={
@@ -99,8 +134,10 @@ function MenuItems({ toggleCollapsed }) {
       }
       overflowedIndicator={<UilEllipsisV />}
       openKeys={openKeys}
+      style={{
+        backgroundColor: "#000000",
+      }}
       items={items}
-      className="hover:bg-[#004DA7] hover:rounded-2xl bg-transparent text-white gap-4"
     />
   );
 }

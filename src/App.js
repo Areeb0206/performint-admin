@@ -15,6 +15,7 @@ import "./static/css/style.css";
 import config from "./config/config";
 import ProtectedRoute from "./components/utilities/protectedRoute";
 import "antd/dist/antd.less";
+import IBOSelection from "./container/iboSelection";
 
 const NotFound = lazy(() => import("./container/pages/404"));
 
@@ -52,6 +53,10 @@ function ProviderConfig() {
             <Routes>
               <Route
                 path="/*"
+                element={<ProtectedRoute path="/*" Component={IBOSelection} />}
+              />
+              <Route
+                path="/ibo/*"
                 element={<ProtectedRoute path="/*" Component={Admin} />}
               />
               <Route path="*" element={<NotFound />} />

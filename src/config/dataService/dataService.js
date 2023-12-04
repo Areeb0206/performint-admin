@@ -10,7 +10,6 @@ const hostname = () => {
       break;
     case "localhost": // dev
       hostUrl = "http://localhost:5001/api";
-      // hostUrl = 'https://broker.upforks.com/api';
       break;
     default:
       hostUrl = "https://broker.upforks.com/api";
@@ -108,7 +107,7 @@ client.interceptors.request.use((config) => {
 client.interceptors.response.use(
   (response) => response,
   (error) => {
-    return Promise.reject(error.response.data.error);
+    return Promise.reject(error?.response?.data?.error);
   }
 );
 export { DataService, addQueryParamsToUrl };

@@ -2,7 +2,7 @@ import themes from "./themeConfigure";
 
 const { lightMode, darkMode } = themes;
 
-const primaryColor = "#0478FF";
+const primaryColor = "#03812E";
 const primaryColorRgb = "130, 49, 211";
 const primaryHover = "#6726A8";
 const secondaryColor = "#5840FF";
@@ -45,6 +45,7 @@ const textColor = "#666D92";
 const btnlg = "50px";
 const btnsm = "38px";
 const btnxs = "32px";
+const sliderbarColor = "#000000";
 
 const theme = {
   lightMode,
@@ -78,6 +79,7 @@ const theme = {
   black: "#000000",
   pink: pinkColor,
   "dash-color": dashColor, // info state color
+  "side-menu-bg-color": sliderbarColor, // info state color
   "extra-light-color": extraLightColor, // Extra Light state color
   "extra-light-hover": extraLightHover, // Extra Light state color
   "font-family": "'Jost', sans-serif",

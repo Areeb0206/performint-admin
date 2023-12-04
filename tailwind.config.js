@@ -14,7 +14,7 @@ module.exports = {
     extend: {
       colors: {
         ...colors,
-        primary: "#0478FF",
+        primary: "#03812E",
         white: "#ffffff",
         black: "#000000",
         "primary-hover": "rgb(103, 38, 168)",
@@ -127,6 +127,11 @@ module.exports = {
       borderWidth: {
         1: "1px",
         5: "5px",
+      },
+      fontWeight: {
+        thin: 100,
+        extralight: 200,
+        light: 300,
       },
       borderRadius: {
         4: "4px",
