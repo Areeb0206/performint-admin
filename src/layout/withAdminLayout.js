@@ -143,9 +143,9 @@ const ThemeLayout = (WrappedComponent) => {
                       >
                         <div className="flex  flex-row items-center flex-1 h-full">
                           <div
-                            className={`transition-all duration-300 ease-in-out rtl:ssm:pr-[15px] bg-primary ltr:pr-5 rtl:pl-5 ltr:ssm:pl-[15px] ltr:ssm:pr-[15px] rtl:ssm::pl:[15px] ltr:pl-[30px] rtl:pr-[30px] xs:ltr:pl-[20px] xs:rtl:pr-[20px] ${
+                            className={`transition-all duration-200 ease-in-out rtl:ssm:pr-[15px] bg-primary ltr:pr-5 rtl:pl-5 ltr:ssm:pl-[15px] ltr:ssm:pr-[15px] rtl:ssm::pl:[15px] ltr:pl-[30px] rtl:pr-[30px] xs:ltr:pl-[20px] xs:rtl:pr-[20px] ${
                               !collapsed ? "w-[280px]" : "w-20"
-                            } xs:w-[150px] h-full grid align-middle bg-[#000]`}
+                            } xs:w-[150px] h-full grid align-middle !bg-[#000000]`}
                           >
                             <div className="flex items-center justify-between border-b-2 border-[#979797]">
                               {!collapsed ? (
@@ -154,7 +154,7 @@ const ThemeLayout = (WrappedComponent) => {
                                     style={{
                                       maxWidth: "200px",
                                     }}
-                                    className="w-full max-w-[140px] xs:max-w-[140px]"
+                                    className="w-full max-w-[180px] xs:max-w-[180px]"
                                     src={
                                       layoutMode === "lightMode"
                                         ? require(`../static/performmint/dashboard/dashboardPerformmint.png`)
@@ -239,6 +239,7 @@ const ThemeLayout = (WrappedComponent) => {
                                 <SideMenuItems
                                   topMenu={topMenu}
                                   toggleCollapsed={toggleCollapsedMobile}
+                                  collapsed={collapsed}
                                 />
                               </Scrollbars>
                             </Sider>

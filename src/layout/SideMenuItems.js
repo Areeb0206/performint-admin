@@ -1,4 +1,5 @@
-import { UilCreateDashboard } from "@iconscout/react-unicons";
+import { Uil12Plus } from "@iconscout/react-unicons";
+import { UilPlus } from "@iconscout/react-unicons";
 import { Menu } from "antd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -6,10 +7,9 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import UilEllipsisV from "@iconscout/react-unicons/icons/uil-ellipsis-v";
 import propTypes from "prop-types";
-
 const { SubMenu, Item } = Menu;
 
-function MenuItems({ toggleCollapsed }) {
+function MenuItems({ toggleCollapsed, collapsed }) {
   const { t } = useTranslation();
 
   function getItem(label, key, icon, children, type) {
@@ -90,31 +90,29 @@ function MenuItems({ toggleCollapsed }) {
       [
         getItem(
           <NavLink onClick={toggleCollapsed} to={`merchant`}>
-            {t("Merchant")}
+            {t("Merchant1")}
           </NavLink>,
           "merchant",
           null
         ),
         getItem(
           <NavLink onClick={toggleCollapsed} to={`merchant`}>
-            {t("In-House Check-ins")}
+            {t("Merchant2")}
           </NavLink>,
-          "In-House",
+          "Merchant2",
           null
         ),
         getItem(
-          <NavLink onClick={toggleCollapsed} to={`donor/network-client`}>
-            {t("Network Check-ins")}
+          <NavLink onClick={toggleCollapsed} to={`merchant`}>
+            {t("Merchant3")}
           </NavLink>,
-          "Network",
+          "Merchant3",
           null
         ),
       ]
     ),
   ];
-  const updatedItem = items?.map((i) => {
-    return <></>;
-  });
+
   return (
     <Menu
       onOpenChange={onOpenChange}
@@ -141,40 +139,29 @@ function MenuItems({ toggleCollapsed }) {
       style={{
         backgroundColor: "#000000",
       }}
-      // items={items}
     >
       {items.map((item) => {
         if (item.children) {
           return (
             <SubMenu
-              className="!py-2"
-              style={{
-                paddingTop: "20px !important",
-                paddingBottom: "20px !important",
-              }}
               key={item.key}
               icon={item.icon}
+              expandIcon={
+                !collapsed
+                  ? item.children?.length > 0 && <UilPlus className="text-xl" />
+                  : false
+              }
               title={
-                <span className="ant-menu-title-content">
+                <span className="ant-menu-title-content  ">
                   <span>{item.label}</span>
                 </span>
               }
             >
               {item.children.map((child) => {
                 return (
-                  <Item
-                    style={
-                      {
-                        // paddingTop: "20px !important",
-                        // paddingBottom: "20px !important",
-                      }
-                    }
-                    // className="!py-2"
-                    key={child.key}
-                    icon={child.icon}
-                  >
+                  <Item style={{}} key={child.key} icon={child.icon}>
                     <NavLink
-                      className="-ml-10"
+                      className="text-white"
                       onClick={toggleCollapsed}
                       to={`${path}${child.key}`}
                     >
@@ -187,17 +174,7 @@ function MenuItems({ toggleCollapsed }) {
           );
         }
         return (
-          <Item
-            style={
-              {
-                // paddingTop: "20px !important",
-                // paddingBottom: "20px !important",
-              }
-            }
-            className="!py-2"
-            key={item.key}
-            icon={item.icon}
-          >
+          <Item className="" key={item.key} icon={item.icon}>
             <NavLink onClick={toggleCollapsed} to={`${path}${item.key}`}>
               {item.label}
             </NavLink>

@@ -83,8 +83,10 @@ const LayoutContainer = Styled.div`
             .ant-layout-sider-children{
                 .ant-menu{
                     .ant-menu-submenu-inline{
+                      
                         > .ant-menu-submenu-title{
                             padding: 30px 15px !important;
+                                
                         }
                     }
                     .ant-menu-item{
@@ -131,7 +133,7 @@ const LayoutContainer = Styled.div`
                 }
                 .ant-menu-sub.ant-menu-inline{
                     background-color: ${({ theme }) =>
-                      theme[theme.mainContent]["white-background"]};
+                      theme[theme.mainContent]["black-background"]};
                 }
                 
                 .ant-menu-submenu-selected{
@@ -343,7 +345,7 @@ const LayoutContainer = Styled.div`
                             width: 16px;
                             height: 16px;
                         }
-                                                
+                                                  
                         .ant-menu-submenu-arrow{
                             right: auto;
                             ${({ theme }) =>
@@ -389,10 +391,11 @@ const LayoutContainer = Styled.div`
                             : "padding-left"}: 0 !important;
                         transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
                         a{
+                            color:white;
                             ${({ theme }) =>
                               theme.rtl
                                 ? "padding-right"
-                                : "padding-left"}: 36px !important;
+                                : "padding-left"}: 26px !important;
                         }
                     }
                 }
@@ -423,6 +426,7 @@ const LayoutContainer = Styled.div`
                         i{
                             color: ${({ theme }) =>
                               theme[theme.mainContent]["menu-active"]};
+                              
                         }
                     }
                 }
@@ -445,6 +449,7 @@ const LayoutContainer = Styled.div`
                     .ant-menu-item{
                         padding: 0 20px !important;
                         justify-content: center;
+                         
                         @media only screen and (max-width: 1699px){
                             padding-inline-start:0 !important;
                         }
