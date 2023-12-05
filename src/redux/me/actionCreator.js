@@ -9,6 +9,7 @@ const getMe = (callback) => {
     dispatch(getMeBegin());
     try {
       const response = await DataService.get("/user/me");
+      console.log(response);
       if (response.data.errors) {
         dispatch(logOut());
         dispatch(getMeErr(response.data.errors));

@@ -16,17 +16,22 @@ import Settings from "./settings";
 import { Popover } from "../../popup/popup";
 import Heading from "../../heading/heading";
 import { logOut } from "../../../redux/authentication/actionCreator";
+import { iboAtom } from "../../../jotaiStore/ibo";
+import { useAtom } from "jotai";
 
 const AuthInfo = React.memo(() => {
   const dispatch = useDispatch();
   const currentUser = useSelector((state) => state.currentUser.data);
   const navigate = useNavigate();
   const [, setLinkToken] = useState({});
+  const [, setIboDetails] = useAtom(iboAtom);
 
   const SignOut = (e) => {
     e.preventDefault();
     setLinkToken({});
     dispatch(logOut(() => navigate("/")));
+    localStorage.clear();
+    setIboDetails({});
   };
 
   const userContent = (

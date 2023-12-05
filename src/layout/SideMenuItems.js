@@ -1,12 +1,14 @@
 import { Uil12Plus } from "@iconscout/react-unicons";
 import { UilPlus } from "@iconscout/react-unicons";
 import { Menu } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import UilEllipsisV from "@iconscout/react-unicons/icons/uil-ellipsis-v";
 import propTypes from "prop-types";
+import { useAtom } from "jotai";
+import { iboAtom } from "../jotaiStore/ibo";
 const { SubMenu, Item } = Menu;
 
 function MenuItems({ toggleCollapsed, collapsed }) {
@@ -28,17 +30,16 @@ function MenuItems({ toggleCollapsed, collapsed }) {
     };
   });
 
-  const [path, setPath] = useState("ibo/dashboard");
+  const [iboDetails] = useAtom(iboAtom);
+
+  const [path, setPath] = useState(`ibo/${iboDetails?._id}/dashboard`);
   const pathName = window.location.pathname;
   const pathArray = pathName || [];
   const mainPath = pathArray;
   const mainPathSplit = mainPath.split("/");
   const [openKeys, setOpenKeys] = React.useState(
-    !topMenu
-      ? [`${mainPathSplit.length > 1 ? [mainPathSplit[1]] : "dashboard"}`]
-      : []
+    !topMenu ? [mainPathSplit?.[mainPathSplit?.length - 1]] : []
   );
-
   const onOpenChange = (keys) => {
     setOpenKeys(
       keys[keys.length - 1] !== "recharts"
@@ -121,18 +122,16 @@ function MenuItems({ toggleCollapsed, collapsed }) {
       selectedKeys={
         !topMenu
           ? `${
-              mainPathSplit.length === 1
+              mainPathSplit?.includes("dashboard")
                 ? "dashboard"
-                : mainPathSplit.length === 2
-                ? mainPathSplit[1]
-                : mainPathSplit[2]
+                : mainPathSplit?.includes("merchant")
+                ? "merchant"
+                : []
             }`
           : []
       }
       defaultOpenKeys={
-        !topMenu
-          ? [`${mainPathSplit.length > 2 ? [mainPathSplit[1]] : "dashboard"}`]
-          : []
+        !topMenu ? [mainPathSplit?.[mainPathSplit?.length - 1]] : []
       }
       overflowedIndicator={<UilEllipsisV />}
       openKeys={openKeys}

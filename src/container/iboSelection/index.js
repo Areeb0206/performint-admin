@@ -4,10 +4,14 @@ import image2 from "../../static/performmint/initialPage/image2.png";
 import { addIBO, getIBODetails } from "../../redux/ibo/service";
 import IBOCard from "./IBOCard";
 import React, { lazy, Suspense, useCallback, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { iboAtom, iboListAtom } from "../../jotaiStore/ibo";
+import { useAtom } from "jotai";
 
 function IBOSelection() {
   const [createIBO, setCreateIBO] = useState(false);
-  const [IboList, setIboList] = useState([]);
+  const [IboList, setIboList] = useAtom(iboListAtom);
+
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -58,6 +62,7 @@ function IBOSelection() {
         setLoading(false);
       });
   };
+
   return (
     <div className="flex w-full h-screen ">
       <Row className="w-full">

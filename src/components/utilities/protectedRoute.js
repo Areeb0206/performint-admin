@@ -10,7 +10,7 @@ import {
 import { ContextProvider } from "../../ContextProvider";
 import { useAtom } from "jotai";
 import { plaidAtom } from "../../jotaiStore/plaid";
-import axios from "axios";
+import { iboAtom, iboListAtom } from "../../jotaiStore/ibo";
 const SecurityWrapper = ({ children }) => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -30,17 +30,20 @@ function ProtectedRoute({ Component, path }) {
     };
   });
   const [linkToken, setLinkToken] = useAtom(plaidAtom);
+  const [iboDetails, setIboDetails] = useAtom(iboAtom);
+  const [IboList, setIboList] = useAtom(iboListAtom);
+
   const [loading, setLoading] = useState(false);
   const getLinkToken = async () => {
-    if (currentUser?._id) {
-      const res = await getPlaidLinkToken();
+    if (iboDetails?._id) {
+      const res = await getPlaidLinkToken(iboDetails?._id);
       if (res?.data?.linkToken) {
         setLinkToken({
           linkToken: res?.data?.linkToken,
         });
         return;
       }
-      const createToken = await createLinkToken();
+      const createToken = await createLinkToken(iboDetails?._id);
       if (createToken?.data?.linkToken) {
         setLinkToken({
           linkToken: createToken?.data?.linkToken,
@@ -51,37 +54,22 @@ function ProtectedRoute({ Component, path }) {
   };
   useEffect(() => {
     getLinkToken();
-  }, [currentUser?._id]);
+  }, [iboDetails?._id]);
 
-  // useEffect(() => {
-  //   var config = {
-  //     method: "get",
-  //     maxBodyLength: Infinity,
-  //     url: "https://gateway.fppdashboard.com/payments",
-  //     headers: {
-  //       "Cache-Control": "no-cache",
-  //       "Content-Type": "application/x-www-form-urlencoded",
-  //       Authorization: "Bearer DN7lG.nxUQROu3wMu3eC_g-umYvtGFFMThyUnf",
-  //     },
-  //     withCredentials: false,
-  //     crossDomain: true,
-  //   };
-
-  //   axios(config)
-  //     .then(function (response) {
-  //       console.log(JSON.stringify(response.data));
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error);
-  //     });
-  // }, []);
   return isLoggedIn ? (
     <SecurityWrapper>
       <Routes>
         <Route
           element={
             <ContextProvider.Provider
-              value={{ linkToken, setLoading, loading }}
+              value={{
+                linkToken,
+                setLoading,
+                loading,
+                iboDetails,
+                IboList,
+                setIboDetails,
+              }}
             >
               <Component />
             </ContextProvider.Provider>
@@ -92,7 +80,6 @@ function ProtectedRoute({ Component, path }) {
     </SecurityWrapper>
   ) : (
     <Routes>
-      {" "}
       <Route path="/" element={<Navigate to="/" />} />
     </Routes>
   );

@@ -8,27 +8,33 @@ import { useDispatch, useSelector } from "react-redux";
 // import UilTwitter from '@iconscout/react-unicons/icons/uil-twitter';
 // import UilGithub from '@iconscout/react-unicons/icons/uil-github';
 import { login } from "../../../../redux/authentication/actionCreator";
-import { Checkbox } from "../../../../components/checkbox/checkbox";
+import { iboAtom } from "../../../../jotaiStore/ibo";
+import { useAtom } from "jotai";
 
 function SignIn() {
   const history = useNavigate();
   const dispatch = useDispatch();
   const isLoading = useSelector((state) => state.auth.loading);
   const [form] = Form.useForm();
-  const [state, setState] = useState({
-    checked: null,
-  });
+  const [, setIboDetails] = useAtom(iboAtom);
 
   const handleSubmit = useCallback(
     (values) => {
-      dispatch(login(values, () => history("/")));
+      dispatch(
+        login(values, ({ payload }) => {
+          console.log("payload", payload);
+          if (payload?.role === "admin") {
+            history("/ibo");
+          } else if (payload?.role === "ibo") {
+            setIboDetails(payload);
+            localStorage.setItem("iboDetails", JSON.stringify(payload));
+            history(`ibo/${payload?._id}/dashboard`);
+          }
+        })
+      );
     },
     [history, dispatch]
   );
-
-  const onChange = (checked) => {
-    setState({ ...state, checked });
-  };
 
   return (
     <Row justify="center">

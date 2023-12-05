@@ -2,15 +2,21 @@ import { Col, Divider, Row } from "antd";
 import React from "react";
 import { RightOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import { useAtom } from "jotai";
+import { iboAtom } from "../../../jotaiStore/ibo";
 function IBOCard({ item }) {
   const navigate = useNavigate();
+  const [, setIboDetails] = useAtom(iboAtom);
+
   return (
     <Col
       sm={24}
       lg={11}
       className="bg-[#D8FFE5] rounded-lg p-4 cursor-pointer"
       onClick={() => {
-        navigate("/ibo/dashboard");
+        setIboDetails(item);
+        localStorage.setItem("iboDetails", JSON.stringify(item));
+        navigate(`/ibo/${item?._id}/dashboard`);
       }}
     >
       <div className="flex justify-between items-center">

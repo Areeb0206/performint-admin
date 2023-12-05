@@ -19,11 +19,11 @@ const login = (values, callback) => {
       if (response.data.errors) {
         dispatch(loginErr(response.data.errors));
       } else {
-        setItem("access_token", response.data.data.accessToken);
-        setItem("refresh_token", response.data.data.refreshToken);
+        setItem("access_token", response?.data?.data.accessToken);
+        setItem("refresh_token", response?.data?.data.refreshToken);
         setItem("loggedIn", true);
         dispatch(loginSuccess(true));
-        callback();
+        callback(response?.data?.data);
       }
     } catch (err) {
       dispatch(loginErr(err));

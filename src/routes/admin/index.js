@@ -1,7 +1,9 @@
 import { Spin } from "antd";
 import React, { lazy, Suspense, useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import withAdminLayout from "../../layout/withAdminLayout";
+import { useAtom } from "jotai";
+import { iboAtom } from "../../jotaiStore/ibo";
 const Dashboard = lazy(() => import("../../container/dashboard"));
 const IBOSelection = lazy(() => import("../../container/charts/ChartJs.js"));
 const NotFound = lazy(() => import("../../container/pages/404"));
@@ -11,6 +13,7 @@ const Admin = React.memo(() => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
   return (
     <Suspense
       fallback={

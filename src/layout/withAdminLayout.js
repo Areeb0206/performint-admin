@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/prop-types */
 import UilEllipsisV from "@iconscout/react-unicons/icons/uil-ellipsis-v";
-import { Button, Col, Layout, Row } from "antd";
+import { Button, Col, Layout, Row, Select } from "antd";
 import propTypes from "prop-types";
 import { Component, useContext } from "react";
 import { connect, useSelector } from "react-redux";
@@ -17,6 +17,7 @@ import { ReactComponent as MySVG } from "../static/img/icon/left-bar.svg";
 import SideMenuItems from "./SideMenuItems";
 import { ContextProvider } from "../ContextProvider";
 import { Scrollbars } from "@pezhmanparsaee/react-custom-scrollbars";
+import SelecIbo from "./SelectIbo";
 import ConnectToBankAccount from "./ConnectToBankAcount";
 const { theme } = require("../config/theme/themeVariables");
 
@@ -124,7 +125,14 @@ const ThemeLayout = (WrappedComponent) => {
 
       return (
         <ContextProvider.Consumer>
-          {({ linkToken, loading, setLoading }) => {
+          {({
+            linkToken,
+            loading,
+            setLoading,
+            iboDetails,
+            IboList,
+            setIboDetails,
+          }) => {
             return (
               <>
                 {loading ? (
@@ -143,9 +151,9 @@ const ThemeLayout = (WrappedComponent) => {
                       >
                         <div className="flex  flex-row items-center flex-1 h-full">
                           <div
-                            className={`transition-all duration-200 ease-in-out rtl:ssm:pr-[15px] bg-primary ltr:pr-5 rtl:pl-5 ltr:ssm:pl-[15px] ltr:ssm:pr-[15px] rtl:ssm::pl:[15px] ltr:pl-[30px] rtl:pr-[30px] xs:ltr:pl-[20px] xs:rtl:pr-[20px] ${
+                            className={`transition-all duration-200 ease-in-out rtl:ssm:pr-[15px]  ltr:pr-5 rtl:pl-5 ltr:ssm:pl-[15px] ltr:ssm:pr-[15px] rtl:ssm::pl:[15px] ltr:pl-[30px] rtl:pr-[30px] xs:ltr:pl-[20px] xs:rtl:pr-[20px] ${
                               !collapsed ? "w-[280px]" : "w-20"
-                            } xs:w-[150px] h-full grid align-middle !bg-[#000000]`}
+                            } xs:w-[150px] h-full grid align-middle bg-[#000000]`}
                           >
                             <div className="flex items-center justify-between border-b-2 border-[#979797]">
                               {!collapsed ? (
@@ -182,9 +190,24 @@ const ThemeLayout = (WrappedComponent) => {
                             {topMenu && window.innerWidth > 991 ? (
                               <TopMenu />
                             ) : (
-                              <CustomizerWrap rtl={rtl} />
+                              // <CustomizerWrap rtl={rtl} />
+                              <div className="flex  px-10">
+                                <div className=" flex flex-col  text-2xl font-medium text-black">
+                                  Hey, {iboDetails?.firstName}!
+                                  <div className="text-base font-light">
+                                    Welcome back!
+                                  </div>
+                                </div>
+                                <div className="ml-10">
+                                  {currentUser?.role === "admin" ? (
+                                    <SelecIbo />
+                                  ) : (
+                                    <></>
+                                  )}
+                                </div>
+                              </div>
                             )}
-                            <div className="flex flex-row items-center md:hidden">
+                            {/* <div className="flex flex-row items-center md:hidden">
                               {topMenu && window.innerWidth > 991 ? (
                                 <TopMenuSearch>
                                   <div className="flex top-right-wrap">
@@ -195,7 +218,8 @@ const ThemeLayout = (WrappedComponent) => {
                               ) : (
                                 <AuthInfo />
                               )}
-                            </div>
+                            </div> */}
+                            <AuthInfo />
                           </div>
                           <div className="hidden md:flex items-center ltr:pr-[25px] rtl:pl-[25px] ltr:ssm:pr-[10px] rtl:ssm:pl-[10px]">
                             <Search />
@@ -246,8 +270,8 @@ const ThemeLayout = (WrappedComponent) => {
                           </ThemeProvider>
                         ) : null}
 
-                        {/* {!currentUser?.hasBankAccountLinked &&
-                        currentUser?._id ? (
+                        {!iboDetails?.hasBankAccountLinked &&
+                        iboDetails?._id ? (
                           <Layout className="atbd-main-layout">
                             <Content>
                               <div className="flex items-center justify-center w-full h-[700px] bg-white">
@@ -256,14 +280,14 @@ const ThemeLayout = (WrappedComponent) => {
                             </Content>
                           </Layout>
                         ) : (
-                          <> */}
-                        <Layout className="atbd-main-layout">
-                          <Content>
-                            <WrappedComponent {...this.props} />
-                          </Content>
-                        </Layout>
-                        {/* </>
-                        )} */}
+                          <>
+                            <Layout className="atbd-main-layout">
+                              <Content>
+                                <WrappedComponent {...this.props} />
+                              </Content>
+                            </Layout>
+                          </>
+                        )}
                       </Layout>
                     </Layout>
                     {window.innerWidth <= 991 ? (

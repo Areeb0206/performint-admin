@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Spin } from 'antd';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Spin } from "antd";
+import { NavLink } from "react-router-dom";
 
-import Heading from '../../components/heading/heading';
-import { Button } from '../../components/buttons/buttons';
+import Heading from "../../components/heading/heading";
+import { Button } from "../../components/buttons/buttons";
+import { useAtom } from "jotai";
+import { iboAtom } from "../../jotaiStore/ibo";
 
 function NotFound() {
   const [state, setState] = useState({
@@ -14,6 +16,8 @@ function NotFound() {
       setState({ isLoading: false });
     }, 1500);
   }, []);
+  const [iboDetails] = useAtom(iboAtom);
+
   return (
     <main className="min-h-[715px] lg:min-h-[580px]">
       {state.isLoading ? (
@@ -22,7 +26,11 @@ function NotFound() {
         </div>
       ) : (
         <div className="flex justify-center items-center flex-col min-h-screen pb-36 px-[15px] text-center">
-          <img className="mx-auto mb-20" src={require(`../../static/img/pages/404.svg`).default} alt="404" />
+          <img
+            className="mx-auto mb-20"
+            src={require(`../../static/img/pages/404.svg`).default}
+            alt="404"
+          />
           <Heading
             className="text-light-extra dark:text-white60 mb-5 text-6xl ssm:text-5xl xs:text-4xl font-semibold"
             as="h3"
@@ -32,7 +40,7 @@ function NotFound() {
           <p className="text-body dark:text-white60 mb-6 text-lg xs:text-base font-medium">
             Sorry! the page you are looking for does not exist.
           </p>
-          <NavLink to="/admin">
+          <NavLink to={`ibo/${iboDetails?._id}/dashboard`}>
             <Button size="default" type="primary" to="/admin" className="h-11">
               Return Home
             </Button>
