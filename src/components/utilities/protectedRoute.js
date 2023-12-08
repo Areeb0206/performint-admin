@@ -53,7 +53,7 @@ function ProtectedRoute({ Component, path }) {
     }
   };
   useEffect(() => {
-    getLinkToken();
+    if (iboDetails?._id) getLinkToken();
   }, [iboDetails?._id]);
 
   return isLoggedIn ? (

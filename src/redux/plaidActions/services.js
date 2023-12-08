@@ -10,8 +10,11 @@ const createLinkToken = async (id) => {
   return response;
 };
 
-const creatAccessToken = async (body) => {
-  const response = await DataService.post("/plaid/create_access_token", body);
+const creatAccessToken = async (id, body) => {
+  const response = await DataService.post(
+    `/plaid/create_access_token/${id}`,
+    body
+  );
   return response;
 };
 
